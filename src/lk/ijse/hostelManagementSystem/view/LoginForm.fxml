@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.hostelManagementSystem.Controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="730.0" prefWidth="1175.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="14.0" layoutY="14.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="524.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <Pane layoutX="418.0" layoutY="210.0" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: BDBDBD; -fx-background-radius: 10;">
+         <children>
+            <JFXTextField fx:id="txtEmail" layoutX="2.0" layoutY="2.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717;" unFocusColor="#ffffff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <focusColor>
+                  <LinearGradient endX="0.31553398058252424" endY="0.48058252427184467" proportional="false" startX="0.28640776699029125">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ffffff00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="418.0" layoutY="282.0" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: BDBDBD; -fx-background-radius: 10;">
+         <children>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="2.0" layoutY="2.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: #171717; -fx-background-radius: 10;" unFocusColor="#ffffff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnSignIn" layoutX="418.0" layoutY="365.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="980.0" layoutY="444.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
+      <Text fill="WHITE" layoutX="821.0" layoutY="34.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="You whill get access to the public information and account potions" wrappingWidth="339.0000142157078" />
+      <Text fill="WHITE" layoutX="448.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an account? " wrappingWidth="173.00001421570778">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ButtonBar layoutX="698.0" layoutY="449.0" prefHeight="40.0" prefWidth="79.0" />
+      <JFXButton fx:id="btnCreateAccount" layoutX="604.0" layoutY="444.0" onAction="#btnCreateAccountOnAction" prefHeight="31.0" prefWidth="134.0" text="Create Account" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="702.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
+      <JFXButton fx:id="btnForgetPassword" layoutX="525.0" layoutY="474.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" />
+      <Pane layoutX="262.0" layoutY="-79.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 100;" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </AnchorPane>
