@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jfoenix-8.0.10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hostelManagementSystem/lib/jfoenix-8.0.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
