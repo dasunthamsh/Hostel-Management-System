@@ -24,6 +24,10 @@ public class Navigation {
                 window.setTitle("Login Form");
                 initUI("LoginForm.fxml");
                 break;
+
+            case DASHBORD:
+                window.setTitle("Dashboard Form");
+                initUI("DashboardForm.fxml");
         }
     }
 
