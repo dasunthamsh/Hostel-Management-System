@@ -10,6 +10,8 @@ import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.util.Navigation;
 import lk.ijse.hostelManagementSystem.util.Routes;
 
+import java.io.IOException;
+
 public class LoginFormController {
     public JFXTextField txtEmail;
     public JFXPasswordField txtPassword;
@@ -18,8 +20,8 @@ public class LoginFormController {
     public JFXButton btnForgetPassword;
     public AnchorPane pane;
 
-    public void btnSignOnAction(ActionEvent actionEvent) {
-        //Navigation.navigate(Routes.DASHBORD,);
+    public void btnSignOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.DASHBORD,pane);
 
 
     }
