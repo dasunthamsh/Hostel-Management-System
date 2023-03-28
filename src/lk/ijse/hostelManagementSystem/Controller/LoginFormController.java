@@ -15,6 +15,7 @@ public class LoginFormController {
     public JFXButton btnForgetPassword;
 
     public void btnSignOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnCreateAccountOnAction(ActionEvent actionEvent) {

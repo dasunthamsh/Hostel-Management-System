@@ -26,32 +26,6 @@
             <Font name="System Bold" size="39.0" />
          </font>
       </Text>
-      <Pane layoutX="418.0" layoutY="210.0" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: BDBDBD; -fx-background-radius: 10;">
-         <children>
-            <JFXTextField fx:id="txtEmail" layoutX="2.0" layoutY="2.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717;" unFocusColor="#ffffff00">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <focusColor>
-                  <LinearGradient endX="0.31553398058252424" endY="0.48058252427184467" proportional="false" startX="0.28640776699029125">
-                     <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="#ffffff00" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </focusColor>
-            </JFXTextField>
-         </children>
-      </Pane>
-      <Pane layoutX="418.0" layoutY="282.0" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: BDBDBD; -fx-background-radius: 10;">
-         <children>
-            <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="2.0" layoutY="2.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: #171717; -fx-background-radius: 10;" unFocusColor="#ffffff00">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </JFXPasswordField>
-         </children>
-      </Pane>
       <JFXButton fx:id="btnSignIn" layoutX="418.0" layoutY="365.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -69,6 +43,24 @@
       <Text fill="WHITE" layoutX="14.0" layoutY="702.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
       <JFXButton fx:id="btnForgetPassword" layoutX="525.0" layoutY="474.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" />
       <Pane layoutX="262.0" layoutY="-79.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 100;" />
+      <JFXTextField fx:id="txtEmail" layoutX="419.0" layoutY="212.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 20; -fx-background-color: #171717; -fx-border-color: white; -fx-border-radius: 10;" unFocusColor="#ffffff00">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <focusColor>
+            <LinearGradient endX="0.31553398058252424" endY="0.48058252427184467" proportional="false" startX="0.28640776699029125">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#ffffff00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="419.0" layoutY="283.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: #171717; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" unFocusColor="#ffffff00">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXPasswordField>
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />
