@@ -7,8 +7,11 @@
 
 .text-input{
     -fx-text-inner-color:#FFFFFF;
-
-
-
 }
 
+
+.button1:hover
+{
+    -fx-background-color : #171717 ;
+    -fx-background-radius :  30 0 0 30;
+}
