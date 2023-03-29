@@ -34,7 +34,7 @@
             <Font name="System Bold" size="39.0" />
          </font>
       </Text>
-      <JFXButton fx:id="btnSignIn" layoutX="435.0" layoutY="362.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" stylesheets="@../css/css.css" text="Sign in" textFill="WHITE">
+      <JFXButton fx:id="btnSignIn" layoutX="435.0" layoutY="362.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -58,7 +58,7 @@
       <Text fill="WHITE" layoutX="14.0" layoutY="702.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
       <JFXButton fx:id="btnForgetPassword" layoutX="542.0" layoutY="474.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" textFill="WHITE" />
       <Pane layoutX="262.0" layoutY="-79.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 100;" />
-      <JFXTextField fx:id="txtEmail" cache="true" layoutX="436.0" layoutY="209.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717; -fx-border-color: white; -fx-border-radius: 10; -fx-font-style: white;" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtEmail" cache="true" layoutX="436.0" layoutY="209.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717; -fx-border-color: white; -fx-border-radius: 10; -fx-font-style: white;" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
