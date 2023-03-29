@@ -20,7 +20,6 @@ public class Navigation {
 
 
         switch (routes){
-
             case LOGIN:
                 window.setTitle("Login Form");
                 initUI("LoginForm.fxml");
@@ -30,13 +29,18 @@ public class Navigation {
                 window.setTitle("Dashboard Form");
                 initUI("DashboardForm.fxml");
                 break;
+
+            case STUDENT:
+                window.setTitle("add student");
+                initUI("ManageStudentForm.fxml");
+                break;
             default:
                 new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
         }
     }
 
     private static void initUI(String location) throws IOException {
-        Navigation.pane.getChildren().add(FXMLLoader.load(Navigation.class.getResource("/lk/ijse/hostelManagementSystem/view"+location)));
+        Navigation.pane.getChildren().add(FXMLLoader.load(Navigation.class.getResource("/lk/ijse/hostelManagementSystem/view/"+location)));
     }
 
 }
