@@ -21,7 +21,6 @@
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <Pane fx:id="contex" prefHeight="829.0" prefWidth="977.0" />
             <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="294.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Manage Student           " textFill="WHITE">
                <font>
                   <Font size="18.0" />
@@ -79,5 +78,6 @@
             </ImageView>
          </children>
       </Pane>
+      <Pane fx:id="contex" layoutX="324.0" prefHeight="829.0" prefWidth="977.0" />
    </children>
 </AnchorPane>

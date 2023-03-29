@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="829.0" prefWidth="977.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.PaymentDetailsController">
    <children>
@@ -17,5 +18,16 @@
             </Text>
          </children>
       </Pane>
+      <TableView layoutX="49.0" layoutY="192.0" prefHeight="593.0" prefWidth="892.0">
+        <columns>
+          <TableColumn prefWidth="109.0" text="Resevetion ID" />
+          <TableColumn prefWidth="146.0" text="Student ID" />
+            <TableColumn prefWidth="156.0" text="Student Name" />
+            <TableColumn prefWidth="113.0" text="Room ID" />
+            <TableColumn prefWidth="104.0" text="Room Type" />
+            <TableColumn prefWidth="127.0" text="Stutas" />
+            <TableColumn prefWidth="136.0" text="Update" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

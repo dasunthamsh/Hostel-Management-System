@@ -53,6 +53,7 @@ public class DashboardFormController {
             contex.getChildren().add(node);
         }
 
-    public void btnPaymentOnAction(ActionEvent actionEvent) {
+    public void btnPaymentOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("/lk/ijse/hostelManagementSystem/view/PaymentDetails.fxml");
     }
 }

@@ -66,6 +66,16 @@
                   <Image url="@../assets/logout.png" />
                </image>
             </ImageView>
+            <JFXButton fx:id="btnPayment" layoutX="14.0" layoutY="603.0" onAction="#btnPaymentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Payment                     " textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="30.0" layoutY="624.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/payment.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Pane fx:id="contex" layoutX="324.0" prefHeight="829.0" prefWidth="977.0" />
