@@ -16,22 +16,22 @@
                   <Image url="@../assets/logo.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="btnDashBoard" layoutX="9.0" layoutY="189.0" onAction="#btnDashBoardOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Dash Board                 " textFill="WHITE">
+            <JFXButton fx:id="btnDashBoard" layoutX="9.0" layoutY="189.0" onAction="#btnDashBoardOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#24242400" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Dash Board                 " textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="294.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Manage Student           " textFill="WHITE">
+            <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="294.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Manage Student           " textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnManageRoom" layoutX="8.0" layoutY="402.0" onAction="#btnManageRoomsOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Manage Rooms          " textFill="WHITE">
+            <JFXButton fx:id="btnManageRoom" layoutX="8.0" layoutY="402.0" onAction="#btnManageRoomsOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Manage Rooms          " textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnReserveRoom" layoutX="14.0" layoutY="502.0" onAction="#btnReserveRoomOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Reserve Room             " textFill="WHITE">
+            <JFXButton fx:id="btnReserveRoom" layoutX="14.0" layoutY="502.0" onAction="#btnReserveRoomOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Reserve Room             " textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -56,7 +56,7 @@
                   <Image url="@../assets/resevetion.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="730.0" onAction="#btnLogoutOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Logout                       " textFill="WHITE">
+            <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="730.0" onAction="#btnLogoutOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" text="Logout                       " textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
