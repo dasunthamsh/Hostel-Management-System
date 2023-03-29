@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import lk.ijse.hostelManagementSystem.util.Navigation;
+import lk.ijse.hostelManagementSystem.util.Routes;
 
 import java.io.IOException;
 
@@ -23,10 +25,12 @@ public class DashboardFormController {
     public Pane contex;
     public AnchorPane pane;
 
-    public void btnDashBoardOnAction(ActionEvent actionEvent) {
+    public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.DASHBORD,pane);
     }
 
     public void btnManageStudentOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnManageRoomsOnAction(ActionEvent actionEvent) {
