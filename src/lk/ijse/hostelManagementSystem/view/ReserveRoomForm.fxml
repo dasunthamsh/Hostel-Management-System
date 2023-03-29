@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -20,8 +21,8 @@
             </Text>
          </children>
       </Pane>
-      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="544.0" layoutY="217.0" prefHeight="41.0" prefWidth="293.0" promptText="Student ID" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="132.0" layoutY="217.0" prefHeight="41.0" prefWidth="293.0" promptText="Room ID" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="548.0" layoutY="270.0" prefHeight="41.0" prefWidth="293.0" promptText="Student ID" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="136.0" layoutY="270.0" prefHeight="41.0" prefWidth="293.0" promptText="Room ID" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXButton layoutX="715.0" layoutY="762.0" prefHeight="41.0" prefWidth="245.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Reserve Room" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -30,10 +31,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="544.0" layoutY="323.0" prefHeight="41.0" prefWidth="293.0" promptText="  Student Name" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="132.0" layoutY="323.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room type" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="132.0" layoutY="415.0" prefHeight="41.0" prefWidth="293.0" promptText="  Avalable Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="132.0" layoutY="509.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="544.0" layoutY="414.0" prefHeight="41.0" prefWidth="293.0" promptText="Payment" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="548.0" layoutY="376.0" prefHeight="41.0" prefWidth="293.0" promptText="  Student Name" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="376.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room type" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="468.0" prefHeight="41.0" prefWidth="293.0" promptText="  Avalable Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="562.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXComboBox focusColor="#ffffff00" labelFloat="true" layoutX="548.0" layoutY="467.0" prefHeight="41.0" prefWidth="293.0" promptText="Payment" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <Label layoutX="745.0" layoutY="144.0" prefHeight="43.0" prefWidth="186.0" text="time" textFill="WHITE" />
+      <Label layoutX="536.0" layoutY="144.0" prefHeight="43.0" prefWidth="186.0" text="R ID" textFill="WHITE" />
    </children>
 </AnchorPane>
