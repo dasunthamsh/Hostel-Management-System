@@ -4,8 +4,12 @@ package lk.ijse.hostelManagementSystem.Controller;/*
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+
+import java.io.IOException;
 
 public class DashboardFormController {
 
@@ -34,5 +38,9 @@ public class DashboardFormController {
     public void btnLogoutOnAction(ActionEvent actionEvent) {
     }
 
-
+        public void setUi(String ui) throws IOException {
+            Parent node = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
+            contex.getChildren().clear();
+            contex.getChildren().add(node);
+        }
 }
