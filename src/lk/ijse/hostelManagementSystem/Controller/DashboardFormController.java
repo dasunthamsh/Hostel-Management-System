@@ -24,6 +24,7 @@ public class DashboardFormController {
     public JFXButton btnReserveRoom;
     public Pane contex;
     public AnchorPane pane;
+    public JFXButton btnPayment;
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.DASHBORD,pane);
@@ -51,4 +52,7 @@ public class DashboardFormController {
             contex.getChildren().clear();
             contex.getChildren().add(node);
         }
+
+    public void btnPaymentOnAction(ActionEvent actionEvent) {
+    }
 }
