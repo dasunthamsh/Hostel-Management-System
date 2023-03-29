@@ -21,7 +21,7 @@
             </Text>
          </children>
       </Pane>
-      <JFXTextField fx:id="btnRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" onAction="#btnRoomTypeIDOnAction" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXButton fx:id="btnAddRoom" layoutX="712.0" layoutY="766.0" onAction="#btnAddRoomOnAction" prefHeight="41.0" prefWidth="245.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Add Room" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -30,9 +30,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="btnKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" onAction="#btnKeyMoneyOnAction" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="btnRoomType" focusColor="#405aa800" labelFloat="true" layoutX="541.0" layoutY="195.0" onAction="#btnRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="btnQyt" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" onAction="#btnQytOnAction" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtRoomType" focusColor="#405aa800" labelFloat="true" layoutX="541.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtQyt" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <TableView layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: #171717;">
         <columns>
           <TableColumn prefWidth="163.0" text="Room tytpe ID" />
