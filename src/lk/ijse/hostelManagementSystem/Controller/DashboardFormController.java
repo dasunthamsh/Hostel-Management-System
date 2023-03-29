@@ -47,13 +47,15 @@ public class DashboardFormController {
         Navigation.navigate(Routes.LOGIN,pane);
     }
 
-        public void setUi(String ui) throws IOException {
-            Parent node = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
-            contex.getChildren().clear();
-            contex.getChildren().add(node);
-        }
+
 
     public void btnPaymentOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("/lk/ijse/hostelManagementSystem/view/PaymentDetails.fxml");
+        setUi("/lk/ijse/hostelManagementSystem/view/PaymentDetails");
+    }
+
+    public void setUi(String ui) throws IOException {
+        Parent node = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
+        contex.getChildren().clear();
+        contex.getChildren().add(node);
     }
 }
