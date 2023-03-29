@@ -34,7 +34,7 @@
             <Font name="System Bold" size="39.0" />
          </font>
       </Text>
-      <JFXButton fx:id="btnSignIn" layoutX="435.0" layoutY="362.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" stylesheets="@../css/css.css" text="Sign in" textFill="WHITE">
+      <JFXButton fx:id="btnSignIn" layoutX="435.0" layoutY="362.0" onAction="#btnSignOnAction" prefHeight="53.0" prefWidth="339.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

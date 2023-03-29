@@ -1,8 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.DashboardFormController">
-
+<AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.DashboardFormController">
+   <children>
+      <Pane prefHeight="829.0" prefWidth="324.0" style="-fx-background-color: #242424;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="88.0" layoutY="14.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnDashBoard" layoutX="9.0" layoutY="189.0" onAction="#btnDashBoardOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Dash Board                 " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="294.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Manage Student           " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnManageRoom" layoutX="8.0" layoutY="402.0" onAction="#btnManageRoomsOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Manage Rooms          " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnReserveRoom" layoutX="14.0" layoutY="502.0" onAction="#btnReserveRoomOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Reserve Room             " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="213.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/dashbord.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="318.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/student.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="426.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/room.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="41.0" layoutY="526.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/resevetion.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="730.0" onAction="#btnLogoutOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#3296ed" style="-fx-background-radius: 10;" text="Logout                       " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="36.0" layoutY="749.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="contex" layoutX="324.0" prefHeight="829.0" prefWidth="977.0" />
+   </children>
 </AnchorPane>

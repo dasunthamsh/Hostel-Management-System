@@ -3,6 +3,7 @@ package lk.ijse.hostelManagementSystem.util;/*
 */
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -28,6 +29,9 @@ public class Navigation {
             case DASHBORD:
                 window.setTitle("Dashboard Form");
                 initUI("DashboardForm.fxml");
+                break;
+            default:
+                new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
         }
     }
 
