@@ -11,4 +11,14 @@ import javafx.scene.layout.AnchorPane;
 
 public class ManageStudentCFormController {
 
+    public JFXTextField txtStudentId;
+    public JFXTextField txtStudentName;
+    public JFXTextField txtStudentAddress;
+    public JFXTextField txtStudentNo;
+    public JFXDatePicker cmbBirthDay;
+    public JFXComboBox cmbGender;
+    public JFXButton btnAddStudent;
+
+    public void btnAddStudentNoOnAction(ActionEvent actionEvent) {
+    }
 }
