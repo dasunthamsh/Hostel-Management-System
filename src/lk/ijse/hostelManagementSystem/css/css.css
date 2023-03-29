@@ -4,5 +4,6 @@
 }
 
 .text-input{
-    -fx-background-color: #FFFFFF;
+    -fx-text-inner-color:#FFFFFF;
 }
+

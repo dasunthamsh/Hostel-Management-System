@@ -16,7 +16,7 @@
 
 <AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.LoginFormController">
    <children>
-      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="436.0" layoutY="280.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: #171717; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" unFocusColor="#ffffff00">
+      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="436.0" layoutY="280.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: #171717; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -58,7 +58,7 @@
       <Text fill="WHITE" layoutX="14.0" layoutY="702.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
       <JFXButton fx:id="btnForgetPassword" layoutX="542.0" layoutY="474.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" textFill="WHITE" />
       <Pane layoutX="262.0" layoutY="-79.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 100;" />
-      <JFXTextField fx:id="txtEmail" cache="true" layoutX="436.0" layoutY="209.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717; -fx-border-color: white; -fx-border-radius: 10; -fx-font-style: white;" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtEmail" cache="true" layoutX="436.0" layoutY="209.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: #171717; -fx-border-color: white; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
