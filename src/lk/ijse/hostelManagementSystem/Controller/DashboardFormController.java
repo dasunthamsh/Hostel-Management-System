@@ -29,17 +29,21 @@ public class DashboardFormController {
         Navigation.navigate(Routes.DASHBORD,pane);
     }
 
-    public void btnManageStudentOnAction(ActionEvent actionEvent) {
+    public void btnManageStudentOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("/lk/ijse/hostelManagementSystem/view/ManageStudentForm");
 
     }
 
-    public void btnManageRoomsOnAction(ActionEvent actionEvent) {
+    public void btnManageRoomsOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("/lk/ijse/hostelManagementSystem/view/ManageRoomForm");
     }
 
-    public void btnReserveRoomOnAction(ActionEvent actionEvent) {
+    public void btnReserveRoomOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("/lk/ijse/hostelManagementSystem/view/ReserveRoomForm");
     }
 
-    public void btnLogoutOnAction(ActionEvent actionEvent) {
+    public void btnLogoutOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.LOGIN,pane);
     }
 
         public void setUi(String ui) throws IOException {
