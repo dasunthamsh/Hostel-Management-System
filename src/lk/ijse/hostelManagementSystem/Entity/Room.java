@@ -14,9 +14,9 @@ import java.util.Date;
 @Entity
 public class Room {
 
-    private String room_TpeId;
+    private String roomTpeId;
     private String type;
-    private String key_Money;
+    private String keyMoney;
     private int qyt;
 
 }
