@@ -22,7 +22,7 @@ public class Reservation {
     private String studentId;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "")
+    @JoinColumn(name = "roomTpeId",referencedColumnName = "roomTpeId")
     private String roomTypeId;
     public String status;
 }
