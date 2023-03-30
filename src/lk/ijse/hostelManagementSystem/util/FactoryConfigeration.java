@@ -1,9 +1,6 @@
 package lk.ijse.hostelManagementSystem.util;/*
     @author Dasun
 */
-
-import com.sun.deploy.security.SessionCertStore;
-import lk.ijse.hostelManagementSystem.Controller.DashboardFormController;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
@@ -11,12 +8,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class FactoryConfiguration {
 
-    private static FactoryConfiguration factoryConfiguration;
-    private  SessionFactory sessionFactory;
+public class FactoryConfigeration {
+    private static FactoryConfigeration factoryConfigeration;
+    private SessionFactory sessionFactory;
 
-    private FactoryConfiguration(){
+    private FactoryConfigeration(){
         sessionFactory = new Configuration().mergeProperties(Utility.getProperties())
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Room.class)
@@ -24,11 +21,12 @@ public class FactoryConfiguration {
                 .buildSessionFactory();
     }
 
-    public FactoryConfiguration getInstance(){
-        return (factoryConfiguration == null) ? new FactoryConfiguration() : factoryConfiguration;
+    public static FactoryConfigeration getInstance(){
+        return (factoryConfigeration==null)?factoryConfigeration=new FactoryConfigeration()
+                : factoryConfigeration;
     }
-        public Session getSessino(){
-            return sessionFactory.openSession();
-        }
 
+    public Session getSession(){
+        return sessionFactory.openSession();
+    }
 }
