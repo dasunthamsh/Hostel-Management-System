@@ -6,5 +6,8 @@ import java.util.Date;
 
 public class Room {
 
-
+    private String roomTpeId;
+    private String type;
+    private String keyMoney;
+    private int qyt;
 }
