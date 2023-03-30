@@ -8,6 +8,8 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagementSystem.bo.StudentBO;
+import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 
 public class ManageStudentCFormController {
 
@@ -19,6 +21,19 @@ public class ManageStudentCFormController {
     public JFXComboBox cmbGender;
     public JFXButton btnAddStudent;
 
+    StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
+
+    String sId =txtStudentId.getText();
+    String sName = txtStudentName.getText();
+    String sAddress = txtStudentAddress.getText();
+    String sNo = txtStudentNo.getText();
+    String dob = String.valueOf(cmbBirthDay.getValue());
+    String sGender = String.valueOf(cmbGender.getValue());
+
+
     public void btnAddStudentNoOnAction(ActionEvent actionEvent) {
+
+
+
     }
 }
