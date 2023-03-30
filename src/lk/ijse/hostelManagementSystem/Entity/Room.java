@@ -25,6 +25,13 @@ public class Room {
     private String keyMoney;
     private int qyt;
 
+    public Room(String roomTpeId, String type, String keyMoney, int qyt) {
+        this.roomTpeId = roomTpeId;
+        this.type = type;
+        this.keyMoney = keyMoney;
+        this.qyt = qyt;
+    }
+
     @OneToMany(mappedBy = "room" , cascade = CascadeType.ALL)
     private List<Reservation> resList = new ArrayList<>();
 

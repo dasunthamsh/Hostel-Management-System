@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -16,13 +17,13 @@ import java.util.Date;
 public class Reservation {
     @Id
     private String resId;
-    private Date date;
+    private LocalDate date;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "studentId",referencedColumnName = "studentId")
-    private String studentId;
+    private Student student;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "roomTpeId",referencedColumnName = "roomTpeId")
-    private String roomTypeId;
+    private Room room;
     public String status;
 }
