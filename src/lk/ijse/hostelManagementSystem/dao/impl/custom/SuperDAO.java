@@ -3,4 +3,5 @@ package lk.ijse.hostelManagementSystem.dao.impl.custom;/*
 */
 
 public interface SuperDAO {
+
 }
