@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
     @author Dasun
 */
 
-public class StudentBOImpl {
+import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
+
+public class StudentBOImpl implements SuperBO {
 }

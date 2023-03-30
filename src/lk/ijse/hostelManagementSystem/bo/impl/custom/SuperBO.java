@@ -2,5 +2,5 @@ package lk.ijse.hostelManagementSystem.bo.impl.custom;/*
     @author Dasun
 */
 
-public class SuperBO {
+public interface SuperBO {
 }
