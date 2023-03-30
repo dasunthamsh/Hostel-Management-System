@@ -2,12 +2,21 @@ package lk.ijse.hostelManagementSystem.Entity;/*
     @author Dasun
 */
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import java.util.Date;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class Room {
 
-    private String roomTpeId;
+    private String room_TpeId;
     private String type;
-    private String keyMoney;
+    private String key_Money;
     private int qyt;
+
 }

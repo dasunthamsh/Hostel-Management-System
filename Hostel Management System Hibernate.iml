@@ -18,5 +18,14 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="txw2-2.3.1" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.10" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
