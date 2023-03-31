@@ -20,6 +20,9 @@ public class ManageStudentCFormController {
     public JFXDatePicker cmbBirthDay;
     public JFXComboBox cmbGender;
     public JFXButton btnAddStudent;
+    public JFXButton btnUpdateStudent;
+    public JFXButton btnSerchStudent;
+    public JFXButton btnDeleteStudent;
 
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
@@ -35,5 +38,14 @@ public class ManageStudentCFormController {
 
 
 
+    }
+
+    public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnSearchStudentOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
     }
 }
