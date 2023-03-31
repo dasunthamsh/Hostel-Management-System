@@ -7,6 +7,10 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 
+import lk.ijse.hostelManagementSystem.Entity.Room;
+import lk.ijse.hostelManagementSystem.bo.RoomBO;
+import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -18,6 +22,7 @@ public class ManageRoomFormController {
     public JFXComboBox cmbRoomType;
     public JFXTextField txtQtq;
 
+    RoomBO roomBO = (RoomBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ROOM);
 
     public void btnAddRoomOnAction(ActionEvent actionEvent) {
         Session session = FactoryConfigeration.getInstance().getSession();
@@ -28,6 +33,7 @@ public class ManageRoomFormController {
     }
 
     public void btnSaveRoomOnAction(ActionEvent actionEvent) {
+        roomBO.saveRoom(new RoomDTO());
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
