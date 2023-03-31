@@ -3,6 +3,7 @@ package lk.ijse.hostelManagementSystem.dao.impl;/*
 */
 
 import lk.ijse.hostelManagementSystem.Entity.Room;
+import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.dao.RoomDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
@@ -29,12 +30,22 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public Room serch(String s) {
-        return null;
+    public Room serch(String id) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Room room = session.get(Room.class,id);
+        transaction.commit();
+        session.close();
+        return room;
     }
 
     @Override
-    public void delete(String s) {
+    public void delete(String id) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(session.get(Room.class,id));
+        transaction.commit();
+        session.close();
 
     }
 }

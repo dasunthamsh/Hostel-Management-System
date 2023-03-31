@@ -57,6 +57,7 @@ public class ManageRoomFormController {
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+        roomBO.deleteRoom(txtRoomTypeID.getText());
     }
 
     public void cmbRoomTypeOnAction() {
