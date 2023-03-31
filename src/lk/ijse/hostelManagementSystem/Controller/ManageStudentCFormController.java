@@ -40,19 +40,15 @@ public class ManageStudentCFormController {
 
     public void btnAddStudentNoOnAction(ActionEvent actionEvent) {
 
-        String sId =txtStudentId.getText();
-        String sName = txtStudentName.getText();
-        String sAddress = txtStudentAddress.getText();
-        String sNo = txtStudentNo.getText();
-        String dob = String.valueOf(cmbBirthDay.getValue());
-        String sGender = String.valueOf(cmbGender.getValue());
 
         studentBO.saveStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
-
 
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
+
+        studentBO.saveStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+
     }
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
