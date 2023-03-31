@@ -24,7 +24,7 @@ public class Student {
     private String name;
     private String address;
     private String contactNo;
-    private Date date;
+    private Date dob;
     private String gender;
 
     public Student(String studentId, String name, String address, String contactNo, Date date, String gender) {
@@ -32,7 +32,7 @@ public class Student {
         this.name = name;
         this.address = address;
         this.contactNo = contactNo;
-        this.date = date;
+        this.dob = date;
         this.gender = gender;
     }
 
