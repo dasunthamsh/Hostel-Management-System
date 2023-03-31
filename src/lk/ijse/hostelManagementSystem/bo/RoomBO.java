@@ -2,5 +2,5 @@ package lk.ijse.hostelManagementSystem.bo;/*
     @author Dasun
 */
 
-public interface RoomBO {
+public interface RoomBO extends StudentBO {
 }

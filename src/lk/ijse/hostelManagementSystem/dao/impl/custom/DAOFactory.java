@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.dao.impl.custom;/*
     @author Dasun
 */
 
+import lk.ijse.hostelManagementSystem.dao.impl.RoomDAOImpl;
 import lk.ijse.hostelManagementSystem.dao.impl.StudentDAOImpl;
 
 public class DAOFactory {
@@ -26,7 +27,7 @@ public class DAOFactory {
         case STUDENT:
           return new StudentDAOImpl();
         case ROOM:
-          return new Ro
+          return new RoomDAOImpl();
         default:
           return null;
       }
