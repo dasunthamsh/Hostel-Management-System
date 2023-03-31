@@ -66,6 +66,8 @@ public class ManageStudentCFormController {
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
+
+        studentBO.deleteStudent(txtStudentId.getText());
     }
 
     public void cmbGenderOnAction() {

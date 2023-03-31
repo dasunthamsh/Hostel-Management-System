@@ -35,6 +35,6 @@ public class StudentBOImpl implements StudentBO {
 
     @Override
     public void deleteStudent(String id) {
-
+        studentDAO.delete(id);
     }
 }
