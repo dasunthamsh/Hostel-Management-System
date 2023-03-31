@@ -45,8 +45,6 @@ public class ManageRoomFormController {
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
         RoomDTO room =roomBO.searcRoom(txtRoomTypeID.getText());
 
-
-
         txtRoomTypeID.setText(room.getRoomTpeId());
         cmbRoomType.setValue(room.getType());
         txtQtq.setText(String.valueOf(room.getQyt()));
