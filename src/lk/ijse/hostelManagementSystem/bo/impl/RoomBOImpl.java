@@ -34,6 +34,6 @@ public class RoomBOImpl implements RoomBO {
 
     @Override
     public void deleteRoom(String id) {
-
+        roomDAO.delete(id);
     }
 }
