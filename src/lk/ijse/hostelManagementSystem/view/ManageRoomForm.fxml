@@ -51,7 +51,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnUpdateOnAction" layoutX="296.0" layoutY="748.0" onAction="#btnUpdateRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+      <JFXButton fx:id="btnUpdate" layoutX="296.0" layoutY="748.0" onAction="#btnUpdateRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

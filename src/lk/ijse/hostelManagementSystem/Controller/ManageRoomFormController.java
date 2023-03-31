@@ -3,6 +3,7 @@ package lk.ijse.hostelManagementSystem.Controller;/*
 */
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 
@@ -17,8 +18,8 @@ public class ManageRoomFormController {
     public JFXTextField txtKeyMoney;
     public JFXTextField txtRoomType;
     public JFXTextField txtQyt;
-
-
+    public JFXComboBox cmbRoomType;
+    public JFXTextField txtQtq;
 
 
     public void btnAddRoomOnAction(ActionEvent actionEvent) {
@@ -29,4 +30,18 @@ public class ManageRoomFormController {
         session.close();
     }
 
+    public void btnSaveRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    public void cmbRoomTypeOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnSearchRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+    }
 }
