@@ -5,4 +5,6 @@ package lk.ijse.hostelManagementSystem.bo;/*
 import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
 
 public interface ReservationBO extends SuperBO {
+
+    void saveReservation();
 }

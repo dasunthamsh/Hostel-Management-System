@@ -5,11 +5,14 @@ package lk.ijse.hostelManagementSystem.Controller;/*
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ReserveRoomFormController  {
@@ -30,6 +33,22 @@ public class ReserveRoomFormController  {
 
 
     public void initialize() {
+        cmbPaymentOnAction();
+    }
 
+    public void cbmStudentIdOnAction() {
+
+        ObservableList<String> obList = FXCollections.observableArrayList();
+        ArrayList<String> idList =
+    }
+
+    public void cmbRoomIdTypeOnAction() {
+    }
+
+    public void cmbPaymentOnAction() {
+
+        ObservableList<String> list = FXCollections.observableArrayList();
+        list.addAll("Payed","Pending");
+        cmbPayment.setItems(list);
     }
 }
