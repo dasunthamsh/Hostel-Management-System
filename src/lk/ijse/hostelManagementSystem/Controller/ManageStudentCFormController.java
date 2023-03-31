@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 
 public class ManageStudentCFormController {
 

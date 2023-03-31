@@ -29,7 +29,7 @@
       <JFXTextField fx:id="txtStudentNo" focusColor="#405aa800" labelFloat="true" layoutX="539.0" layoutY="283.0" prefHeight="41.0" prefWidth="293.0" promptText="  Student Contact No." style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXDatePicker fx:id="cmbBirthDay" defaultColor="#127ec6" layoutX="132.0" layoutY="376.0" overLay="true" prefHeight="41.0" prefWidth="293.0" promptText="Birth Day" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" />
       <JFXComboBox fx:id="cmbGender" focusColor="#ffffff00" labelFloat="true" layoutX="539.0" layoutY="376.0" prefHeight="41.0" prefWidth="293.0" promptText="Gender" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXButton fx:id="btnAddStudent" layoutX="718.0" layoutY="774.0" onAction="#btnAddStudentNoOnAction" prefHeight="41.0" prefWidth="245.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Add Student" textFill="WHITE">
+      <JFXButton fx:id="btnAddStudent" layoutX="67.0" layoutY="735.0" onAction="#btnAddStudentNoOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -48,5 +48,29 @@
             <TableColumn prefWidth="96.0" text="...." />
         </columns>
       </TableView>
+      <JFXButton fx:id="btnUpdateStudent" layoutX="294.0" layoutY="735.0" onAction="#btnUpdateStudentOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSerchStudent" layoutX="515.0" layoutY="735.0" onAction="#btnSearchStudentOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteStudent" layoutX="743.0" layoutY="735.0" onAction="#btnDeleteStudentOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>

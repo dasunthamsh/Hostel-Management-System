@@ -4,7 +4,7 @@ package lk.ijse.hostelManagementSystem.bo;/*
 
 import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
 
-public interface StudentBO extends SuperBO {
+public interface StudentBO extends SuperBO  {
 
 
 }
