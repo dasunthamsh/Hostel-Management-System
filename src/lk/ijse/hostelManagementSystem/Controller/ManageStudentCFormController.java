@@ -42,16 +42,17 @@ public class ManageStudentCFormController {
 
 
         studentBO.saveStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
-
+        clearText();
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
 
         studentBO.updateStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
-
+        clearText();
     }
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
+
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
@@ -67,5 +68,12 @@ public class ManageStudentCFormController {
 
     public void initialize() {
         cmbGenderOnAction();
+    }
+
+    public void clearText(){
+        txtStudentId.setText("");
+        txtStudentName.setText("");
+        txtStudentAddress.setText("");
+        txtStudentNo.setText("");
     }
 }
