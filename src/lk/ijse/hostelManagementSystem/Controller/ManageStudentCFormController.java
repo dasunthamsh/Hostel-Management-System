@@ -9,12 +9,15 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
+import java.net.URL;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.ResourceBundle;
 
 
 public class ManageStudentCFormController {
@@ -58,9 +61,15 @@ public class ManageStudentCFormController {
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
     }
 
-    public void cmbGenderOnAction(ActionEvent actionEvent) {
+    public void cmbGenderOnAction() {
         ObservableList<String> list = FXCollections.observableArrayList();
         list.addAll("Mail" , "Femail","පොන්නයො");
         cmbGender.setItems(list);
+    }
+
+
+
+    public void initialize() {
+        cmbGenderOnAction();
     }
 }
