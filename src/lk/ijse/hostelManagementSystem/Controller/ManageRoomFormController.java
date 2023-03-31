@@ -5,8 +5,11 @@ package lk.ijse.hostelManagementSystem.Controller;/*
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
+import javafx.fxml.Initializable;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.RoomBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
@@ -14,6 +17,9 @@ import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class ManageRoomFormController {
 
@@ -37,6 +43,7 @@ public class ManageRoomFormController {
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
+        roomBO.updateRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
     }
 
     public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
@@ -46,5 +53,15 @@ public class ManageRoomFormController {
     }
 
     public void cmbRoomTypeOnAction() {
+        ObservableList<String> list = FXCollections.observableArrayList();
+        list.addAll("Non-AC ","Non-AC / Food","AC ","AC / Food");
+        cmbRoomType.setItems(list);
+
+    }
+
+
+
+    public void initialize() {
+        cmbRoomTypeOnAction();
     }
 }

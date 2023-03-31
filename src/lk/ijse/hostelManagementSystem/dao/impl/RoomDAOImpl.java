@@ -4,11 +4,18 @@ package lk.ijse.hostelManagementSystem.dao.impl;/*
 
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.dao.RoomDAO;
+import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class RoomDAOImpl implements RoomDAO {
     @Override
     public void save(Room entity) {
-
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(entity);
+        transaction.commit();
+        session.close();
     }
 
     @Override

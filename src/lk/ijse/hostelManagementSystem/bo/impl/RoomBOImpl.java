@@ -20,6 +20,7 @@ public class RoomBOImpl implements RoomBO {
 
     @Override
     public void updateRoom(RoomDTO dto) {
+        roomDAO.update(new Room(dto.getRoomTpeId(),dto.getType(),dto.getKeyMoney(),dto.getQyt()));
 
     }
 
