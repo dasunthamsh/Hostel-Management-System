@@ -6,9 +6,12 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 
 public class ManageStudentCFormController {
@@ -38,6 +41,7 @@ public class ManageStudentCFormController {
         String dob = String.valueOf(cmbBirthDay.getValue());
         String sGender = String.valueOf(cmbGender.getValue());
 
+        studentBO.saveStudent(new StudentDTO());
 
 
     }
@@ -49,5 +53,11 @@ public class ManageStudentCFormController {
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
+    }
+
+    public void cmbGenderOnAction(ActionEvent actionEvent) {
+        ObservableList<String> list = FXCollections.observableArrayList();
+        list.addAll("Mail" , "Femail","පොන්නයො");
+        cmbGender.setItems(list);
     }
 }
