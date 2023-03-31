@@ -32,8 +32,13 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public Student serch(String s) {
-        return null;
+    public Student serch(String id) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Student student = session.get(Student.class ,id);
+        transaction.commit();
+        session.close();
+        return student;
     }
 
     @Override

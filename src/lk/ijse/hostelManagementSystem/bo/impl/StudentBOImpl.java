@@ -27,8 +27,10 @@ public class StudentBOImpl implements StudentBO {
 
     @Override
     public StudentDTO searcStudent(String id) {
-
-        return null;
+        Student student = studentDAO.serch(id);
+        return new StudentDTO(
+                student.getStudentId(),student.getName(),student.getAddress(),student.getContactNo(),student.getDob(),student.getGender()
+        );
     }
 
     @Override

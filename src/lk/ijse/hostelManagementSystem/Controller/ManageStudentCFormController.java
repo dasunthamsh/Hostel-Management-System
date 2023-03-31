@@ -54,6 +54,15 @@ public class ManageStudentCFormController {
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
 
         StudentDTO student = studentBO.searcStudent(txtStudentId.getText());
+
+
+        txtStudentId.setText(student.getStudentId());
+        txtStudentName.setText(student.getName());
+        txtStudentAddress.setText(student.getAddress());
+        txtStudentNo.setText(student.getContactNo());
+        cmbBirthDay.setValue(student.getDob());
+        cmbGender.setValue(student.getGender());
+
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
