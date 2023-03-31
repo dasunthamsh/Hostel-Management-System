@@ -43,18 +43,7 @@ public class ReserveRoomFormController {
         cmbPaymentOnAction();
     }
 
-    public void cbmStudentIdOnAction() {
 
-        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue !=null){
-                setStudentId(reservationBO.getStudentId(newValue));
-            }
-        });
-    }
-
-
-
-    private void setStudentId(StudentDTO student){txtStudentName.setText(student.getName());}
 
     public void cmbRoomIdTypeOnAction() {
     }
@@ -67,4 +56,6 @@ public class ReserveRoomFormController {
     }
 
 
+    public void cbmStudentIdOnAction(ActionEvent actionEvent) {
+    }
 }
