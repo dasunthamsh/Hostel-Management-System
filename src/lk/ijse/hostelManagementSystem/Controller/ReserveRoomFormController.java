@@ -6,9 +6,13 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class ReserveRoomFormController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ReserveRoomFormController  {
     public JFXComboBox cmbStudentId;
     public JFXComboBox cmbRoomId;
     public JFXButton btnReservRoom;
@@ -21,5 +25,11 @@ public class ReserveRoomFormController {
     public Label lblReserveId;
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
+
+    }
+
+
+    public void initialize() {
+
     }
 }
