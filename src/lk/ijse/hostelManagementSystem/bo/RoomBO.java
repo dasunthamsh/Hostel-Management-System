@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo;/*
     @author Dasun
 */
 
-public interface RoomBO extends StudentBO {
+import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
+
+public interface RoomBO extends SuperBO {
 }

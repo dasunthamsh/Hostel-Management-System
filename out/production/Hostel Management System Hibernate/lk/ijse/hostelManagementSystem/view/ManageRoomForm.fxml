@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
@@ -22,7 +23,7 @@
          </children>
       </Pane>
       <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXButton fx:id="btnAddRoom" layoutX="712.0" layoutY="766.0" onAction="#btnAddRoomOnAction" prefHeight="41.0" prefWidth="245.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Add Room" textFill="WHITE">
+      <JFXButton fx:id="btnSaveRoom" layoutX="69.0" layoutY="746.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -31,8 +32,7 @@
          </cursor>
       </JFXButton>
       <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtRoomType" focusColor="#405aa800" labelFloat="true" layoutX="541.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtQyt" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <TableView layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: #171717;">
         <columns>
           <TableColumn prefWidth="163.0" text="Room tytpe ID" />
@@ -42,5 +42,30 @@
             <TableColumn prefWidth="108.0" text="...." />
         </columns>
       </TableView>
+      <JFXComboBox fx:id="cmbRoomType" focusColor="#ffffff00" labelFloat="true" layoutX="534.0" layoutY="194.0" onAction="#cmbRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Room Type" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXButton fx:id="btnSerchRoom" layoutX="524.0" layoutY="747.0" onAction="#btnSearchRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="296.0" layoutY="748.0" onAction="#btnUpdateRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="756.0" layoutY="748.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
