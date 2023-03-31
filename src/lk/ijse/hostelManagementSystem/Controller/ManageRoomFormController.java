@@ -43,10 +43,11 @@ public class ManageRoomFormController {
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
-        roomBO.updateRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
+
     }
 
     public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
+        roomBO.updateRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
