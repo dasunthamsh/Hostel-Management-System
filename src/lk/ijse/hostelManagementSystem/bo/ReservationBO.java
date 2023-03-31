@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo;/*
     @author Dasun
 */
 
-public interface ReservationBO {
+import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
+
+public interface ReservationBO extends SuperBO {
 }

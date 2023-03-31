@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
     @author Dasun
 */
 
-public class ReservationBOImpl {
+import lk.ijse.hostelManagementSystem.bo.ReservationBO;
+
+public class ReservationBOImpl implements ReservationBO {
 }
