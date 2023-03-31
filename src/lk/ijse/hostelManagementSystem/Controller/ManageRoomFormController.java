@@ -33,7 +33,7 @@ public class ManageRoomFormController {
     }
 
     public void btnSaveRoomOnAction(ActionEvent actionEvent) {
-        roomBO.saveRoom(new RoomDTO());
+        roomBO.saveRoom(new RoomDTO(txtRoomTypeID.getText(),cmbRoomType.getValue(),txtQtq.getText(),txtKeyMoney.getText()));
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
