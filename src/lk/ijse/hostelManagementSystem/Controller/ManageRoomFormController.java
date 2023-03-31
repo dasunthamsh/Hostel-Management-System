@@ -14,10 +14,7 @@ import org.hibernate.Transaction;
 public class ManageRoomFormController {
 
     public JFXTextField txtRoomTypeID;
-    public JFXButton btnAddRoom;
     public JFXTextField txtKeyMoney;
-    public JFXTextField txtRoomType;
-    public JFXTextField txtQyt;
     public JFXComboBox cmbRoomType;
     public JFXTextField txtQtq;
 
@@ -33,9 +30,6 @@ public class ManageRoomFormController {
     public void btnSaveRoomOnAction(ActionEvent actionEvent) {
     }
 
-    public void cmbRoomTypeOnAction(ActionEvent actionEvent) {
-    }
-
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
     }
 
@@ -43,5 +37,8 @@ public class ManageRoomFormController {
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+    }
+
+    public void cmbRoomTypeOnAction() {
     }
 }
