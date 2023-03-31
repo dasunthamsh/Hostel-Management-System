@@ -11,14 +11,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ReserveRoomFormController  {
+public class ReserveRoomFormController {
     public JFXComboBox cmbStudentId;
     public JFXComboBox cmbRoomId;
     public JFXButton btnReservRoom;
@@ -30,7 +32,7 @@ public class ReserveRoomFormController  {
     public Label lblTime;
     public Label lblReserveId;
 
-    ReservationBO reservationBO = BOFactory.getInstance().getBO()
+    ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
@@ -43,9 +45,17 @@ public class ReserveRoomFormController  {
 
     public void cbmStudentIdOnAction() {
 
-        ObservableList<String> obList = FXCollections.observableArrayList();
-        ArrayList<String> idList =
+        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue !=null){
+                setStudentId(reservationBO.getStudentId(newValue));
+            }
+        });
     }
+
+
+
+
+    private void setStudentId(StudentDTO student){txtStudentName.setText(student.getName());}
 
     public void cmbRoomIdTypeOnAction() {
     }
@@ -56,4 +66,6 @@ public class ReserveRoomFormController  {
         list.addAll("Payed","Pending");
         cmbPayment.setItems(list);
     }
+
+
 }

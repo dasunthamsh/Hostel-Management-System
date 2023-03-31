@@ -4,6 +4,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
 
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
+import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 public class ReservationBOImpl implements ReservationBO {
     @Override
@@ -12,7 +13,10 @@ public class ReservationBOImpl implements ReservationBO {
     }
 
     @Override
-    public void getStudentId(ReservationDTO dto) {
-
+    public StudentDTO getStudentId(Object newValue) {
+        return null;
     }
+
+
+
 }
