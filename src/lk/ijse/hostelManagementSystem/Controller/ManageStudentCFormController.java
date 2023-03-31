@@ -13,6 +13,9 @@ import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 
 public class ManageStudentCFormController {
 
@@ -41,7 +44,7 @@ public class ManageStudentCFormController {
         String dob = String.valueOf(cmbBirthDay.getValue());
         String sGender = String.valueOf(cmbGender.getValue());
 
-        studentBO.saveStudent(new StudentDTO());
+        studentBO.saveStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
 
 
     }

@@ -10,6 +10,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,15 +25,15 @@ public class Student {
     private String name;
     private String address;
     private String contactNo;
-    private Date dob;
+    private LocalDate dob;
     private String gender;
 
-    public Student(String studentId, String name, String address, String contactNo, Date date, String gender) {
+    public Student(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
         this.studentId = studentId;
         this.name = name;
         this.address = address;
         this.contactNo = contactNo;
-        this.dob = date;
+        this.dob = dob;
         this.gender = gender;
     }
 
