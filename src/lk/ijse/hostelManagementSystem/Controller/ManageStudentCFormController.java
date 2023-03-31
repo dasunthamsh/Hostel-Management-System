@@ -53,6 +53,7 @@ public class ManageStudentCFormController {
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
 
+        StudentDTO student = studentBO.searcStudent(txtStudentId.getText());
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {

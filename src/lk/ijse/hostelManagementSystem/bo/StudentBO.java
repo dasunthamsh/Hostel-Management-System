@@ -11,7 +11,7 @@ public interface StudentBO extends SuperBO  {
 
     void updateStudent(StudentDTO dto);
 
-    void searcStudent(String id);
+    StudentDTO searcStudent(String id);
 
     void deleteStudent(String id);
 }
