@@ -9,6 +9,7 @@ import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class ReservationBOImpl implements ReservationBO {
 
@@ -19,10 +20,6 @@ public class ReservationBOImpl implements ReservationBO {
 
     }
 
-    @Override
-    public StudentDTO getStudentId(Object newValue) {
-        return new ArrayList<String>(reservationDAO.g);
-    }
 
 
 }

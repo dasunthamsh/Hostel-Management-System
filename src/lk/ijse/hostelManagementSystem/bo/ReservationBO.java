@@ -14,5 +14,4 @@ public interface ReservationBO extends SuperBO {
     void saveReservation(ReservationDTO dto);
 
 
-    StudentDTO getStudentId(Object newValue);
 }
