@@ -10,6 +10,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.bo.ReservationBO;
+import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -26,6 +29,8 @@ public class ReserveRoomFormController  {
     public JFXComboBox cmbPayment;
     public Label lblTime;
     public Label lblReserveId;
+
+    ReservationBO reservationBO = BOFactory.getInstance().getBO()
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 

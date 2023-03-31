@@ -26,4 +26,9 @@ public class ReservationDAOImpl implements ReservationDAO {
     public void delete(ID id) {
 
     }
+
+    @Override
+    public void getStudentId(Reservation enty) {
+
+    }
 }
