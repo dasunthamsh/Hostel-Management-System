@@ -17,7 +17,7 @@ public class DAOFactory {
 
 
     public enum DAOTypes{
-      STUDENT
+      STUDENT , ROOM
     }
 
 
@@ -25,6 +25,8 @@ public class DAOFactory {
       switch (types){
         case STUDENT:
           return new StudentDAOImpl();
+        case ROOM:
+          return new Ro
         default:
           return null;
       }
