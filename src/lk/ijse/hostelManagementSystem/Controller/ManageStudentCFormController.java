@@ -81,6 +81,8 @@ public class ManageStudentCFormController {
 
     public void initialize() {
         cmbGenderOnAction();
+
+
     }
 
     public void clearText(){
