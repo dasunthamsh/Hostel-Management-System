@@ -20,6 +20,10 @@ public class ReservationBOImpl implements ReservationBO {
 
     }
 
+    @Override
+    public ArrayList<String> getStudentIds() {
+        return null;
+    }
 
 
 }

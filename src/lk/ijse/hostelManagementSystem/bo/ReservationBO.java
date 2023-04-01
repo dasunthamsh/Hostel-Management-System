@@ -13,5 +13,6 @@ public interface ReservationBO extends SuperBO {
 
     void saveReservation(ReservationDTO dto);
 
+    ArrayList<String> getStudentIds();
 
 }

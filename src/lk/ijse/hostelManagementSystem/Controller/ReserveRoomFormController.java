@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
+import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
@@ -33,6 +34,7 @@ public class ReserveRoomFormController {
     public Label lblReserveId;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
+    StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
@@ -41,11 +43,19 @@ public class ReserveRoomFormController {
 
     public void initialize() {
         cmbPaymentOnAction();
+
+//        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+//            if(newValue != null){
+//                setStudentFields(reservationBO.getStudentIds(newValue));
+//            }
+//        });
     }
 
-
+    private void setStudentFields(StudentDTO student){txtStudentName.setText(student.getName());}
 
     public void cmbRoomIdTypeOnAction() {
+        reservationBO.getStudentIds();
+
     }
 
     public void cmbPaymentOnAction() {
