@@ -4,5 +4,9 @@ package lk.ijse.hostelManagementSystem.dao;/*
 
 import lk.ijse.hostelManagementSystem.Entity.Student;
 
+import java.util.List;
+
 public interface StudentDAO extends CrudDAO<Student , String>{
+
+    public List<Student> getAll();
 }

@@ -3,6 +3,8 @@ package lk.ijse.hostelManagementSystem.bo;/*
 */
 
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.Entity.Room;
+import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
@@ -13,6 +15,8 @@ public interface ReservationBO extends SuperBO {
 
     void saveReservation(ReservationDTO dto);
 
-    ArrayList<String> getStudentIds();
+     ArrayList<String> getStudentIds();
+
+     StudentDTO serchStudent(String id);
 
 }

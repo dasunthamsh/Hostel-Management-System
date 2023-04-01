@@ -9,6 +9,8 @@ import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class RoomDAOImpl implements RoomDAO {
     @Override
     public void save(Room entity) {
@@ -47,5 +49,14 @@ public class RoomDAOImpl implements RoomDAO {
         transaction.commit();
         session.close();
 
+    }
+
+    public List<Room> getAll(){
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List res = session.createQuery("FROM Room ").list();
+        transaction.commit();
+        session.close();
+        return res;
     }
 }

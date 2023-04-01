@@ -19,6 +19,7 @@ import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class ReserveRoomFormController {
@@ -44,11 +45,9 @@ public class ReserveRoomFormController {
     public void initialize() {
         cmbPaymentOnAction();
 
-//        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-//            if(newValue != null){
-//                setStudentFields(reservationBO.getStudentIds(newValue));
-//            }
-//        });
+        cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
+
+        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {setStudentFields(reservationBO.serchStudent(String.valueOf(newValue)));});
     }
 
     private void setStudentFields(StudentDTO student){txtStudentName.setText(student.getName());}
@@ -67,5 +66,6 @@ public class ReserveRoomFormController {
 
 
     public void cbmStudentIdOnAction(ActionEvent actionEvent) {
+        cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
     }
 }

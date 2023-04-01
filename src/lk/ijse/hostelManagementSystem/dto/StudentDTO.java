@@ -5,13 +5,15 @@ package lk.ijse.hostelManagementSystem.dto;/*
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
-
+@AllArgsConstructor
+@ToString
 public class StudentDTO {
 
     private String studentId;
@@ -21,14 +23,7 @@ public class StudentDTO {
     private LocalDate dob;
     private String gender;
 
-    public StudentDTO(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
-        this.studentId = studentId;
-        this.name = name;
-        this.address = address;
-        this.contactNo = contactNo;
-        this.dob = dob;
-        this.gender = gender;
-    }
+
 
 
 }

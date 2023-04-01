@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.dao.impl;/*
     @author Dasun
 */
 
+import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
 import lk.ijse.hostelManagementSystem.dao.impl.custom.SuperDAO;
@@ -9,6 +10,8 @@ import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
@@ -49,5 +52,14 @@ public class StudentDAOImpl implements StudentDAO {
         transaction.commit();
         session.close();
 
+    }
+
+    public List<Student> getAll(){
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List res = session.createQuery("FROM Student ").list();
+        transaction.commit();
+        session.close();
+        return res;
     }
 }
