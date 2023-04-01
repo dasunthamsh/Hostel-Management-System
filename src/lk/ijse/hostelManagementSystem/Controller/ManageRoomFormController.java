@@ -10,6 +10,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.RoomBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
@@ -27,6 +30,15 @@ public class ManageRoomFormController {
     public JFXTextField txtKeyMoney;
     public JFXComboBox cmbRoomType;
     public JFXTextField txtQtq;
+    public JFXButton btnSaveRoom;
+    public TableView tblStudent;
+    public TableColumn colRoomTypeId;
+    public TableColumn cloRoomType;
+    public TableColumn colKeyMoney;
+    public TableColumn colQty;
+    public JFXButton btnSerchRoom;
+    public JFXButton btnUpdate;
+    public JFXButton btnDelete;
 
     RoomBO roomBO = (RoomBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ROOM);
 
@@ -71,5 +83,7 @@ public class ManageRoomFormController {
 
     public void initialize() {
         cmbRoomTypeOnAction();
+
+        colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>(""));
     }
 }
