@@ -44,7 +44,7 @@ public class ReserveRoomFormController {
 
     public void initialize() {
         cmbPaymentOnAction();
-
+        cmbRoomId.getItems().addAll(reservationBO.getRoomIds());
         cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
 
         cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {setStudentFields(reservationBO.serchStudent(String.valueOf(newValue)));});

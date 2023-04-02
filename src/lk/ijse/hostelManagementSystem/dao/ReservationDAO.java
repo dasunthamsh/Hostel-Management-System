@@ -8,4 +8,6 @@ import lk.ijse.hostelManagementSystem.Entity.Reservation;
 public interface ReservationDAO extends CrudDAO<Reservation, ID>{
 
     void getStudentId(Reservation enty);
+
+    void getRoomId(Reservation enty);
 }

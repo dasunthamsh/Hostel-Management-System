@@ -7,6 +7,7 @@ import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
+import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
@@ -21,6 +22,6 @@ public interface ReservationBO extends SuperBO {
 
      ArrayList<String> getRoomIds();
 
-    StudentDTO serchRoom(String id);
+    RoomDTO serchRoom(String id);
 
 }

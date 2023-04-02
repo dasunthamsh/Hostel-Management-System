@@ -37,5 +37,10 @@ public class ReservationDAOImpl implements ReservationDAO {
 
     }
 
+    @Override
+    public void getRoomId(Reservation enty) {
+
+    }
+
 
 }

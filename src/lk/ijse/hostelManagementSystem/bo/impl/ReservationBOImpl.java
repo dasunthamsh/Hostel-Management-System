@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
     @author Dasun
 */
 
+import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.dao.ReservationDAO;
@@ -9,6 +10,7 @@ import lk.ijse.hostelManagementSystem.dao.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
 import lk.ijse.hostelManagementSystem.dao.impl.custom.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
+import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
@@ -46,8 +48,9 @@ public class ReservationBOImpl implements ReservationBO {
     }
 
     @Override
-    public StudentDTO serchRoom(String id) {
-        return null;
+    public RoomDTO serchRoom(String id) {
+        Room room =roomDAO.serch(id);
+        return new RoomDTO(room.getRoomTpeId(),room.getType(),room.getQyt(), room.getKeyMoney());
     }
 
 
