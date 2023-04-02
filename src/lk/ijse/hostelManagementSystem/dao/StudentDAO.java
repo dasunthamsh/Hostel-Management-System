@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface StudentDAO extends CrudDAO<Student , String>{
 
-    public List<Student> getAll();
+     List<Student> getAll();
 }

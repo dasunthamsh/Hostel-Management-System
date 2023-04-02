@@ -5,6 +5,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.dao.ReservationDAO;
+import lk.ijse.hostelManagementSystem.dao.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
 import lk.ijse.hostelManagementSystem.dao.impl.custom.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
@@ -17,8 +18,8 @@ import java.util.stream.Collectors;
 public class ReservationBOImpl implements ReservationBO {
 
     public ReservationDAO reservationDAO = (ReservationDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.RESEVATION);
-
     public StudentDAO studentDAO = (StudentDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.STUDENT);
+    public RoomDAO roomDAO = (RoomDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
     public void saveReservation(ReservationDTO dto) {
@@ -40,7 +41,8 @@ public class ReservationBOImpl implements ReservationBO {
 
     @Override
     public ArrayList<String> getRoomIds() {
-        return null;
+        return new ArrayList<String>(roomDAO.getAll().stream().map(room -> {return room.getRoomTpeId();
+        }).collect(Collectors.toList()));
     }
 
     @Override
