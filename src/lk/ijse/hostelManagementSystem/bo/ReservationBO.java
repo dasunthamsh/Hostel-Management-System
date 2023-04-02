@@ -19,4 +19,8 @@ public interface ReservationBO extends SuperBO {
 
      StudentDTO serchStudent(String id);
 
+     ArrayList<String> getRoomIds();
+
+    StudentDTO serchRoom(String id);
+
 }

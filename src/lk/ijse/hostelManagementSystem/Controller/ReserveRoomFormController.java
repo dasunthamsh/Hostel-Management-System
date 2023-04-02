@@ -53,7 +53,7 @@ public class ReserveRoomFormController {
     private void setStudentFields(StudentDTO student){txtStudentName.setText(student.getName());}
 
     public void cmbRoomIdTypeOnAction() {
-
+        cmbRoomId.getItems().addAll(reservationBO.getRoomIds());
 
     }
 

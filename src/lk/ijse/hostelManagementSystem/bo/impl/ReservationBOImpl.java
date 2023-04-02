@@ -38,5 +38,15 @@ public class ReservationBOImpl implements ReservationBO {
         return new StudentDTO(serch.getStudentId(),serch.getName(),serch.getAddress(),serch.getContactNo(),serch.getDob(),serch.getGender());
     }
 
+    @Override
+    public ArrayList<String> getRoomIds() {
+        return null;
+    }
+
+    @Override
+    public StudentDTO serchRoom(String id) {
+        return null;
+    }
+
 
 }
