@@ -50,7 +50,7 @@ public class RoomDAOImpl implements RoomDAO {
         session.close();
 
     }
-
+    @Override
     public List<Room> getAll(){
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
