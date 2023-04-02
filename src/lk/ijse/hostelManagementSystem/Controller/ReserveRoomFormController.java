@@ -11,10 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.net.URL;
@@ -48,9 +50,17 @@ public class ReserveRoomFormController {
         cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
 
         cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {setStudentFields(reservationBO.serchStudent(String.valueOf(newValue)));});
+
+        cmbRoomId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {setRoomFields(reservationBO.serchRoom(String.valueOf(newValue)));});
     }
 
     private void setStudentFields(StudentDTO student){txtStudentName.setText(student.getName());}
+
+    private void setRoomFields(RoomDTO room){
+        txtroomType.setText(room.getType());
+        txtAvalableQyt.setText(String.valueOf(room.getQyt()));
+        txtMoney.setText(room.getKeyMoney());
+    }
 
     public void cmbRoomIdTypeOnAction() {
         cmbRoomId.getItems().addAll(reservationBO.getRoomIds());
