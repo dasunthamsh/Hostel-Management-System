@@ -22,6 +22,7 @@ import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.ResourceBundle;
@@ -44,7 +45,7 @@ public class ReserveRoomFormController {
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
-        reservationBO.saveReservation(new ReservationDTO());
+        reservationBO.saveReservation(new ReservationDTO(txtResId.getText(), lblTime.getText(), (StudentDTO)cmbStudentId.getValue(),(RoomDTO)cmbRoomId.getValue(),(String) cmbPayment.getValue()));
     }
 
 
