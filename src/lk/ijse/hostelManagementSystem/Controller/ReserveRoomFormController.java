@@ -17,6 +17,7 @@ import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
@@ -43,6 +44,7 @@ public class ReserveRoomFormController {
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
+        reservationBO.saveReservation(new ReservationDTO());
     }
 
 
