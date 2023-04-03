@@ -78,4 +78,8 @@ public class ReserveRoomFormController {
     public void cbmStudentIdOnAction(ActionEvent actionEvent) {
         cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
     }
+
+    public void getResevationId(){
+        lblReserveId.setText(reservationBO.getResevationId());
+    }
 }
