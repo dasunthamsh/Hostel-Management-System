@@ -42,5 +42,11 @@ public class ReservationDAOImpl implements ReservationDAO {
 
     }
 
+    @Override
+    public String getResevetionId() {
+
+        return null;
+    }
+
 
 }

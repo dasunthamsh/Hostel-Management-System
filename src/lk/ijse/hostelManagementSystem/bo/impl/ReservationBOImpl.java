@@ -53,5 +53,10 @@ public class ReservationBOImpl implements ReservationBO {
         return new RoomDTO(room.getRoomTpeId(),room.getType(),room.getQyt(), room.getKeyMoney());
     }
 
+    @Override
+    public String getResevationId() {
+        return null;
+    }
+
 
 }

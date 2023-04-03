@@ -22,6 +22,8 @@ public interface ReservationBO extends SuperBO {
 
      ArrayList<String> getRoomIds();
 
-    RoomDTO serchRoom(String id);
+      RoomDTO serchRoom(String id);
+
+      String getResevationId();
 
 }
