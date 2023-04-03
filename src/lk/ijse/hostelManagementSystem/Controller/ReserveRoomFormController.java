@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
@@ -35,6 +36,7 @@ public class ReserveRoomFormController {
     public JFXComboBox cmbPayment;
     public Label lblTime;
     public Label lblReserveId;
+    public TextField txtResId;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
@@ -46,6 +48,8 @@ public class ReserveRoomFormController {
 
     public void initialize() {
         cmbPaymentOnAction();
+        getResevationId();
+
         cmbRoomId.getItems().addAll(reservationBO.getRoomIds());
         cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
 

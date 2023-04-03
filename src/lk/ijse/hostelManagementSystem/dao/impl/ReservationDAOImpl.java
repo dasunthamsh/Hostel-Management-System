@@ -44,9 +44,12 @@ public class ReservationDAOImpl implements ReservationDAO {
 
     @Override
     public String getResevetionId() {
-
-        return null;
-    }
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<String> list = session.createQuery("SELECT resId FROM Reservation ORDER BY resId DESC ").setMaxResults(1).list();
+        transaction.commit();
+        session.close();
+        return list.size()>0? String.format("#R%3d",Integer.parseInt(list.get(0).replace("#R",""))+1):"#R001";    }
 
 
 }

@@ -55,7 +55,7 @@ public class ReservationBOImpl implements ReservationBO {
 
     @Override
     public String getResevationId() {
-        return null;
+        return reservationDAO.getResevetionId();
     }
 
 

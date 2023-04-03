@@ -36,7 +36,7 @@
       <JFXTextField fx:id="txtAvalableQyt" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="468.0" prefHeight="41.0" prefWidth="293.0" promptText="  Avalable Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXTextField fx:id="txtMoney" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="562.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXComboBox fx:id="cmbPayment" focusColor="#ffffff00" labelFloat="true" layoutX="548.0" layoutY="467.0" onAction="#cmbPaymentOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Payment" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <Label fx:id="lblTime" layoutX="745.0" layoutY="144.0" prefHeight="43.0" prefWidth="186.0" text="time" textFill="WHITE" />
-      <Label fx:id="lblReserveId" layoutX="536.0" layoutY="144.0" prefHeight="43.0" prefWidth="186.0" text="R ID" textFill="WHITE" />
+      <Label fx:id="lblReserveId" layoutX="523.0" layoutY="136.0" prefHeight="43.0" prefWidth="186.0" textFill="WHITE" />
+      <Label fx:id="lblTime" layoutX="716.0" layoutY="138.0" prefHeight="43.0" prefWidth="186.0" textFill="WHITE" />
    </children>
 </AnchorPane>
