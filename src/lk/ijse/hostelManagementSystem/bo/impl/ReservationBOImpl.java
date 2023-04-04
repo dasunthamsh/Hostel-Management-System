@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
     @author Dasun
 */
 
+import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
@@ -25,6 +26,7 @@ public class ReservationBOImpl implements ReservationBO {
 
     @Override
     public void saveReservation(ReservationDTO dto) {
+
 
     }
 

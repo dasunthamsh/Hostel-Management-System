@@ -43,9 +43,12 @@ public class ReserveRoomFormController {
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
+
+
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
-        reservationBO.saveReservation(new ReservationDTO(txtResId.getText(), lblTime.getText(), (StudentDTO)cmbStudentId.getValue(),(RoomDTO)cmbRoomId.getValue(),(String) cmbPayment.getValue()));
+        reservationBO.saveReservation(new ReservationDTO(txtResId.getText(),lblTime.getText(), (StudentDTO)cmbStudentId.getValue(),(RoomDTO)cmbRoomId.getValue(),(String) cmbPayment.getValue()));
+
     }
 
 

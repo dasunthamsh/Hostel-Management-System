@@ -5,12 +5,14 @@ package lk.ijse.hostelManagementSystem.dto;/*
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class ReservationDTO {
 
     private String resId;
@@ -26,5 +28,9 @@ public class ReservationDTO {
         this.student = student;
         this.room = room;
         this.status = status;
+    }
+
+    public ReservationDTO(RoomDTO room) {
+        this.room = room;
     }
 }
