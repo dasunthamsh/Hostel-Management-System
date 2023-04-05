@@ -1,10 +1,12 @@
 .button:hover{
     -fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF) ;
 
-
-
 }
 
+/*.button:hover {*/
+/*    -fx-background-color: linear-gradient(to right top, #150734, #0F2557, #28559A, #3778C2, #4B9FE1, #63BCE5, #7ED5EA);*/
+
+/*}*/
 .text-input{
     -fx-text-inner-color:#FFFFFF;
 }
