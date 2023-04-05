@@ -28,8 +28,7 @@ public class RoomBOImpl implements RoomBO {
     public RoomDTO searcRoom(String id) {
         Room room = roomDAO.serch(id);
         return new RoomDTO(
-                room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney()
-        );
+                room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney());
     }
 
     @Override

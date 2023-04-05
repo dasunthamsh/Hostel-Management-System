@@ -73,7 +73,7 @@ public class ManageStudentCFormController {
 
     public void cmbGenderOnAction() {
         ObservableList<String> list = FXCollections.observableArrayList();
-        list.addAll("Mail" , "Femail","පොන්නයො");
+        list.addAll("Mail" , "Femail","other");
         cmbGender.setItems(list);
     }
 
