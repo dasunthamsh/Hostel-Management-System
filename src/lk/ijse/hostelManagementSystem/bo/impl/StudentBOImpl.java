@@ -5,7 +5,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
-import lk.ijse.hostelManagementSystem.dao.impl.custom.DAOFactory;
+import lk.ijse.hostelManagementSystem.dao.custom.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 public class StudentBOImpl implements StudentBO {

@@ -1,4 +1,4 @@
-package lk.ijse.hostelManagementSystem.dao.impl;/*
+package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
     @author Dasun
 */
 

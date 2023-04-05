@@ -1,10 +1,10 @@
-package lk.ijse.hostelManagementSystem.dao.impl.custom;/*
+package lk.ijse.hostelManagementSystem.dao.custom;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.dao.impl.ReservationDAOImpl;
-import lk.ijse.hostelManagementSystem.dao.impl.RoomDAOImpl;
-import lk.ijse.hostelManagementSystem.dao.impl.StudentDAOImpl;
+import lk.ijse.hostelManagementSystem.dao.custom.impl.ReservationDAOImpl;
+import lk.ijse.hostelManagementSystem.dao.custom.impl.RoomDAOImpl;
+import lk.ijse.hostelManagementSystem.dao.custom.impl.StudentDAOImpl;
 
 public class DAOFactory {
 

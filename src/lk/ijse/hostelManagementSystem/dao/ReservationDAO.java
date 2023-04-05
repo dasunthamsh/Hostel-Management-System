@@ -4,8 +4,9 @@ package lk.ijse.hostelManagementSystem.dao;/*
 
 import com.sun.xml.bind.v2.model.core.ID;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.dao.custom.CrudDAO;
 
-public interface ReservationDAO extends CrudDAO<Reservation, ID>{
+public interface ReservationDAO extends CrudDAO<Reservation, ID> {
 
     void getStudentId(Reservation enty);
 

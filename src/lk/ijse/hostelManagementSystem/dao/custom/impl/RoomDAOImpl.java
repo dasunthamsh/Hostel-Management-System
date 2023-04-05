@@ -1,9 +1,8 @@
-package lk.ijse.hostelManagementSystem.dao.impl;/*
+package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
     @author Dasun
 */
 
 import lk.ijse.hostelManagementSystem.Entity.Room;
-import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.dao.RoomDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;

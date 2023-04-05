@@ -5,7 +5,7 @@ package lk.ijse.hostelManagementSystem.bo.impl;/*
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.RoomBO;
 import lk.ijse.hostelManagementSystem.dao.RoomDAO;
-import lk.ijse.hostelManagementSystem.dao.impl.custom.DAOFactory;
+import lk.ijse.hostelManagementSystem.dao.custom.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 
 

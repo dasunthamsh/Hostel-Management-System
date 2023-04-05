@@ -9,13 +9,12 @@ import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.dao.ReservationDAO;
 import lk.ijse.hostelManagementSystem.dao.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
-import lk.ijse.hostelManagementSystem.dao.impl.custom.DAOFactory;
+import lk.ijse.hostelManagementSystem.dao.custom.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class ReservationBOImpl implements ReservationBO {

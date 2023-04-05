@@ -1,14 +1,11 @@
-package lk.ijse.hostelManagementSystem.dao.impl;/*
+package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.dao.StudentDAO;
-import lk.ijse.hostelManagementSystem.dao.impl.custom.SuperDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import java.util.List;
