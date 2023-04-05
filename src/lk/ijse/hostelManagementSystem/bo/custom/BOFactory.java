@@ -1,10 +1,10 @@
-package lk.ijse.hostelManagementSystem.bo.impl.custom;/*
+package lk.ijse.hostelManagementSystem.bo.custom;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.bo.impl.ReservationBOImpl;
-import lk.ijse.hostelManagementSystem.bo.impl.RoomBOImpl;
-import lk.ijse.hostelManagementSystem.bo.impl.StudentBOImpl;
+import lk.ijse.hostelManagementSystem.bo.custom.impl.ReservationBOImpl;
+import lk.ijse.hostelManagementSystem.bo.custom.impl.RoomBOImpl;
+import lk.ijse.hostelManagementSystem.bo.custom.impl.StudentBOImpl;
 
 public class BOFactory {
 

@@ -1,4 +1,4 @@
-package lk.ijse.hostelManagementSystem.bo.impl;/*
+package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
     @author Dasun
 */
 

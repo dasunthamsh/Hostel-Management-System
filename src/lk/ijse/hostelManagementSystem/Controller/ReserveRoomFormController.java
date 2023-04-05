@@ -6,28 +6,17 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import lk.ijse.hostelManagementSystem.Entity.Reservation;
-import lk.ijse.hostelManagementSystem.Entity.Room;
-import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.ReservationBO;
 import lk.ijse.hostelManagementSystem.bo.StudentBO;
-import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
-
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.ResourceBundle;
 
 public class ReserveRoomFormController {
     public JFXComboBox cmbStudentId;

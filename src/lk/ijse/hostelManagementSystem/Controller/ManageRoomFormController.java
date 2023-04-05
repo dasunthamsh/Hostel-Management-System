@@ -9,20 +9,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.RoomBO;
-import lk.ijse.hostelManagementSystem.bo.impl.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class ManageRoomFormController {
 
