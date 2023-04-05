@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -38,5 +39,6 @@
       <JFXComboBox fx:id="cmbPayment" focusColor="#ffffff00" labelFloat="true" layoutX="548.0" layoutY="467.0" onAction="#cmbPaymentOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Payment" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <Label fx:id="lblReserveId" layoutX="523.0" layoutY="136.0" prefHeight="43.0" prefWidth="186.0" textFill="WHITE" />
       <Label fx:id="lblTime" layoutX="716.0" layoutY="138.0" prefHeight="43.0" prefWidth="186.0" textFill="WHITE" />
+      <JFXDatePicker fx:id="cmbDate" defaultColor="#008f8100" editable="false" layoutX="71.0" layoutY="179.0" />
    </children>
 </AnchorPane>

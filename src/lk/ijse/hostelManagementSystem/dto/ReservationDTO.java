@@ -17,20 +17,12 @@ public class ReservationDTO {
 
     private String resId;
     private LocalDate date;
+  //  private String studentId;
+   // private String roomTpeId;
     private StudentDTO student;
     private RoomDTO room;
     private String status;
 
 
-    public ReservationDTO(String resId, LocalDate date, StudentDTO student, RoomDTO room, String status) {
-        this.resId = resId;
-        this.date = date;
-        this.student = student;
-        this.room = room;
-        this.status = status;
-    }
 
-    public ReservationDTO(RoomDTO room) {
-        this.room = room;
-    }
 }

@@ -4,6 +4,7 @@ package lk.ijse.hostelManagementSystem.dao.impl;/*
 
 import com.sun.xml.bind.v2.model.core.ID;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
+import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.dao.ReservationDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
@@ -14,7 +15,14 @@ import java.util.List;
 public class ReservationDAOImpl implements ReservationDAO {
     @Override
     public void save(Reservation entity) {
-
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(entity);
+        Room room = entity.getRoom();
+        room.setQyt(room.getQyt()-1);
+        session.update(room);
+        transaction.commit();
+        session.close();
     }
 
     @Override

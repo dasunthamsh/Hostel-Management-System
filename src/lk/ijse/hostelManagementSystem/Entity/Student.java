@@ -28,7 +28,21 @@ public class Student {
     private LocalDate dob;
     private String gender;
 
+//    public Student(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
+//        this.studentId = studentId;
+//        this.name = name;
+//        this.address = address;
+//        this.contactNo = contactNo;
+//        this.dob = dob;
+//        this.gender = gender;
+//    }
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    private List<Reservation> resList = new ArrayList<>();
+
+
     public Student(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
+
         this.studentId = studentId;
         this.name = name;
         this.address = address;
@@ -36,8 +50,4 @@ public class Student {
         this.dob = dob;
         this.gender = gender;
     }
-
-    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
-    private List<Reservation> resList = new ArrayList<>();
-
 }

@@ -26,7 +26,12 @@ public class ReservationBOImpl implements ReservationBO {
 
     @Override
     public void saveReservation(ReservationDTO dto) {
+        StudentDTO s1 = dto.getStudent();
+        RoomDTO r1 = dto.getRoom();
 
+        reservationDAO.save(new Reservation(dto.getResId(),dto.getDate(),
+            new Student(s1.getStudentId(),s1.getName(),s1.getAddress(),s1.getContactNo(),s1.getDob(),s1.getGender()),
+            new Room(r1.getRoomTpeId(),r1.getType(),r1.getKeyMoney(),r1.getQyt()),dto.getStatus()));
 
     }
 

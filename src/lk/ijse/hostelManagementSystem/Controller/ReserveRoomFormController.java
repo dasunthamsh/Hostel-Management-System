@@ -4,7 +4,9 @@ package lk.ijse.hostelManagementSystem.Controller;/*
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -39,6 +41,7 @@ public class ReserveRoomFormController {
     public Label lblTime;
     public Label lblReserveId;
     public TextField txtResId;
+    public JFXDatePicker cmbDate;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
@@ -46,8 +49,11 @@ public class ReserveRoomFormController {
 
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
+        System.out.println(reservationBO.getResevationId());
 
-        reservationBO.saveReservation(new ReservationDTO(txtResId.getText(),lblTime.getText(), (StudentDTO)cmbStudentId.getValue(),(RoomDTO)cmbRoomId.getValue(),(String) cmbPayment.getValue()));
+        System.out.println(reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())));
+        System.out.println(cmbStudentId.getValue());
+        reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
 
     }
 
