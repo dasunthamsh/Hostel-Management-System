@@ -1,8 +1,8 @@
-package lk.ijse.hostelManagementSystem.bo;/*
+package lk.ijse.hostelManagementSystem.bo.custom;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.bo.custom.SuperBO;
+import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 
 public interface RoomBO extends SuperBO {

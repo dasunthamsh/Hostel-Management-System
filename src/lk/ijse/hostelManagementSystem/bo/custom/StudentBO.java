@@ -1,11 +1,11 @@
-package lk.ijse.hostelManagementSystem.bo;/*
+package lk.ijse.hostelManagementSystem.bo.custom;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.bo.custom.SuperBO;
+import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
-public interface StudentBO extends SuperBO  {
+public interface StudentBO extends SuperBO {
 
     void saveStudent(StudentDTO dto);
 

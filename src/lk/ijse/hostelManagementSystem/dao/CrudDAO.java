@@ -1,8 +1,6 @@
-package lk.ijse.hostelManagementSystem.dao.custom;/*
+package lk.ijse.hostelManagementSystem.dao;/*
     @author Dasun
 */
-
-import lk.ijse.hostelManagementSystem.dao.custom.SuperDAO;
 
 public interface CrudDAO <T ,ID> extends SuperDAO {
 

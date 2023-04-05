@@ -1,9 +1,9 @@
-package lk.ijse.hostelManagementSystem.dao;/*
+package lk.ijse.hostelManagementSystem.dao.custom;/*
     @author Dasun
 */
 
 import lk.ijse.hostelManagementSystem.Entity.Room;
-import lk.ijse.hostelManagementSystem.dao.custom.CrudDAO;
+import lk.ijse.hostelManagementSystem.dao.CrudDAO;
 
 import java.util.List;
 

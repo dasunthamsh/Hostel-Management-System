@@ -9,8 +9,8 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import lk.ijse.hostelManagementSystem.bo.StudentBO;
-import lk.ijse.hostelManagementSystem.bo.custom.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
+import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 

@@ -5,7 +5,7 @@ package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
 import com.sun.xml.bind.v2.model.core.ID;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
-import lk.ijse.hostelManagementSystem.dao.ReservationDAO;
+import lk.ijse.hostelManagementSystem.dao.custom.ReservationDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

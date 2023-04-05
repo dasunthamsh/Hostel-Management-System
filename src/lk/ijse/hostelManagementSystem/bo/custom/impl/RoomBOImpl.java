@@ -3,9 +3,9 @@ package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
 */
 
 import lk.ijse.hostelManagementSystem.Entity.Room;
-import lk.ijse.hostelManagementSystem.bo.RoomBO;
-import lk.ijse.hostelManagementSystem.dao.RoomDAO;
-import lk.ijse.hostelManagementSystem.dao.custom.DAOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
+import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
+import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 
 
