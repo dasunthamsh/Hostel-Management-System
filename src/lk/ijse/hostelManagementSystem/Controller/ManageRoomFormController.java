@@ -47,6 +47,8 @@ public class ManageRoomFormController {
 
     public void btnSaveRoomOnAction(ActionEvent actionEvent) {
         roomBO.saveRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
+
+        cleanText();
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {
@@ -87,7 +89,10 @@ public class ManageRoomFormController {
 
     }
 
-    public void lodeRoomDta(){
-
+    public void cleanText(){
+        txtRoomTypeID.setText("");
+        cloRoomType.setText("");
+        txtQtq.setText("");
+        txtKeyMoney.setText("");
     }
 }
