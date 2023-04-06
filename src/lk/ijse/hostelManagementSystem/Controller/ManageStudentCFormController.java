@@ -12,10 +12,16 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
+
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 
 public class ManageStudentCFormController {
@@ -39,6 +45,7 @@ public class ManageStudentCFormController {
     public TableView tblStudent;
 
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
+    private final LinkedHashMap<JFXTextField, Pattern> RegexMap = new LinkedHashMap<>();
 
 
 
@@ -98,11 +105,28 @@ public class ManageStudentCFormController {
         colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
 
+        RegexMap.put(txtStudentId,Pattern.compile("^[A-z 0-9-]+$"));
+        RegexMap.put(txtStudentName,Pattern.compile("^[A-z ]+$"));
+        RegexMap.put(txtStudentAddress,Pattern.compile("^[A-z1-9 /,.-]+$"));
+        RegexMap.put(txtStudentNo,Pattern.compile("^[0-9]{10,11}$"));
+
     }
 
     private void selectAllStudents(){
         ObservableList<StudentDTM> students = studentBO.getStudents();
         tblStudent.setItems(students);
+    }
+
+
+    public void validateFieldsOnKeyRelease(KeyEvent keyEvent) {
+        Object validate = ValidationUtil.Validate(RegexMap, btnAddStudent);
+        if (keyEvent.getCode().equals(KeyCode.ENTER)) {
+            if (validate instanceof JFXTextField) {
+                ((JFXTextField) validate).requestFocus();
+            } else {
+                btnAddStudent.fire();
+            }
+        }
     }
 
     public void clearText(){
