@@ -15,9 +15,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
+import lk.ijse.hostelManagementSystem.tm.RoomTM;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.ArrayList;
 
 public class ManageRoomFormController {
 
@@ -26,7 +29,6 @@ public class ManageRoomFormController {
     public JFXComboBox cmbRoomType;
     public JFXTextField txtQtq;
     public JFXButton btnSaveRoom;
-    public TableView tblStudent;
     public TableColumn colRoomTypeId;
     public TableColumn cloRoomType;
     public TableColumn colKeyMoney;
@@ -34,6 +36,7 @@ public class ManageRoomFormController {
     public JFXButton btnSerchRoom;
     public JFXButton btnUpdate;
     public JFXButton btnDelete;
+    public TableView tblRoom;
 
     RoomBO roomBO = (RoomBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ROOM);
 
@@ -87,12 +90,31 @@ public class ManageRoomFormController {
         colQty.setCellValueFactory(new PropertyValueFactory<>("qyt"));
 
 
+        tblRoom.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue !=null){
+                setUpdateFields((RoomTM) newValue);
+            }
+        });
+    }
+
+
+
+    private void setUpdateFields(RoomTM tm){
+        txtRoomTypeID.setText(tm.getRoomTpeId());
+        cmbRoomType.getSelectionModel().select(tm.getType());
+        txtQtq.setText(String.valueOf(tm.getQyt()));
+        txtKeyMoney.setText(tm.getKeyMoney());
+    }
+
+    private void loadRooms(ArrayList<RoomDTO> room){
+
     }
 
     public void cleanText(){
         txtRoomTypeID.setText("");
-        cloRoomType.setText("");
+        cmbRoomType.setValue("");
         txtQtq.setText("");
         txtKeyMoney.setText("");
     }
 }
+//

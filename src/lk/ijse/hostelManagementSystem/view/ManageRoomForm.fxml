@@ -33,7 +33,7 @@
       </JFXButton>
       <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <TableView fx:id="tblStudent" layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: #171717;">
+      <TableView fx:id="tblRoom" layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: #171717;">
         <columns>
           <TableColumn fx:id="colRoomTypeId" prefWidth="163.0" text="Room tytpe ID" />
           <TableColumn fx:id="cloRoomType" prefWidth="125.0" text="Room Type" />

@@ -44,7 +44,7 @@ public class ReserveRoomFormController {
         System.out.println(cmbStudentId.getValue());
         reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
 
-        clearText();
+
     }
 
 

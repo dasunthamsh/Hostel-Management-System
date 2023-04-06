@@ -18,15 +18,14 @@
             </Text>
          </children>
       </Pane>
-      <TableView layoutX="49.0" layoutY="192.0" prefHeight="593.0" prefWidth="892.0">
+      <TableView fx:id="tlbpayment" layoutX="49.0" layoutY="192.0" prefHeight="593.0" prefWidth="892.0">
         <columns>
-          <TableColumn prefWidth="109.0" text="Resevetion ID" />
-          <TableColumn prefWidth="146.0" text="Student ID" />
-            <TableColumn prefWidth="156.0" text="Student Name" />
-            <TableColumn prefWidth="113.0" text="Room ID" />
-            <TableColumn prefWidth="104.0" text="Room Type" />
-            <TableColumn prefWidth="127.0" text="Stutas" />
-            <TableColumn prefWidth="136.0" text="Update" />
+          <TableColumn fx:id="colResevetionId" prefWidth="109.0" text="Resevetion ID" />
+          <TableColumn fx:id="colStudentId" prefWidth="183.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="161.0" text="Student Name" />
+            <TableColumn fx:id="colRoomId" prefWidth="121.0" text="Room ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="133.0" text="Room Type" />
+            <TableColumn fx:id="colStutas" prefWidth="184.0" text="Stutas" />
         </columns>
       </TableView>
    </children>
