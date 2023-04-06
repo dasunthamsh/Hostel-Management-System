@@ -1,8 +1,16 @@
-package lk.ijse.hostelManagementSystem.tm;/*
+package lk.ijse.hostelManagementSystem.view.dtm;/*
     @author Dasun
 */
 
-public class PaymentTM {
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PaymentDTM {
 
     private String resId;
     private String status;
@@ -11,5 +19,4 @@ public class PaymentTM {
     private String StudentId;
     private String name;
     private String payment;
-
 }

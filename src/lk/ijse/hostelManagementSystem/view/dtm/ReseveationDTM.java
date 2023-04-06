@@ -1,4 +1,4 @@
-package lk.ijse.hostelManagementSystem.tm;/*
+package lk.ijse.hostelManagementSystem.view.dtm;/*
     @author Dasun
 */
 
@@ -9,10 +9,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReservationTM {
+public class ReseveationDTM {
 
     private String resId;
     private LocalDate date;

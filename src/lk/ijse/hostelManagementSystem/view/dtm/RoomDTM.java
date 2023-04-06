@@ -1,4 +1,4 @@
-package lk.ijse.hostelManagementSystem.tm;/*
+package lk.ijse.hostelManagementSystem.view.dtm;/*
     @author Dasun
 */
 
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class RoomTM {
+public class RoomDTM {
 
     private String roomTpeId;
     private String type;
@@ -17,11 +17,10 @@ public class RoomTM {
     private int qyt;
 
 
-    public RoomTM(String roomTpeId, String type, int qyt , String keyMoney) {
+    public RoomDTM(String roomTpeId, String type, int qyt , String keyMoney) {
         this.roomTpeId = roomTpeId;
         this.type = type;
         this.keyMoney = keyMoney;
         this.qyt = qyt;
     }
-
 }

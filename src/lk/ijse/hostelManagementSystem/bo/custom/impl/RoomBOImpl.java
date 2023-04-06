@@ -6,12 +6,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
-import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
+import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
-import lk.ijse.hostelManagementSystem.tm.RoomTM;
-import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
-import org.hibernate.Session;
+import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
 
 import java.util.List;
 
@@ -45,11 +43,11 @@ public class RoomBOImpl implements RoomBO {
 
 
     @Override
-    public ObservableList<RoomTM> getRooms() {
-        ObservableList<RoomTM> rooms = FXCollections.observableArrayList();
+    public ObservableList<RoomDTM> getRooms() {
+        ObservableList<RoomDTM> rooms = FXCollections.observableArrayList();
         List<Room> all = roomDAO.getAll();
         for (Room room : all){
-            rooms.add(new RoomTM(room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney()));
+            rooms.add(new RoomDTM(room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney()));
         }
 
         return rooms;

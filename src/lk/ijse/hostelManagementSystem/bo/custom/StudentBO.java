@@ -5,8 +5,7 @@ package lk.ijse.hostelManagementSystem.bo.custom;/*
 import javafx.collections.ObservableList;
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
-import lk.ijse.hostelManagementSystem.tm.RoomTM;
-import lk.ijse.hostelManagementSystem.tm.StudentTM;
+import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
 public interface StudentBO extends SuperBO {
 
@@ -18,5 +17,5 @@ public interface StudentBO extends SuperBO {
 
     void deleteStudent(String id);
 
-    ObservableList<StudentTM> getStudents();
+    ObservableList<StudentDTM> getStudents();
 }

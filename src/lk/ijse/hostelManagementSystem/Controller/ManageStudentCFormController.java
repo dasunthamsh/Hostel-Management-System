@@ -12,12 +12,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
-import lk.ijse.hostelManagementSystem.tm.StudentTM;
-
-import javax.management.Notification;
+import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
 
 public class ManageStudentCFormController {
@@ -47,17 +45,18 @@ public class ManageStudentCFormController {
 
      public  void btnAddStudentNoOnAction(ActionEvent actionEvent) {
 
-        if(btnAddStudent.getText().equals("Add Student")) {
+
             studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
 
-        }
 
         clearText();
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
 
-        studentBO.updateStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+         if(btnUpdateStudent.getText().equals("Update Student")) {
+             studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+         }
         clearText();
     }
 
@@ -102,7 +101,7 @@ public class ManageStudentCFormController {
     }
 
     private void selectAllStudents(){
-        ObservableList<StudentTM> students = studentBO.getStudents();
+        ObservableList<StudentDTM> students = studentBO.getStudents();
         tblStudent.setItems(students);
     }
 
@@ -112,4 +111,5 @@ public class ManageStudentCFormController {
         txtStudentAddress.setText("");
         txtStudentNo.setText("");
     }
+
 }

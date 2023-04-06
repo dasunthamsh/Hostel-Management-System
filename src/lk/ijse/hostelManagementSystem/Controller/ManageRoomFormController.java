@@ -8,19 +8,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
-import lk.ijse.hostelManagementSystem.tm.RoomTM;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import java.util.ArrayList;
 
 public class ManageRoomFormController {
 
@@ -94,7 +91,7 @@ public class ManageRoomFormController {
 
 
     private void selectAllRooms(){
-        ObservableList<RoomTM> rooms = roomBO.getRooms();
+        ObservableList<RoomDTM> rooms = roomBO.getRooms();
         tblRoom.setItems(rooms);
     }
 
