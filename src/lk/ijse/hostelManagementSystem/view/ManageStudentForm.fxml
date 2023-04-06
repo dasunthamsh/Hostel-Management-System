@@ -37,15 +37,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <TableView layoutX="126.0" layoutY="475.0" prefHeight="240.0" prefWidth="725.0" style="-fx-background-color: #171717;">
+      <TableView fx:id="tblStudent" layoutX="126.0" layoutY="475.0" prefHeight="240.0" prefWidth="725.0" style="-fx-background-color: #171717;">
         <columns>
-          <TableColumn prefWidth="135.0" text="Student ID" />
-          <TableColumn prefWidth="69.0" text="Name" />
-            <TableColumn prefWidth="108.0" text="Addres" />
-            <TableColumn prefWidth="108.0" text="Mobile" />
-            <TableColumn prefWidth="127.0" text="DOB" />
-            <TableColumn prefWidth="81.0" text="Gender" />
-            <TableColumn prefWidth="96.0" text="...." />
+          <TableColumn fx:id="colStuduentId" prefWidth="86.0" text="Student ID" />
+          <TableColumn fx:id="colName" prefWidth="99.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="140.0" text="Addres" />
+            <TableColumn fx:id="colContact" prefWidth="167.0" text="Contact.No" />
+            <TableColumn fx:id="colDOB" prefWidth="151.0" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="81.0" text="Gender" />
         </columns>
       </TableView>
       <JFXButton fx:id="btnUpdateStudent" layoutX="294.0" layoutY="735.0" onAction="#btnUpdateStudentOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">

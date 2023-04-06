@@ -9,6 +9,9 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
@@ -26,6 +29,13 @@ public class ManageStudentCFormController {
     public JFXButton btnUpdateStudent;
     public JFXButton btnSerchStudent;
     public JFXButton btnDeleteStudent;
+    public TableColumn colStuduentId;
+    public TableColumn colName;
+    public TableColumn colAddress;
+    public TableColumn colContact;
+    public TableColumn colDOB;
+    public TableColumn colGender;
+    public TableView tblStudent;
 
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
@@ -76,6 +86,12 @@ public class ManageStudentCFormController {
     public void initialize() {
         cmbGenderOnAction();
 
+        colStuduentId.setCellValueFactory(new PropertyValueFactory<>("roomTpeId"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("type"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("keyMoney"));
+        colContact.setCellValueFactory(new PropertyValueFactory<>("qyt"));
+        colDOB.setCellValueFactory(new PropertyValueFactory<>("qyt"));
+        colGender.setCellValueFactory(new PropertyValueFactory<>("qyt"));
 
     }
 
