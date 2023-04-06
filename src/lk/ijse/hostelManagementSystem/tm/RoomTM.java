@@ -16,4 +16,12 @@ public class RoomTM {
     private String keyMoney;
     private int qyt;
 
+
+    public RoomTM(String roomTpeId, String type, int qyt , String keyMoney) {
+        this.roomTpeId = roomTpeId;
+        this.type = type;
+        this.keyMoney = keyMoney;
+        this.qyt = qyt;
+    }
+
 }

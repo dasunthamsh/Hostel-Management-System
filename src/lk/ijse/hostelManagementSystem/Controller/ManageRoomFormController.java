@@ -83,7 +83,7 @@ public class ManageRoomFormController {
 
     public void initialize() {
         cmbRoomTypeOnAction();
-
+        selectAllRooms();
         colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>("roomTpeId"));
         cloRoomType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colKeyMoney.setCellValueFactory(new PropertyValueFactory<>("keyMoney"));

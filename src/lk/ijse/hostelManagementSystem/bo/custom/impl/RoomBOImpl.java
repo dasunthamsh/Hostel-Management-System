@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
     @author Dasun
 */
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
@@ -9,6 +10,10 @@ import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.tm.RoomTM;
+import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import org.hibernate.Session;
+
+import java.util.List;
 
 
 public class RoomBOImpl implements RoomBO {
@@ -38,8 +43,15 @@ public class RoomBOImpl implements RoomBO {
         roomDAO.delete(id);
     }
 
+
     @Override
     public ObservableList<RoomTM> getRooms() {
-        return null;
+        ObservableList<RoomTM> rooms = FXCollections.observableArrayList();
+        List<Room> all = roomDAO.getAll();
+        for (Room room : all){
+            rooms.add(new RoomTM(room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney()));
+        }
+
+        return rooms;
     }
 }
