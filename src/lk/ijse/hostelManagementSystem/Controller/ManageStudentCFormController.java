@@ -17,6 +17,8 @@ import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.tm.StudentTM;
 
+import javax.management.Notification;
+
 
 public class ManageStudentCFormController {
 
@@ -43,10 +45,13 @@ public class ManageStudentCFormController {
 
 
 
-    public void btnAddStudentNoOnAction(ActionEvent actionEvent) {
+     public  void btnAddStudentNoOnAction(ActionEvent actionEvent) {
 
+        if(btnAddStudent.getText().equals("Add Student")) {
+            studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
 
-        studentBO.saveStudent(new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentNo.getText(),cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+        }
+
         clearText();
     }
 
