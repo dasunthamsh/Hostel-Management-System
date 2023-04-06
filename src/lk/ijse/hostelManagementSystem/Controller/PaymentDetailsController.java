@@ -2,8 +2,10 @@ package lk.ijse.hostelManagementSystem.Controller;/*
     @author Dasun
 */
 
+import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -16,6 +18,7 @@ public class PaymentDetailsController {
     public TableColumn colRoomType;
     public TableColumn colStutas;
     public TableColumn colResevetionId;
+    public TableView tlbpayment;
 
 
     public void initialize() {
@@ -28,6 +31,6 @@ public class PaymentDetailsController {
     }
 
     private void lodeAllValues(){
-
+        tlbpayment.setItems(FXCollections.observableArrayList());
     }
 }
