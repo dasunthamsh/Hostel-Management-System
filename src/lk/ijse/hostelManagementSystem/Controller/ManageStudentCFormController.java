@@ -15,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.tm.StudentTM;
 
 
 public class ManageStudentCFormController {
@@ -85,14 +86,19 @@ public class ManageStudentCFormController {
 
     public void initialize() {
         cmbGenderOnAction();
+        selectAllStudents();
+        colStuduentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colContact.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+        colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
 
-        colStuduentId.setCellValueFactory(new PropertyValueFactory<>("roomTpeId"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("type"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("keyMoney"));
-        colContact.setCellValueFactory(new PropertyValueFactory<>("qyt"));
-        colDOB.setCellValueFactory(new PropertyValueFactory<>("qyt"));
-        colGender.setCellValueFactory(new PropertyValueFactory<>("qyt"));
+    }
 
+    private void selectAllStudents(){
+        ObservableList<StudentTM> students = studentBO.getStudents();
+        tblStudent.setItems(students);
     }
 
     public void clearText(){
