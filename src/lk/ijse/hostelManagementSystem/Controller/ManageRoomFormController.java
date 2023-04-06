@@ -89,26 +89,15 @@ public class ManageRoomFormController {
         colKeyMoney.setCellValueFactory(new PropertyValueFactory<>("keyMoney"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qyt"));
 
-
-        tblRoom.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue !=null){
-                setUpdateFields((RoomTM) newValue);
-            }
-        });
     }
 
 
 
-    private void setUpdateFields(RoomTM tm){
-        txtRoomTypeID.setText(tm.getRoomTpeId());
-        cmbRoomType.getSelectionModel().select(tm.getType());
-        txtQtq.setText(String.valueOf(tm.getQyt()));
-        txtKeyMoney.setText(tm.getKeyMoney());
+    private void selectAllRooms(){
+        ObservableList<RoomTM> rooms = roomBO.getRooms();
+        tblRoom.setItems(rooms);
     }
 
-    private void loadRooms(ArrayList<RoomDTO> room){
-
-    }
 
     public void cleanText(){
         txtRoomTypeID.setText("");

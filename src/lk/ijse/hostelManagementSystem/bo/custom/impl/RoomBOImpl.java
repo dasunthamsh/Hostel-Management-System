@@ -2,11 +2,13 @@ package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
     @author Dasun
 */
 
+import javafx.collections.ObservableList;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
+import lk.ijse.hostelManagementSystem.tm.RoomTM;
 
 
 public class RoomBOImpl implements RoomBO {
@@ -34,5 +36,10 @@ public class RoomBOImpl implements RoomBO {
     @Override
     public void deleteRoom(String id) {
         roomDAO.delete(id);
+    }
+
+    @Override
+    public ObservableList<RoomTM> getRooms() {
+        return null;
     }
 }

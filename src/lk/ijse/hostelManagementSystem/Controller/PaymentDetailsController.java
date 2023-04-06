@@ -7,6 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.PaymentBo;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +23,8 @@ public class PaymentDetailsController {
     public TableView tlbpayment;
 
 
+    private final PaymentBo paymentBo = (PaymentBo) BOFactory.getInstance().getBO(BOFactory.BOTypes.PAYMENT);
+
     public void initialize() {
         colResevetionId.setCellValueFactory(new PropertyValueFactory<>("resId"));
         colRoomType.setCellValueFactory(new PropertyValueFactory<>("studentId"));
@@ -30,7 +34,5 @@ public class PaymentDetailsController {
         colStutas.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
 
-    private void lodeAllValues(){
-        tlbpayment.setItems(FXCollections.observableArrayList());
-    }
+
 }
