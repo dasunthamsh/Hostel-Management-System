@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
     @author Dasun
 */
 
-public class PaymentBOImpl {
+import lk.ijse.hostelManagementSystem.bo.SuperBO;
+
+public class PaymentBOImpl implements SuperBO {
 }
