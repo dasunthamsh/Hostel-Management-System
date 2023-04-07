@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.dao.custom;/*
     @author Dasun
 */
 
-public interface RegesterDAO {
+import lk.ijse.hostelManagementSystem.dao.SuperDAO;
+
+public interface RegesterDAO extends SuperDAO {
 }

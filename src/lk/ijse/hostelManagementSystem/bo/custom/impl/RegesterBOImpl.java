@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.bo.custom.impl;/*
     @author Dasun
 */
 
-public class RegesterBOImpl {
+import lk.ijse.hostelManagementSystem.bo.custom.RegesterBO;
+
+public class RegesterBOImpl implements RegesterBO {
 }

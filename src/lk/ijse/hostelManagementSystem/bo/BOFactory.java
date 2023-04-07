@@ -2,10 +2,7 @@ package lk.ijse.hostelManagementSystem.bo;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.bo.custom.impl.PaymentBOImpl;
-import lk.ijse.hostelManagementSystem.bo.custom.impl.ReservationBOImpl;
-import lk.ijse.hostelManagementSystem.bo.custom.impl.RoomBOImpl;
-import lk.ijse.hostelManagementSystem.bo.custom.impl.StudentBOImpl;
+import lk.ijse.hostelManagementSystem.bo.custom.impl.*;
 
 public class BOFactory {
 
@@ -16,7 +13,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        STUDENT , ROOM , RESEVATION ,PAYMENT
+        STUDENT , ROOM , RESEVATION ,PAYMENT , REGESTER
     }
 
     public SuperBO getBO(BOTypes types){
@@ -30,6 +27,8 @@ public class BOFactory {
                 return new ReservationBOImpl();
             case PAYMENT:
                 return new PaymentBOImpl();
+            case REGESTER:
+                return new RegesterBOImpl();
             default:
 
                 return null;

@@ -2,5 +2,7 @@ package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
     @author Dasun
 */
 
-public class RegesterDAOimpl {
+import lk.ijse.hostelManagementSystem.dao.custom.RegesterDAO;
+
+public class RegesterDAOimpl implements RegesterDAO {
 }
