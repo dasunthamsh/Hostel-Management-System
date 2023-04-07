@@ -3,6 +3,9 @@ package lk.ijse.hostelManagementSystem.bo.custom;/*
 */
 
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
+import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 
 public interface RegesterBO extends SuperBO {
+
+    boolean saveUser(RegesterDTO dto);
 }

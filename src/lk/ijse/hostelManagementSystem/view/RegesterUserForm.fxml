@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="pain" prefHeight="839.0" prefWidth="1301.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.RegesterUserFormController">
    <children>
-      <JFXTextField fx:id="txtId" cache="true" layoutX="446.0" layoutY="228.0" prefHeight="50.0" prefWidth="336.0" promptText=" ID " style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtId" cache="true" layoutX="446.0" layoutY="228.0" prefHeight="50.0" prefWidth="336.0" promptText=" ID " style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -24,7 +24,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextField>
-      <JFXTextField fx:id="txtName" cache="true" layoutX="446.0" layoutY="311.0" prefHeight="50.0" prefWidth="336.0" promptText="  Name" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtName" cache="true" layoutX="446.0" layoutY="311.0" prefHeight="50.0" prefWidth="336.0" promptText="  Name" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font name="System Bold" size="39.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="txtEmail" cache="true" layoutX="446.0" layoutY="395.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtEmail" cache="true" layoutX="446.0" layoutY="395.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -55,7 +55,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextField>
-      <JFXTextField fx:id="txtPassword" cache="true" layoutX="446.0" layoutY="480.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtPassword" cache="true" layoutX="446.0" layoutY="480.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

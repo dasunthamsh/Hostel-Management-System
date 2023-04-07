@@ -18,5 +18,5 @@ public class Regester {
    private String id;
    private String name;
    private String email;
-   private String assword;
+   private String password;
 }

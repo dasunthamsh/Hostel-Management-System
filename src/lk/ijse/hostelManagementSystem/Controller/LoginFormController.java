@@ -26,7 +26,8 @@ public class LoginFormController {
 
     }
 
-    public void btnCreateAccountOnAction(ActionEvent actionEvent) {
+    public void btnCreateAccountOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.REGESTER,pane);
     }
 
     public void btnForgetPasswordOnAction(ActionEvent actionEvent) {

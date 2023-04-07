@@ -14,7 +14,7 @@ public class RegesterDTO {
     private String id;
     private String name;
     private String email;
-    private String assword;
+    private String password;
 
 
 }
