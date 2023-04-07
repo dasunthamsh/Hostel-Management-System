@@ -3,6 +3,12 @@
 
 }
 
+
+.buttoon:hover{
+    -fx-background-color: linear-gradient(to right top, #161D27, #192231, #182A38, #1E3449,  #203B50) ;
+
+}
+
 /*.button:hover {*/
 /*    -fx-background-color: linear-gradient(to right top, #150734, #0F2557, #28559A, #3778C2, #4B9FE1, #63BCE5, #7ED5EA);*/
 
@@ -14,6 +20,7 @@
 
 .button1:hover
 {
+
     -fx-background-color : #171717 ;
     -fx-background-radius :  30 0 0 30;
 }
