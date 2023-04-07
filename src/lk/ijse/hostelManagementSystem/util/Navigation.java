@@ -40,6 +40,11 @@ public class Navigation {
                 initUI("RegesterUserForm.fxml");
                 break;
 
+            case FORGETPASSWORD:
+                window.setTitle("Forget password");
+                initUI("ForgetPasswordForm.fxml");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
         }

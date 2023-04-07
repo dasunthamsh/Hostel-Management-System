@@ -6,15 +6,13 @@ import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
+import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dao.custom.ReservationDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
-import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
-import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
-import org.hibernate.Session;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -64,6 +62,11 @@ public class ReservationBOImpl implements ReservationBO {
     @Override
     public String getResevationId() {
         return reservationDAO.getResevetionId();
+    }
+
+    @Override
+    public void deleteReservation(String id) {
+
     }
 
 

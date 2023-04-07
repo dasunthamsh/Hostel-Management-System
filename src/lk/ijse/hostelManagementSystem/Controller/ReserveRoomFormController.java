@@ -31,6 +31,7 @@ public class ReserveRoomFormController {
     public Label lblReserveId;
     public TextField txtResId;
     public JFXDatePicker cmbDate;
+    public JFXButton btnDelete;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
@@ -38,13 +39,18 @@ public class ReserveRoomFormController {
 
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
-        System.out.println(reservationBO.getResevationId());
 
-        System.out.println(reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())));
-        System.out.println(cmbStudentId.getValue());
+
+//        System.out.println(reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())));
+//        System.out.println(cmbStudentId.getValue());
         reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
 
+    }
 
+
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+        reservationBO.deleteReservation(txtResId.getText());
     }
 
 
@@ -98,4 +104,5 @@ public class ReserveRoomFormController {
         txtStudentName.setText("");
         cmbPayment.setValue("");
     }
+
 }

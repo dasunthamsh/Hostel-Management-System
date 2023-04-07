@@ -30,6 +30,7 @@ public class LoginFormController {
         Navigation.navigate(Routes.REGESTER,pane);
     }
 
-    public void btnForgetPasswordOnAction(ActionEvent actionEvent) {
+    public void btnForgetPasswordOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.FORGETPASSWORD,pane);
     }
 }

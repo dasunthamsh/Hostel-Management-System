@@ -2,15 +2,11 @@ package lk.ijse.hostelManagementSystem.Entity;/*
     @author Dasun
 */
 
-import lk.ijse.hostelManagementSystem.dto.RoomDTO;
-import lk.ijse.hostelManagementSystem.dto.StudentDTO;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
