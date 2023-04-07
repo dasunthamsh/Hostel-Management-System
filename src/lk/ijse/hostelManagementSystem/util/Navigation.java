@@ -34,6 +34,12 @@ public class Navigation {
                 window.setTitle("add student");
                 initUI("ManageStudentForm.fxml");
                 break;
+
+            case REGESTER:
+                window.setTitle("Regester user");
+                initUI("RegesterUserForm.fxml");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
         }

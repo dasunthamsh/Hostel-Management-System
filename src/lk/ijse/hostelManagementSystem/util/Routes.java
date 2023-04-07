@@ -3,5 +3,5 @@ package lk.ijse.hostelManagementSystem.util;/*
 */
 
 public enum Routes {
-    LOGIN , DASHBORD , STUDENT , ROOMS , PAYMENTS , RESERVE
+    LOGIN , DASHBORD , STUDENT , REGESTER
 }

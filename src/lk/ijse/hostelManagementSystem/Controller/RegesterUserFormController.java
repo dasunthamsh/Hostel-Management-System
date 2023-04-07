@@ -6,17 +6,19 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagementSystem.util.Navigation;
 
 public class RegesterUserFormController {
-    public AnchorPane txtName;
+
     public JFXTextField txtId;
-    public JFXTextField txtEmail1;
     public JFXTextField txtEmail;
     public JFXTextField txtPassword;
     public JFXButton btnBack;
     public JFXButton btnRegester;
+    public AnchorPane pain;
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        Navigation.navigate();
     }
 
     public void btnRegesterOnAction(ActionEvent actionEvent) {
