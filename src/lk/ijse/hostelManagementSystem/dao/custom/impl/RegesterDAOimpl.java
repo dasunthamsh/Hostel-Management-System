@@ -16,6 +16,6 @@ public class RegesterDAOimpl implements RegesterDAO {
         session.save(entity);
         transaction.commit();
         session.close();
-        return false;
+        return true;
     }
 }

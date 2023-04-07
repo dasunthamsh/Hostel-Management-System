@@ -15,6 +15,6 @@ public class RegesterBOImpl implements RegesterBO {
     @Override
     public boolean saveUser(RegesterDTO dto) {
         regesterDAO.save(new Regester(dto.getId(),dto.getName(),dto.getEmail(), dto.getPassword()));
-        return false;
+        return true;
     }
 }

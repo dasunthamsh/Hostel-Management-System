@@ -33,7 +33,6 @@ public class RegesterUserFormController {
 
     public void btnRegesterOnAction(ActionEvent actionEvent) throws IOException {
 
-        regesterBO.saveUser(new RegesterDTO(txtId.getText(),txtName.getText(),txtEmail.getText(),txtPassword.getText()));
-
+            regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
     }
 }
