@@ -2,16 +2,12 @@ package lk.ijse.hostelManagementSystem.Controller;/*
     @author Dasun
 */
 
-import javafx.collections.FXCollections;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.PaymentBo;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class PaymentDetailsController {
     public TableColumn colStudentId;
@@ -24,6 +20,7 @@ public class PaymentDetailsController {
 
 
     private final PaymentBo paymentBo = (PaymentBo) BOFactory.getInstance().getBO(BOFactory.BOTypes.PAYMENT);
+    public AnchorPane pain;
 
     public void initialize() {
         colResevetionId.setCellValueFactory(new PropertyValueFactory<>("resId"));
@@ -33,6 +30,7 @@ public class PaymentDetailsController {
         colRoomType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colStutas.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
+
 
 
 }

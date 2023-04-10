@@ -45,6 +45,11 @@ public class Navigation {
                 initUI("ForgetPasswordForm.fxml");
                 break;
 
+            case PAYMENT:
+                window.setTitle("payment");
+                initUI("PaymentDetails.fxml");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
         }

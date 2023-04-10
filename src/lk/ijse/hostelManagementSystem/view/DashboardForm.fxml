@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.DashboardFormController">
    <children>
-      <Pane prefHeight="829.0" prefWidth="324.0" style="-fx-background-color: #242424;">
+      <Pane layoutX="9.0" layoutY="9.0" prefHeight="815.0" prefWidth="307.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;">
          <children>
             <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="88.0" layoutY="14.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -78,6 +78,6 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="contex" layoutX="324.0" prefHeight="829.0" prefWidth="977.0" />
+      <Pane fx:id="contex" layoutX="330.0" layoutY="7.0" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;" />
    </children>
 </AnchorPane>

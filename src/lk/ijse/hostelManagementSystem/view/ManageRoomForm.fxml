@@ -11,19 +11,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="829.0" prefWidth="977.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.ManageRoomFormController">
+<AnchorPane prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.ManageRoomFormController">
    <children>
-      <Pane layoutX="29.0" layoutY="20.0" prefHeight="67.0" prefWidth="933.0" style="-fx-background-color: #242424; -fx-background-radius: 10;">
+      <Pane layoutX="51.0" layoutY="34.0" prefHeight="52.0" prefWidth="858.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;">
          <children>
-            <Text fill="WHITE" layoutX="370.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE ROOMS">
+            <Text fill="WHITE" layoutX="333.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE ROOMS">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXButton fx:id="btnSaveRoom" layoutX="69.0" layoutY="746.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SAVE" textFill="WHITE">
+      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXButton fx:id="btnSaveRoom" layoutX="65.0" layoutY="743.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -31,9 +31,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: #9E9E9E; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <TableView fx:id="tblRoom" layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: #171717;">
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <TableView fx:id="tblRoom" layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: white;">
         <columns>
           <TableColumn fx:id="colRoomTypeId" prefWidth="163.0" text="Room tytpe ID" />
           <TableColumn fx:id="cloRoomType" prefWidth="125.0" text="Room Type" />
@@ -41,8 +41,8 @@
             <TableColumn fx:id="colQty" prefWidth="172.0" text="QTY" />
         </columns>
       </TableView>
-      <JFXComboBox fx:id="cmbRoomType" focusColor="#ffffff00" labelFloat="true" layoutX="534.0" layoutY="194.0" onAction="#cmbRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Room Type" style="-fx-border-radius: 10; -fx-border-color: #9E9E9E;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXButton fx:id="btnSerchRoom" layoutX="524.0" layoutY="747.0" onAction="#btnSearchRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="SEARCH" textFill="WHITE">
+      <JFXComboBox fx:id="cmbRoomType" focusColor="#ffffff00" labelFloat="true" layoutX="534.0" layoutY="194.0" onAction="#cmbRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Room Type" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXButton fx:id="btnSerchRoom" layoutX="520.0" layoutY="744.0" onAction="#btnSearchRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="SEARCH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -50,7 +50,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnUpdate" layoutX="296.0" layoutY="748.0" onAction="#btnUpdateRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+      <JFXButton fx:id="btnUpdate" layoutX="292.0" layoutY="745.0" onAction="#btnUpdateRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="UPDATE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -58,7 +58,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnDelete" layoutX="756.0" layoutY="748.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="DELETE" textFill="WHITE">
+      <JFXButton fx:id="btnDelete" layoutX="752.0" layoutY="745.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="DELETE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

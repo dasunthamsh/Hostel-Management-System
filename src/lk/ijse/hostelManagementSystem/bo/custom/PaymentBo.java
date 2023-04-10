@@ -3,7 +3,8 @@ package lk.ijse.hostelManagementSystem.bo.custom;/*
 */
 
 
+import lk.ijse.hostelManagementSystem.bo.SuperBO;
 
-public interface PaymentBo {
+public interface PaymentBo extends SuperBO {
 
 }

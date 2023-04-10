@@ -7,18 +7,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="829.0" prefWidth="977.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.PaymentDetailsController">
+<AnchorPane fx:id="pain" prefHeight="829.0" prefWidth="977.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.PaymentDetailsController">
    <children>
-      <Pane layoutX="22.0" layoutY="24.0" prefHeight="67.0" prefWidth="933.0" style="-fx-background-color: #242424; -fx-background-radius: 10;">
+      <Pane layoutX="60.0" layoutY="24.0" prefHeight="52.0" prefWidth="858.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 10;">
          <children>
-            <Text fill="WHITE" layoutX="370.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAYMENT DETAILS">
+            <Text fill="WHITE" layoutX="370.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAYMENT DETAILS">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <TableView fx:id="tlbpayment" layoutX="49.0" layoutY="192.0" prefHeight="593.0" prefWidth="892.0">
+      <TableView fx:id="tlbpayment" layoutX="49.0" layoutY="192.0" prefHeight="542.0" prefWidth="892.0">
         <columns>
           <TableColumn fx:id="colResevetionId" prefWidth="109.0" text="Resevetion ID" />
           <TableColumn fx:id="colStudentId" prefWidth="183.0" text="Student ID" />
