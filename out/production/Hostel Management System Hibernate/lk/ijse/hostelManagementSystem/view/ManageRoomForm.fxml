@@ -22,7 +22,7 @@
             </Text>
          </children>
       </Pane>
-      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXButton fx:id="btnSaveRoom" layoutX="65.0" layoutY="743.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -31,8 +31,8 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="534.0" layoutY="295.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="295.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" promptText="  Qyt" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <TableView fx:id="tblRoom" layoutX="158.0" layoutY="385.0" prefHeight="281.0" prefWidth="679.0" style="-fx-background-color: white;">
         <columns>
           <TableColumn fx:id="colRoomTypeId" prefWidth="163.0" text="Room tytpe ID" />
