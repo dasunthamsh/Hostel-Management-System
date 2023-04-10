@@ -19,4 +19,9 @@ public class Regester {
    private String name;
    private String email;
    private String password;
+
+    public Regester(String id, String password) {
+        this.id = id;
+        this.password = password;
+    }
 }

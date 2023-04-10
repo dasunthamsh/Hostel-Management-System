@@ -23,7 +23,7 @@
          </children>
       </Pane>
       <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="158.0" layoutY="195.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room Type ID" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXButton fx:id="btnSaveRoom" layoutX="65.0" layoutY="743.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="SAVE" textFill="WHITE">
+      <JFXButton fx:id="btnSaveRoom" layoutX="65.0" layoutY="743.0" onAction="#btnSaveRoomOnAction" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

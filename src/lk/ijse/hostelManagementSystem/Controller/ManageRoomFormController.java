@@ -11,13 +11,19 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class ManageRoomFormController {
 
@@ -36,6 +42,7 @@ public class ManageRoomFormController {
     public TableView tblRoom;
 
     RoomBO roomBO = (RoomBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ROOM);
+    private final LinkedHashMap<JFXTextField, Pattern> RegexMap = new LinkedHashMap<>();
 
     public void btnAddRoomOnAction(ActionEvent actionEvent) {
         Session session = FactoryConfigeration.getInstance().getSession();
@@ -86,6 +93,11 @@ public class ManageRoomFormController {
         colKeyMoney.setCellValueFactory(new PropertyValueFactory<>("keyMoney"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qyt"));
 
+        RegexMap.put(txtRoomTypeID,Pattern.compile("^(RM-)[0-9]{4}$"));
+        RegexMap.put(txtKeyMoney,Pattern.compile("^[0-9]+([.]{1}[0-9]{1,2})?+$"));
+        RegexMap.put(txtQtq,Pattern.compile("^[0-9]+$"));
+
+
     }
 
 
@@ -95,6 +107,18 @@ public class ManageRoomFormController {
         tblRoom.setItems(rooms);
     }
 
+    public void validateFieldsOnKeyRelease(KeyEvent keyEvent) {
+        Object validate = ValidationUtil.Validate(RegexMap, btnSaveRoom);
+        if (keyEvent.getCode().equals(KeyCode.ENTER)) {
+            if (validate instanceof JFXTextField) {
+                ((JFXTextField) validate).requestFocus();
+            } else {
+                btnSaveRoom.fire();
+            }
+        }
+    }
+
+
 
     public void cleanText(){
         txtRoomTypeID.setText("");
@@ -102,5 +126,7 @@ public class ManageRoomFormController {
         txtQtq.setText("");
         txtKeyMoney.setText("");
     }
+
+
 }
 //

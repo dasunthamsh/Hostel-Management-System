@@ -17,4 +17,8 @@ public class RegesterDTO {
     private String password;
 
 
+    public RegesterDTO(String id, String password) {
+        this.id = id;
+        this.password = password;
+    }
 }

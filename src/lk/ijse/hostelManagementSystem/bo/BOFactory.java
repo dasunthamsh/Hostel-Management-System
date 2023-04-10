@@ -29,6 +29,7 @@ public class BOFactory {
                 return new PaymentBOImpl();
             case REGESTER:
                 return new RegesterBOImpl();
+
             default:
 
                 return null;

@@ -8,4 +8,6 @@ import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 public interface RegesterBO extends SuperBO {
 
     boolean saveUser(RegesterDTO dto);
+
+    boolean updateUser(String id , String password);
 }

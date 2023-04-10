@@ -8,4 +8,6 @@ import lk.ijse.hostelManagementSystem.dao.SuperDAO;
 public interface RegesterDAO extends SuperDAO {
 
     boolean save(Regester entity);
+
+    boolean update(String id , String password);
 }
