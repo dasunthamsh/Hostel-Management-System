@@ -13,4 +13,6 @@ public interface ReservationDAO extends CrudDAO<Reservation, ID> {
     void getRoomId(Reservation enty);
 
     String getResevetionId();
+
+    Reservation get(String id);
 }

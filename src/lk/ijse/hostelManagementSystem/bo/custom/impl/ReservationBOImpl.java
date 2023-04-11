@@ -69,5 +69,17 @@ public class ReservationBOImpl implements ReservationBO {
 
     }
 
+    @Override
+    public ReservationDTO getReservation(String id) {
+
+        Reservation reservation = reservationDAO.get(id);
+        Student s = reservation.getStudent();
+        Room r = reservation.getRoom();
+        return new ReservationDTO(reservation.getResId(),reservation.getDate(),
+        new StudentDTO(s.getStudentId(),s.getName(),s.getAddress(),s.getContactNo(),s.getDob(),s.getGender()),
+                new RoomDTO(r.getRoomTpeId(),r.getType(),r.getKeyMoney(),r.getQyt()),
+                reservation.getStatus());
+    }
+
 
 }

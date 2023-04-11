@@ -22,13 +22,14 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public void update(Student entity) {
+    public boolean update(Student entity) {
 
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.update(entity);
         transaction.commit();
         session.close();
+        return false;
     }
 
     @Override

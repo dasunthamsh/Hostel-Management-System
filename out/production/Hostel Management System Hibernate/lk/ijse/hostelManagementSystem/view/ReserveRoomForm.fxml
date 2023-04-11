@@ -47,5 +47,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <JFXButton layoutX="89.0" layoutY="699.0" onAction="#btnSerchOnAction" prefHeight="39.0" prefWidth="205.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="serch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtResId" layoutX="114.0" layoutY="158.0" />
    </children>
 </AnchorPane>

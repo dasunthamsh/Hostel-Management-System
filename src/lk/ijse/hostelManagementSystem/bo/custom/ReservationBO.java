@@ -24,4 +24,8 @@ public interface ReservationBO extends SuperBO {
       String getResevationId();
 
       void deleteReservation(String id);
+
+       ReservationDTO getReservation(String id);
+
+
 }

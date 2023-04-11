@@ -92,7 +92,7 @@ public class ReserveRoomFormController {
     }
 
     public void getResevationId(){
-        lblReserveId.setText(reservationBO.getResevationId());
+        txtResId.setText(reservationBO.getResevationId());
     }
 
     public void clearText(){
@@ -105,4 +105,25 @@ public class ReserveRoomFormController {
         cmbPayment.setValue("");
     }
 
+    public void btnSerchOnAction(ActionEvent actionEvent) {
+//        RoomDTO roomDTO = new RoomDTO();
+//        StudentDTO studentDTO = new StudentDTO();
+
+      ///  reservationBO.getReservation(reservationBO.getResevationId(),lblTime,reservationBO.serchStudent((String) cmbStudentId.getValue()),reservationBO.serchRoom(cmbRoomId.getValue()),cmbPaymentOnAction());
+        reservationBO.getReservation(String.valueOf(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue())));
+
+
+   //ReservationDTO res = reservationBO.getReservation(txtResId.getText());
+
+//
+//    cmbRoomId.setValue(res.getRoom());
+//    cmbStudentId.setValue(res.getStudent());
+//    cmbPayment.setValue(res.getStatus());
+//    txtroomType.setText(roomDTO.getType());
+//    txtAvalableQyt.setText(String.valueOf(roomDTO.getQyt()));
+//    txtMoney.setText(roomDTO.getKeyMoney());
+//    txtStudentName.setText(studentDTO.getName());
+//    cmbDate.setValue(res.getDate());
+
+    }
 }

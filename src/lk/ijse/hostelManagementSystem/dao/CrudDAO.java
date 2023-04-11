@@ -6,7 +6,7 @@ public interface CrudDAO <T ,ID> extends SuperDAO {
 
     void  save(T entity);
 
-    void update(T entity);
+    boolean update(T entity);
 
     T serch(ID id);
 

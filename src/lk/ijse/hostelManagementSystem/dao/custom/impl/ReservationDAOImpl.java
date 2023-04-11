@@ -26,8 +26,9 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public void update(Reservation entity) {
+    public boolean update(Reservation entity) {
 
+        return false;
     }
 
     @Override
@@ -58,6 +59,16 @@ public class ReservationDAOImpl implements ReservationDAO {
         transaction.commit();
         session.close();
         return list.size()>0? String.format("#R%03d",Integer.parseInt(list.get(0).replace("#R",""))+1):"#R001";    }
+
+    @Override
+    public Reservation get(String id) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Reservation reservation =session.get(Reservation.class,id);
+        transaction.commit();
+        session.close();
+        return reservation;
+    }
 
 
 }

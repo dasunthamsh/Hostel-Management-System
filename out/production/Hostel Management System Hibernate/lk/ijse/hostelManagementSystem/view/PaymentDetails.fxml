@@ -25,7 +25,8 @@
             <TableColumn fx:id="colStudentName" prefWidth="161.0" text="Student Name" />
             <TableColumn fx:id="colRoomId" prefWidth="121.0" text="Room ID" />
             <TableColumn fx:id="colRoomType" prefWidth="133.0" text="Room Type" />
-            <TableColumn fx:id="colStutas" prefWidth="184.0" text="Stutas" />
+            <TableColumn fx:id="colStutas" prefWidth="117.0" text="Stutas" />
+            <TableColumn fx:id="colUpdate" prefWidth="67.0" text="Update" />
         </columns>
       </TableView>
    </children>

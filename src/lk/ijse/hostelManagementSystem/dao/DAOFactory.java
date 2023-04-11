@@ -33,6 +33,7 @@ public class DAOFactory {
           return new RegesterDAOimpl();
         case QUERY:
           return new QueryDAOImpl();
+
         default:
           return null;
       }
