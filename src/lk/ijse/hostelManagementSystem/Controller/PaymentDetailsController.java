@@ -2,6 +2,7 @@ package lk.ijse.hostelManagementSystem.Controller;/*
     @author Dasun
 */
 
+import javafx.collections.FXCollections;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -31,6 +32,12 @@ public class PaymentDetailsController {
         colRoomType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colStutas.setCellValueFactory(new PropertyValueFactory<>("status"));
         colStutas.setCellValueFactory(new PropertyValueFactory<>("btn"));
+    }
+
+    private void loadAllPendingPayments(){
+        tlbpayment.setItems(FXCollections.observableArrayList(paymentBo.getPendingPayments().stream().map(dto -> {
+            return new
+        })));
     }
 
 
