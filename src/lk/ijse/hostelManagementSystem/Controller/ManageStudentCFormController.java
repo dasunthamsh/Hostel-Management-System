@@ -62,7 +62,7 @@ public class ManageStudentCFormController {
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
 
              studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
-      
+
     }
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
@@ -103,7 +103,7 @@ public class ManageStudentCFormController {
         colDOB.setCellValueFactory(new PropertyValueFactory<>("dob"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
 
-        RegexMap.put(txtStudentId,Pattern.compile("^[A-z 0-9-]+$"));
+        RegexMap.put(txtStudentId,Pattern.compile("^[S 0-9-]+$"));
         RegexMap.put(txtStudentName,Pattern.compile("^[A-z ]+$"));
         RegexMap.put(txtStudentAddress,Pattern.compile("^[A-z1-9 /,.-]+$"));
         RegexMap.put(txtStudentNo,Pattern.compile("^[0-9]{10,11}$"));

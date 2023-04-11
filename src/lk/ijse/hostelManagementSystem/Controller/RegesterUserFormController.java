@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
-public class RegesterUserFormController {
+public class RegesterUserFormController  {
 
     public JFXTextField txtId;
     public JFXTextField txtEmail;
@@ -52,5 +52,14 @@ public class RegesterUserFormController {
                 btnRegester.fire();
             }
         }
+    }
+
+
+    public void initialize() {
+        RegexMap.put(txtId,Pattern.compile("^[C 0-9-]+$"));
+        RegexMap.put(txtName,Pattern.compile("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"));
+        RegexMap.put(txtEmail,Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"));
+
+
     }
 }
