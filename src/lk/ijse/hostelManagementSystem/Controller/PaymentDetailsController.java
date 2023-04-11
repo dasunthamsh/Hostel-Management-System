@@ -17,10 +17,11 @@ public class PaymentDetailsController {
     public TableColumn colStutas;
     public TableColumn colResevetionId;
     public TableView tlbpayment;
-
+    public AnchorPane pain;
+    public TableColumn colUpdate;
 
     private final PaymentBo paymentBo = (PaymentBo) BOFactory.getInstance().getBO(BOFactory.BOTypes.PAYMENT);
-    public AnchorPane pain;
+
 
     public void initialize() {
         colResevetionId.setCellValueFactory(new PropertyValueFactory<>("resId"));
@@ -29,6 +30,7 @@ public class PaymentDetailsController {
         colRoomId.setCellValueFactory(new PropertyValueFactory<>("roomTpeId"));
         colRoomType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colStutas.setCellValueFactory(new PropertyValueFactory<>("status"));
+        colStutas.setCellValueFactory(new PropertyValueFactory<>("btn"));
     }
 
 
