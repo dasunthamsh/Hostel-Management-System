@@ -38,5 +38,6 @@
     </orderEntry>
     <orderEntry type="library" name="antlr-2.7.7" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.30" level="project" />
+    <orderEntry type="library" name="TrayTester" level="project" />
   </component>
 </module>
