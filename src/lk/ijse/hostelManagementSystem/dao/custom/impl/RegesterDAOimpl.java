@@ -9,6 +9,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class RegesterDAOimpl implements RegesterDAO {
     @Override
     public boolean save(Regester entity) {
@@ -24,11 +27,23 @@ public class RegesterDAOimpl implements RegesterDAO {
     public boolean update(String id ,String password) {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("UPDATE Regester  SET password = :pas WHERE id =:uid");
+        Query query = session.createQuery("UPDATE Regester  SET password =  :pas WHERE id =:uid");
         query.setParameter("pas",password);
         query.setParameter("uid",id);
         transaction.commit();
         session.close();
         return true;
+    }
+
+    @Override
+    public HashMap<String, String> getAllUserNPasswordMap() {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<Object[]> list = session.createQuery("SELECT email , password FROM Regester ").list();
+        transaction.commit();
+        session.close();
+        HashMap<String,String> userMap = new HashMap<>();
+        list.stream().forEach(o -> userMap.put((String)o[0],(String) o[1]));
+        return userMap;
     }
 }

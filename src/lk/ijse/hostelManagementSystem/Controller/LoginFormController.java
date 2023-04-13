@@ -7,6 +7,8 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.RegesterBO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
 import lk.ijse.hostelManagementSystem.util.Routes;
 
@@ -20,8 +22,14 @@ public class LoginFormController {
     public JFXButton btnForgetPassword;
     public AnchorPane pane;
 
+    RegesterBO regesterBO = (RegesterBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.REGESTER);
+
     public void btnSignOnAction(ActionEvent actionEvent) throws IOException {
-        Navigation.navigate(Routes.DASHBORD,pane);
+
+        if(regesterBO.checkPassword(txtEmail.getText(),txtPassword.getText())){
+
+            Navigation.navigate(Routes.DASHBORD,pane);
+        }
 
 
     }
