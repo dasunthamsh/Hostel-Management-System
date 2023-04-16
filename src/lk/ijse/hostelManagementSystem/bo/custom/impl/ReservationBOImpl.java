@@ -10,11 +10,13 @@ import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dao.custom.ReservationDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
+import lk.ijse.hostelManagementSystem.dto.CustomDTO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class ReservationBOImpl implements ReservationBO {
@@ -79,6 +81,28 @@ public class ReservationBOImpl implements ReservationBO {
         new StudentDTO(s.getStudentId(),s.getName(),s.getAddress(),s.getContactNo(),s.getDob(),s.getGender()),
                 new RoomDTO(r.getRoomTpeId(),r.getType(),r.getKeyMoney(),r.getQyt()),
                 reservation.getStatus());
+    }
+
+    @Override
+    public List<CustomDTO> lodeReservation() {
+
+      //  List<Object[]> pendingList =
+       // ObservableList<ReseveationDTM> rooms = FXCollections.observableArrayList();
+        //List<ReseveationDTM> all = ReservationDAO.lodeReservation();
+
+//        ArrayList<Reservation> all = reservationDAO.lodeReservation();
+//        for (ReseveationDTM room : all){
+//            rooms.add(new ReseveationDTM(room.getResId(),room.getDate(),room.getStatus() , room.getRoomTpeId()),room.getStudentId());
+//        }
+//
+        return null;
+
+       // return new ArrayList<CustomDTO>(reservationDAO.lodeReservation().stream().map(o -> { return new CustomDTO((String)o[0],(String)o[1],(String)o[2],(String)o[3],(String)o[4]);}).collect(Collectors.toList()));
+    }
+
+    @Override
+    public boolean updatePaymentStutes(String resId) {
+        return false;
     }
 
 

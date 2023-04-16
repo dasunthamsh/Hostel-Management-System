@@ -23,7 +23,7 @@ public class Reservation {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "roomTpeId",referencedColumnName = "roomTpeId")
     private Room room;
-    public String status;
+    private String status;
 
 
     public Reservation(String resId, LocalDate date, Student student, Room room, String status) {

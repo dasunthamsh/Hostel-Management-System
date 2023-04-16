@@ -39,7 +39,7 @@ public class RegesterDAOimpl implements RegesterDAO {
     public HashMap<String, String> getAllUserNPasswordMap() {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        List<Object[]> list = session.createQuery("SELECT email , password FROM Regester ").list();
+        List<Object[]> list = session.createQuery("SELECT id , password FROM Regester ").list();
         transaction.commit();
         session.close();
         HashMap<String,String> userMap = new HashMap<>();

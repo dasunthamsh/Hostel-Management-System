@@ -5,6 +5,9 @@ package lk.ijse.hostelManagementSystem.dao.custom;/*
 import com.sun.xml.bind.v2.model.core.ID;
 import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.dao.CrudDAO;
+import lk.ijse.hostelManagementSystem.view.dtm.ReseveationDTM;
+
+import java.util.List;
 
 public interface ReservationDAO extends CrudDAO<Reservation, ID> {
 
@@ -15,4 +18,8 @@ public interface ReservationDAO extends CrudDAO<Reservation, ID> {
     String getResevetionId();
 
     Reservation get(String id);
+
+    // static List<Object> lodeReservation();
+
+    List<ReseveationDTM> lodeReservation();
 }

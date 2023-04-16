@@ -106,24 +106,22 @@ public class ReserveRoomFormController {
     }
 
     public void btnSerchOnAction(ActionEvent actionEvent) {
-//        RoomDTO roomDTO = new RoomDTO();
-//        StudentDTO studentDTO = new StudentDTO();
-
-      ///  reservationBO.getReservation(reservationBO.getResevationId(),lblTime,reservationBO.serchStudent((String) cmbStudentId.getValue()),reservationBO.serchRoom(cmbRoomId.getValue()),cmbPaymentOnAction());
-        reservationBO.getReservation(String.valueOf(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue())));
+        RoomDTO roomDTO = new RoomDTO();
+        StudentDTO studentDTO = new StudentDTO();
 
 
-   //ReservationDTO res = reservationBO.getReservation(txtResId.getText());
 
-//
-//    cmbRoomId.setValue(res.getRoom());
-//    cmbStudentId.setValue(res.getStudent());
-//    cmbPayment.setValue(res.getStatus());
-//    txtroomType.setText(roomDTO.getType());
-//    txtAvalableQyt.setText(String.valueOf(roomDTO.getQyt()));
-//    txtMoney.setText(roomDTO.getKeyMoney());
-//    txtStudentName.setText(studentDTO.getName());
-//    cmbDate.setValue(res.getDate());
+   ReservationDTO res = reservationBO.getReservation(txtResId.getText());
+
+    txtResId.setText(String.valueOf(res.getResId()));
+    cmbRoomId.setValue(res.getRoom());
+    cmbStudentId.setValue(res.getStudent());
+    cmbPayment.setValue(res.getStatus());
+    txtroomType.setText(roomDTO.getType());
+    txtAvalableQyt.setText(String.valueOf(roomDTO.getQyt()));
+    txtMoney.setText(roomDTO.getKeyMoney());
+    txtStudentName.setText(studentDTO.getName());
+    cmbDate.setValue(res.getDate());
 
     }
 }

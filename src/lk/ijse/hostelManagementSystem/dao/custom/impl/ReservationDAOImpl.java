@@ -7,6 +7,7 @@ import lk.ijse.hostelManagementSystem.Entity.Reservation;
 import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.dao.custom.ReservationDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import lk.ijse.hostelManagementSystem.view.dtm.ReseveationDTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -68,6 +69,16 @@ public class ReservationDAOImpl implements ReservationDAO {
         transaction.commit();
         session.close();
         return reservation;
+    }
+
+    @Override
+    public List<ReseveationDTM> lodeReservation() {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        List<Object[]> list = session.createQuery("FROM Reservation ").list();
+        transaction.commit();
+        session.close();
+        return null;
     }
 
 

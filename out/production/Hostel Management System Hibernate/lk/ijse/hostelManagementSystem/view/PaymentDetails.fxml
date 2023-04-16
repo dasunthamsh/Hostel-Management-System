@@ -20,13 +20,13 @@
       </Pane>
       <TableView fx:id="tlbpayment" layoutX="49.0" layoutY="192.0" prefHeight="542.0" prefWidth="892.0">
         <columns>
-          <TableColumn fx:id="colResevetionId" prefWidth="109.0" text="Resevetion ID" />
-          <TableColumn fx:id="colStudentId" prefWidth="183.0" text="Student ID" />
-            <TableColumn fx:id="colStudentName" prefWidth="161.0" text="Student Name" />
-            <TableColumn fx:id="colRoomId" prefWidth="121.0" text="Room ID" />
-            <TableColumn fx:id="colRoomType" prefWidth="133.0" text="Room Type" />
-            <TableColumn fx:id="colStutas" prefWidth="117.0" text="Stutas" />
-            <TableColumn fx:id="colUpdate" prefWidth="67.0" text="Update" />
+          <TableColumn fx:id="colResevetionId" prefWidth="111.0" text="Resevetion ID" />
+          <TableColumn fx:id="colStudentId" prefWidth="147.0" text="Student ID" />
+            <TableColumn fx:id="colRoomId" prefWidth="111.0" text="Room ID" />
+            <TableColumn fx:id="colDate" prefWidth="180.0" text="Date" />
+            <TableColumn fx:id="colStutas" prefWidth="131.0" text="Stutas" />
+            <TableColumn fx:id="colUpdate" prefWidth="91.0" text="Update" />
+            <TableColumn fx:id="colDelete" prefWidth="120.0" text="Delete" />
         </columns>
       </TableView>
    </children>

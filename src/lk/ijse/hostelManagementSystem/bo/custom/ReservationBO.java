@@ -3,11 +3,13 @@ package lk.ijse.hostelManagementSystem.bo.custom;/*
 */
 
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
+import lk.ijse.hostelManagementSystem.dto.CustomDTO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ReservationBO extends SuperBO {
 
@@ -27,5 +29,8 @@ public interface ReservationBO extends SuperBO {
 
        ReservationDTO getReservation(String id);
 
+       List<CustomDTO> lodeReservation();
 
+
+ boolean updatePaymentStutes(String resId);
 }

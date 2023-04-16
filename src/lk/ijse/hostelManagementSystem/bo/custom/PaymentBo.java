@@ -6,12 +6,13 @@ package lk.ijse.hostelManagementSystem.bo.custom;/*
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.CustomDTO;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface PaymentBo extends SuperBO {
+    List<CustomDTO> lodeReservation();
 
-    ArrayList<CustomDTO> getPendingPayments();
+    //  ArrayList<CustomDTO> getPendingPayments() ;
 
-    boolean updatePaymentStutes(String resId);
+   // boolean updatePaymentStutes(String resId);
 
 }
