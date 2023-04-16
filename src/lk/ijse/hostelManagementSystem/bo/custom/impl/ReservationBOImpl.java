@@ -7,6 +7,7 @@ import lk.ijse.hostelManagementSystem.Entity.Room;
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
+import lk.ijse.hostelManagementSystem.dao.custom.QueryDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.ReservationDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.RoomDAO;
 import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
@@ -24,6 +25,7 @@ public class ReservationBOImpl implements ReservationBO {
     public ReservationDAO reservationDAO = (ReservationDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.RESEVATION);
     public StudentDAO studentDAO = (StudentDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.STUDENT);
     public RoomDAO roomDAO = (RoomDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ROOM);
+    public QueryDAO queryDAO = (QueryDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.QUERY);
 
     @Override
     public void saveReservation(ReservationDTO dto) {
@@ -86,6 +88,14 @@ public class ReservationBOImpl implements ReservationBO {
     @Override
     public List<CustomDTO> lodeReservation() {
 
+        List<Object[]> pendList = queryDAO.getPaymentStutas();
+        List<CustomDTO> dtos = new ArrayList<>();
+
+        for (Object[] pList :pendList) {
+            dtos.add(new CustomDTO((String)pList[0], (String)pList[1], (String)pList[2], (String)pList[3]));
+        }
+        return dtos;
+
       //  List<Object[]> pendingList =
        // ObservableList<ReseveationDTM> rooms = FXCollections.observableArrayList();
         //List<ReseveationDTM> all = ReservationDAO.lodeReservation();
@@ -95,7 +105,7 @@ public class ReservationBOImpl implements ReservationBO {
 //            rooms.add(new ReseveationDTM(room.getResId(),room.getDate(),room.getStatus() , room.getRoomTpeId()),room.getStudentId());
 //        }
 //
-        return null;
+
 
        // return new ArrayList<CustomDTO>(reservationDAO.lodeReservation().stream().map(o -> { return new CustomDTO((String)o[0],(String)o[1],(String)o[2],(String)o[3],(String)o[4]);}).collect(Collectors.toList()));
     }

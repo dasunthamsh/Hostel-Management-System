@@ -2,11 +2,10 @@ package lk.ijse.hostelManagementSystem.dto;/*
     @author Dasun
 */
 
+import com.jfoenix.controls.JFXButton;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -17,15 +16,13 @@ public class CustomDTO {
     private String resId;
     private String status;
     private String roomTpeId;
+    private String type;
     private String studentId;
-    private LocalDate date;
+    private String name;
+    private JFXButton btn;
 
 
-    public CustomDTO(String resId, String status, String roomTpeId, String studentId, LocalDate date) {
-        this.resId = resId;
-        this.status = status;
-        this.roomTpeId = roomTpeId;
-        this.studentId = studentId;
-        this.date = date;
-    }
+
+
+
 }
