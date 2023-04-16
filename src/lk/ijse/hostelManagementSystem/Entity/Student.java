@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -28,14 +27,6 @@ public class Student {
     private LocalDate dob;
     private String gender;
 
-//    public Student(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
-//        this.studentId = studentId;
-//        this.name = name;
-//        this.address = address;
-//        this.contactNo = contactNo;
-//        this.dob = dob;
-//        this.gender = gender;
-//    }
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     private List<Reservation> resList = new ArrayList<>();

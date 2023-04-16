@@ -8,16 +8,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RegesterBO;
 import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
-import lk.ijse.hostelManagementSystem.util.Notifications;
 import lk.ijse.hostelManagementSystem.util.Routes;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
-import tray.animations.AnimationType;
-import tray.notification.NotificationType;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -43,19 +39,14 @@ public class RegesterUserFormController  {
     }
 
     public void btnRegesterOnAction(ActionEvent actionEvent) throws IOException {
-    try {
-        if(btnRegester.getText().equals("Add user")) {
-           if( regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()))){
-               Notifications.playNotification(AnimationType.POPUP, "Room Saved Successfully!", NotificationType.SUCCESS, Duration.millis(3000));
+            regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
 
-           }else {
 
            }
-        }
-    }catch (Exception e){
 
-    }
-    }
+
+
+
 
     public void validateFieldsOnKeyRelease(KeyEvent keyEvent) {
         Object validate = ValidationUtil.Validate(RegexMap, btnRegester);

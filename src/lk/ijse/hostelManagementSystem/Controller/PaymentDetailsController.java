@@ -20,7 +20,6 @@ import java.util.List;
 public class PaymentDetailsController {
     public TableColumn colStudentId;
     public TableColumn colRoomId;
-    public TableColumn colStutas;
     public TableView tlbpayment;
     public AnchorPane pain;
     public TableColumn colUpdate;
@@ -35,10 +34,10 @@ public class PaymentDetailsController {
 //
 //
     public void initialize()  {
-        loadAllPendingPayments();
+        loadtable();
     }
 
-    private void loadAllPendingPayments(){
+    private void loadtable(){
 
         List<Object[]> list=paymentBo.getPendingKeyPayments();
         ObservableList<CustomDTO> obList= FXCollections.observableArrayList();
@@ -47,13 +46,13 @@ public class PaymentDetailsController {
             obList.add(new CustomDTO(r[0].toString(),r[1].toString(),r[2].toString(),r[3].toString(),r[4].toString(),
                     r[5].toString(),getButton(r[0].toString())));
         }
-
-        colStudentName.setCellValueFactory(new PropertyValueFactory<>("resId"));
+        tlbpayment.setItems(obList);
+        colResrvationID.setCellValueFactory(new PropertyValueFactory<>("resId"));
         colStudentName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
         colRoomType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colRoomId.setCellValueFactory(new PropertyValueFactory<>("roomTpeId"));
-        colStutas.setCellValueFactory(new PropertyValueFactory<>("status"));
+        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         colUpdate.setCellValueFactory(new PropertyValueFactory<>("btn"));
 
 

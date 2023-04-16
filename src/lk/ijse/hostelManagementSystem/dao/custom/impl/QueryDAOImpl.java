@@ -15,7 +15,7 @@ public class QueryDAOImpl implements QueryDAO {
     public List<Object[]> getPaymentStutas() {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        List <Object[]>list = session.createQuery("SELECT s.studentId FROM Student s INNER JOIN Reservation res ON s.studentId = res.student INNER JOIN Room r ON r.roomTpeId = res.room WHERE res.status ='pending'").list();
+        List<Object[]> list =session.createQuery("SELECT res.resId,s.studentId,s.name, r.roomTpeId, r.type, res.status FROM Reservation res JOIN Student s ON res.student=s.studentId JOIN Room r ON res.room=r.roomTpeId WHERE res.status='Pending'").list();
         transaction.commit();
         session.close();
         return list;
