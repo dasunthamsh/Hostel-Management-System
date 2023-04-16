@@ -13,8 +13,8 @@ import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.PaymentBo;
 import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
 import lk.ijse.hostelManagementSystem.dto.CustomDTO;
-import lk.ijse.hostelManagementSystem.util.Notification;
-
+import lk.ijse.hostelManagementSystem.util.Notifications;
+;
 import java.util.List;
 
 public class PaymentDetailsController {
@@ -24,8 +24,6 @@ public class PaymentDetailsController {
     public TableView tlbpayment;
     public AnchorPane pain;
     public TableColumn colUpdate;
-    public TableColumn colDate;
-    public TableColumn colDelete;
     public TableColumn colStudentName;
     public TableColumn colRoomType;
     public TableColumn colStatus;
@@ -70,9 +68,19 @@ public class PaymentDetailsController {
             boolean isUpdate = paymentBo.updatePayment(resId);
             if(isUpdate){
                 String url ="lk/ijse/hostelManagementSystem/assets/notification.png";
-                Notification.playNotification(url,);
+                String title ="Succeccful";
+                String text ="Paument updated";
+                Notifications.showNotification(url , title , text);
+
+            }else {
+                String url = "lk/ijse/hostelManagementSystem/assets/sorry.png";
+                String title = "UnSuccessful";
+                String text = "payment Update UnSuccessful";
+                Notifications.showNotification(url,title,text);
             }
         });
+
+        return btn;
 
     }
 

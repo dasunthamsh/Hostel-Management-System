@@ -7,11 +7,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-public class Notification {
+public class Notifications {
 
     public static  void showNotification(String url,String title,String text){
         Image image=new Image(url);
-        Notification notifications=Notification.create();
+        org.controlsfx.control.Notifications notifications= org.controlsfx.control.Notifications.create();
         notifications .title(title);
         notifications  .text(text);
         notifications    .graphic(new ImageView(image));
