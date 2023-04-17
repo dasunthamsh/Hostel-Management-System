@@ -33,12 +33,12 @@
          </cursor>
       </JFXButton>
       <JFXTextField fx:id="txtStudentName" focusColor="#405aa800" labelFloat="true" layoutX="548.0" layoutY="376.0" prefHeight="41.0" prefWidth="293.0" promptText="  Student Name" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtroomType" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="376.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room type" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtroomType" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="367.0" prefHeight="41.0" prefWidth="293.0" promptText="  Room type" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXTextField fx:id="txtAvalableQyt" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="468.0" prefHeight="41.0" prefWidth="293.0" promptText="  Avalable Qyt" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXTextField fx:id="txtMoney" focusColor="#405aa800" labelFloat="true" layoutX="136.0" layoutY="562.0" prefHeight="41.0" prefWidth="293.0" promptText="  Key Money" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <JFXComboBox fx:id="cmbPayment" focusColor="#ffffff00" labelFloat="true" layoutX="548.0" layoutY="467.0" onAction="#cmbPaymentOnAction" prefHeight="41.0" prefWidth="293.0" promptText="Payment" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
       <Label fx:id="lblReserveId" layoutX="529.0" layoutY="158.0" prefHeight="43.0" prefWidth="186.0" />
-      <JFXDatePicker fx:id="cmbDate" defaultColor="#008f8100" editable="false" layoutX="739.0" layoutY="164.0" />
+      <JFXDatePicker fx:id="cmbDate" defaultColor="#008f8100" editable="false" layoutX="559.0" layoutY="192.0" prefHeight="31.0" prefWidth="282.0" />
       <JFXButton fx:id="btnDelete" layoutX="682.0" layoutY="747.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="205.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="Delete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -47,14 +47,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="89.0" layoutY="699.0" onAction="#btnSerchOnAction" prefHeight="39.0" prefWidth="205.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" text="serch" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXTextField fx:id="txtResId" layoutX="114.0" layoutY="158.0" />
+      <JFXTextField fx:id="txtResId" layoutX="136.0" layoutY="180.0" prefHeight="43.0" prefWidth="293.0" />
    </children>
 </AnchorPane>

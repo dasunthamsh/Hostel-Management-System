@@ -7,7 +7,6 @@ import lk.ijse.hostelManagementSystem.dao.custom.RegesterDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,12 +23,10 @@ public class RegesterDAOimpl implements RegesterDAO {
     }
 
     @Override
-    public boolean update(String id ,String password) {
+    public boolean update(Regester regester) {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("UPDATE Regester  SET password =  :pas WHERE id =:uid");
-        query.setParameter("pas",password);
-        query.setParameter("uid",id);
+        session.update(regester);
         transaction.commit();
         session.close();
         return true;

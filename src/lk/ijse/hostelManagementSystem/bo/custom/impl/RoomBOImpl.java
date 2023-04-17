@@ -26,9 +26,9 @@ public class RoomBOImpl implements RoomBO {
     }
 
     @Override
-    public void updateRoom(RoomDTO dto) {
+    public boolean updateRoom(RoomDTO dto) {
         roomDAO.update(new Room(dto.getRoomTpeId(),dto.getType(),dto.getKeyMoney(),dto.getQyt()));
-
+            return true;
     }
 
     @Override
@@ -39,8 +39,9 @@ public class RoomBOImpl implements RoomBO {
     }
 
     @Override
-    public void deleteRoom(String id) {
+    public boolean deleteRoom(String id) {
         roomDAO.delete(id);
+        return true;
     }
 
 

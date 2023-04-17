@@ -11,11 +11,11 @@ public interface StudentBO extends SuperBO {
 
     boolean saveStudent(StudentDTO dto);
 
-    void updateStudent(StudentDTO dto);
+    boolean updateStudent(StudentDTO dto);
 
     StudentDTO searcStudent(String id);
 
-    void deleteStudent(String id);
+    boolean deleteStudent(String id);
 
     ObservableList<StudentDTM> getStudents();
 }

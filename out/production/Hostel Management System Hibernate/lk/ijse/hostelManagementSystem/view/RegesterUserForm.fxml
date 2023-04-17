@@ -3,13 +3,16 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pain" prefHeight="839.0" prefWidth="1301.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.RegesterUserFormController">
+<AnchorPane fx:id="pain" prefHeight="839.0" prefWidth="1301.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.RegesterUserFormController">
    <children>
       <JFXTextField fx:id="txtId" cache="true" layoutX="446.0" layoutY="228.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="50.0" prefWidth="336.0" promptText=" ID " style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" unFocusColor="#ffffff00">
          <font>
@@ -37,7 +40,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextField>
-      <Text layoutX="551.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regester">
+      <Text fill="WHITE" layoutX="551.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regester">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
@@ -68,7 +71,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextField>
-      <JFXButton fx:id="btnBack" layoutX="36.0" layoutY="774.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="135.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Back" textFill="WHITE">
+      <JFXButton fx:id="btnBack" layoutX="36.0" layoutY="774.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="135.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 10;" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -76,7 +79,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnRegester" layoutX="446.0" layoutY="561.0" onAction="#btnRegesterOnAction" prefHeight="50.0" prefWidth="336.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #651FFF, #3D5AFE, #2979FF, #00B0FF,  #00B0FF); -fx-background-radius: 10;" text="Regester" textFill="WHITE">
+      <JFXButton fx:id="btnRegester" layoutX="446.0" layoutY="561.0" onAction="#btnRegesterOnAction" prefHeight="50.0" prefWidth="336.0" ripplerFill="TRANSPARENT" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 10;" text="Regester" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -84,5 +87,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <Pane layoutX="863.0" layoutY="66.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 100;" />
+      <Pane layoutX="1020.0" layoutY="591.0" opacity="0.71" prefHeight="113.0" prefWidth="114.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 100;" />
+      <Pane layoutX="254.0" layoutY="584.0" prefHeight="127.0" prefWidth="126.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
+      <Pane layoutX="164.0" layoutY="302.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
+      <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="34.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="345.0" layoutY="99.0" opacity="0.18" prefHeight="619.0" prefWidth="573.0" style="-fx-background-color: black; -fx-background-radius: 20;" />
    </children>
 </AnchorPane>

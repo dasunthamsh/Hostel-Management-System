@@ -27,8 +27,4 @@ public interface ReservationBO extends SuperBO {
 
        ReservationDTO getReservation(String id);
 
-
-
-
- boolean updatePaymentStutes(String resId);
 }

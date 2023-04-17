@@ -45,13 +45,13 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.delete(session.get(Student.class ,id));
         transaction.commit();
         session.close();
-
+        return  true;
     }
 
     public List<Student> getAll(){

@@ -14,8 +14,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.LoginFormController">
+<AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.LoginFormController">
    <children>
+      <Pane layoutX="217.0" layoutY="92.0" opacity="0.13" prefHeight="646.0" prefWidth="891.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Text fill="WHITE" layoutX="539.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You whill get access to the public information and account potions" wrappingWidth="304.0000142157078">
+               <font>
+                  <Font name="Book Antiqua" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
       <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="263.0" layoutY="358.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -24,12 +33,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXPasswordField>
-      <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="14.0" layoutY="14.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="146.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/logo.png" />
          </image>
       </ImageView>
-      <Text layoutX="361.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+      <Text fill="WHITE" layoutX="361.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
          <font>
             <Font name="System Bold" size="39.0" />
          </font>
@@ -42,21 +51,20 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="912.0" layoutY="362.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
-      <Text layoutX="280.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an account? " wrappingWidth="186.00000962615013">
+      <Pane layoutX="98.0" layoutY="588.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
+      <Text fill="WHITE" layoutX="280.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an account? " wrappingWidth="186.00000962615013">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
       <ButtonBar layoutX="698.0" layoutY="449.0" prefHeight="40.0" prefWidth="79.0" />
-      <JFXButton fx:id="btnCreateAccount" layoutX="442.0" layoutY="515.0" onAction="#btnCreateAccountOnAction" prefHeight="31.0" prefWidth="134.0" text="Create Account">
+      <JFXButton fx:id="btnCreateAccount" layoutX="442.0" layoutY="515.0" onAction="#btnCreateAccountOnAction" prefHeight="31.0" prefWidth="134.0" text="Create Account" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="14.0" layoutY="810.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
-      <JFXButton fx:id="btnForgetPassword" layoutX="352.0" layoutY="554.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" />
-      <Pane layoutX="338.0" layoutY="-73.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 100;" />
+      <Text fill="#948383" layoutX="14.0" layoutY="810.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
+      <JFXButton fx:id="btnForgetPassword" layoutX="352.0" layoutY="554.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" textFill="WHITE" />
       <JFXTextField fx:id="txtEmail" cache="true" layoutX="263.0" layoutY="292.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -71,20 +79,8 @@
          </focusColor>
       </JFXTextField>
       <Pane layoutX="599.0" layoutY="638.0" prefHeight="127.0" prefWidth="126.0" style="-fx-background-color: linear-gradient(to right top, #212121, #212121, #263238, #455A64,  #546E7A); -fx-background-radius: 100;" />
-      <ImageView fitHeight="829.0" fitWidth="870.0" layoutX="834.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/lew.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" layoutX="842.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You whill get access to the public information and account potions" wrappingWidth="304.0000142157078">
-         <font>
-            <Font name="Book Antiqua" size="21.0" />
-         </font></Text>
-      <ImageView fitHeight="109.0" fitWidth="134.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/logo.png" />
-         </image>
-      </ImageView>
+      <Pane layoutX="822.0" layoutY="63.0" opacity="0.71" prefHeight="175.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 100;" />
+      <Pane layoutX="1059.0" layoutY="393.0" opacity="0.71" prefHeight="113.0" prefWidth="114.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 100;" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

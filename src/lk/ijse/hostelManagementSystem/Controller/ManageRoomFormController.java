@@ -16,9 +16,9 @@ import javafx.scene.input.KeyEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
+import lk.ijse.hostelManagementSystem.util.Notifications;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
-
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
@@ -44,8 +44,19 @@ public class ManageRoomFormController {
 
 
     public boolean btnSaveRoomOnAction(ActionEvent actionEvent) {
-        roomBO.saveRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
+      boolean isAdded =  roomBO.saveRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
 
+        if(isAdded){
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Student is Added";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
         cleanText();
 
         return true;
@@ -61,12 +72,41 @@ public class ManageRoomFormController {
 
     }
 
-    public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
-        roomBO.updateRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
+    public boolean btnUpdateRoomOnAction(ActionEvent actionEvent) {
+
+      boolean isUpdated =  roomBO.updateRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
+    if(isUpdated){
+        String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+        String titel = "Successful";
+        String text = "Student is Added";
+        Notifications.showNotification(url,text,titel);
+    }else {
+        String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+        String titel = "error";
+        String text = "Somthing was wrong";
+        Notifications.showNotification(url,text,titel);
+    }
+    return true;
+
+
     }
 
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
-        roomBO.deleteRoom(txtRoomTypeID.getText());
+    public boolean btnDeleteOnAction(ActionEvent actionEvent) {
+
+       boolean isDeleted = roomBO.deleteRoom(txtRoomTypeID.getText());
+
+       if(isDeleted){
+           String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+           String titel = "Successful";
+           String text = "Student is Added";
+           Notifications.showNotification(url,text,titel);
+       }else {
+           String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+           String titel = "error";
+           String text = "Somthing was wrong";
+           Notifications.showNotification(url,text,titel);
+       }
+        return true;
     }
 
     public void cmbRoomTypeOnAction() {

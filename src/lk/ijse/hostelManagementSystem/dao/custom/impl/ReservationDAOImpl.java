@@ -43,8 +43,8 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public void delete(ID id) {
-
+    public boolean delete(ID id) {
+        return true;
 
     }
 

@@ -11,12 +11,17 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
-import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.util.Notifications;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class ReserveRoomFormController {
     public JFXComboBox cmbStudentId;
@@ -27,24 +32,32 @@ public class ReserveRoomFormController {
     public JFXTextField txtAvalableQyt;
     public JFXTextField txtMoney;
     public JFXComboBox cmbPayment;
-    public Label lblTime;
     public Label lblReserveId;
     public TextField txtResId;
     public JFXDatePicker cmbDate;
     public JFXButton btnDelete;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
-    StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
+
 
 
 
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
 
-//        System.out.println(reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())));
-//        System.out.println(cmbStudentId.getValue());
-        reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
 
+       boolean isAdded = reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
+        if(isAdded){
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Student is Added";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
     }
 
 
@@ -55,6 +68,9 @@ public class ReserveRoomFormController {
 
 
     public void initialize() {
+        LocalDate date = LocalDate.now();
+        cmbDate.setValue(LocalDate.parse(String.valueOf(date)));
+        //setTime();
         cmbPaymentOnAction();
         getResevationId();
 
@@ -123,5 +139,22 @@ public class ReserveRoomFormController {
     txtStudentName.setText(studentDTO.getName());
     cmbDate.setValue(res.getDate());
 
+    }
+
+    private void setTime() {
+        Thread clock = new Thread() {
+            public void run() {
+                while (true) {
+                    DateFormat hour = new SimpleDateFormat("hh:mm:ss");
+                    cmbDate.setValue(LocalDate.parse(hour.format(new Date())));
+
+                    try {
+                        sleep(1000);
+                    } catch (InterruptedException ex) {
+                    }
+                }
+            }
+        };
+        clock.start();
     }
 }

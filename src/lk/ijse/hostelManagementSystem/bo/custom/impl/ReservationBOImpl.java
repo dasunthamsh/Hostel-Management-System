@@ -85,10 +85,7 @@ public class ReservationBOImpl implements ReservationBO {
 
 
 
-    @Override
-    public boolean updatePaymentStutes(String resId) {
-        return false;
-    }
+
 
 
 }

@@ -11,11 +11,11 @@ public interface RoomBO extends SuperBO {
 
     boolean saveRoom(RoomDTO dto);
 
-    void updateRoom(RoomDTO dto);
+    boolean updateRoom(RoomDTO dto);
 
     RoomDTO searcRoom(String id);
 
-    void deleteRoom(String id);
+    boolean deleteRoom(String id);
 
     ObservableList<RoomDTM> getRooms();
 }

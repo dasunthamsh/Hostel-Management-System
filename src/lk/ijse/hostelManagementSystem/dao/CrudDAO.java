@@ -10,6 +10,6 @@ public interface CrudDAO <T ,ID> extends SuperDAO {
 
     T serch(ID id);
 
-    void delete(ID id);
+    boolean delete(ID id);
 
 }

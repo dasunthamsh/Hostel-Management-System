@@ -9,7 +9,7 @@ public interface RegesterBO extends SuperBO {
 
     boolean saveUser(RegesterDTO dto);
 
-    boolean updateUser(String id , String password);
+    boolean updateUser(RegesterDTO regesterDTO);
 
     boolean checkPassword(String email , String password);
 }

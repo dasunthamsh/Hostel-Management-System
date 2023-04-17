@@ -17,6 +17,7 @@ import javafx.scene.input.KeyEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.util.Notifications;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 import java.util.LinkedHashMap;
@@ -52,16 +53,40 @@ public class ManageStudentCFormController {
      public  void btnAddStudentNoOnAction(ActionEvent actionEvent) {
 
 
-            studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+           boolean isAdded =  studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+         if(isAdded){
+             String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+             String titel = "Successful";
+             String text = "Student is Added";
+             Notifications.showNotification(url,text,titel);
+         }else {
+             String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+             String titel = "error";
+             String text = "Somthing was wrong";
+             Notifications.showNotification(url,text,titel);
+         }
 
-
-      //  clearText();
+        clearText();
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
 
-             studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+           boolean isUpdated =  studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
+       if(isUpdated){
 
+           String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+           String titel = "Successful";
+           String text = "Student is Added";
+           Notifications.showNotification(url,text,titel);
+       }else {
+           String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+           String titel = "error";
+           String text = "Somthing was wrong";
+           Notifications.showNotification(url,text,titel);
+
+       }
+
+        clearText();
     }
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
@@ -78,10 +103,23 @@ public class ManageStudentCFormController {
 
     }
 
-    public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
+    public boolean btnDeleteStudentOnAction(ActionEvent actionEvent) {
 
-        studentBO.deleteStudent(txtStudentId.getText());
-        clearText();
+       boolean isDeleted = studentBO.deleteStudent(txtStudentId.getText());
+        if (isDeleted){
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "Successful";
+            String text = "Student is Added";
+            Notifications.showNotification(url,text,titel);
+        }else {
+            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String titel = "error";
+            String text = "Somthing was wrong";
+            Notifications.showNotification(url,text,titel);
+        }
+
+        return true;
+
     }
 
     public void cmbGenderOnAction() {

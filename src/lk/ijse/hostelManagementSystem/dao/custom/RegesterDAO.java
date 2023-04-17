@@ -11,7 +11,7 @@ public interface RegesterDAO extends SuperDAO {
 
     boolean save(Regester entity);
 
-    boolean update(String id , String password);
+    boolean update(Regester regester);
 
     HashMap<String, String> getAllUserNPasswordMap();
 }

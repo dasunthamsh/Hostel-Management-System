@@ -8,7 +8,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RegesterBO;
+import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
+import lk.ijse.hostelManagementSystem.util.Notifications;
 import lk.ijse.hostelManagementSystem.util.Routes;
 
 import java.io.IOException;
@@ -23,8 +25,22 @@ RegesterBO regesterBO = (RegesterBO) BOFactory.getInstance().getBO(BOFactory.BOT
     public AnchorPane pane;
     public JFXTextField txtId;
 
-    public void btnResetOnAction(ActionEvent actionEvent) {
-        regesterBO.updateUser(txtId.getText(),txtPassword.getText());
+    public boolean btnResetOnAction(ActionEvent actionEvent) {
+        boolean isUpdated = regesterBO.updateUser(new RegesterDTO(txtId.getText(),txtPassword.getText()));
+        if(isUpdated){
+            if(isUpdated){
+                String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+                String titel = "Successful";
+                String text = "Student is Added";
+                Notifications.showNotification(url,text,titel);
+            }else {
+                String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+                String titel = "error";
+                String text = "Somthing was wrong";
+                Notifications.showNotification(url,text,titel);
+            }
+        }
+        return true;
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
