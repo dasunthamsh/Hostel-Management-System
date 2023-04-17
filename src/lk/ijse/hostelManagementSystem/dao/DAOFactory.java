@@ -17,7 +17,7 @@ public class DAOFactory {
 
 
     public enum DAOTypes{
-      STUDENT , ROOM , RESEVATION ,REGESTER , QUERY
+      STUDENT , ROOM , RESEVATION ,REGESTER , QUERY , DASHBOARD
     }
 
 
@@ -33,6 +33,8 @@ public class DAOFactory {
           return new RegesterDAOimpl();
         case QUERY:
           return new QueryDAOImpl();
+        case DASHBOARD:
+          return new DashboardDAOImpl();
 
         default:
           return null;

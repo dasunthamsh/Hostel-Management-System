@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" prefHeight="829.0" prefWidth="1301.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.DashboardFormController">
    <children>
@@ -78,6 +79,13 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="contex" layoutX="330.0" layoutY="7.0" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;" />
+      <Pane fx:id="contex" layoutX="330.0" layoutY="7.0" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Pane layoutX="429.0" layoutY="208.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="txtStudentCount" layoutX="72.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="39.0" />
+               </children>
+            </Pane>
+         </children></Pane>
    </children>
 </AnchorPane>
