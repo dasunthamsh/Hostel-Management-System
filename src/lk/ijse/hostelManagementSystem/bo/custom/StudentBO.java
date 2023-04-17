@@ -9,7 +9,7 @@ import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
 public interface StudentBO extends SuperBO {
 
-    void saveStudent(StudentDTO dto);
+    boolean saveStudent(StudentDTO dto);
 
     void updateStudent(StudentDTO dto);
 

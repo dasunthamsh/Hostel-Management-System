@@ -12,12 +12,13 @@ import java.util.List;
 
 public class RoomDAOImpl implements RoomDAO {
     @Override
-    public void save(Room entity) {
+    public boolean save(Room entity) {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
         transaction.commit();
         session.close();
+        return true;
     }
 
     @Override

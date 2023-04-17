@@ -12,13 +12,15 @@ import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
-    public void save(Student entity) {
+    public boolean save(Student entity) {
 
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
         transaction.commit();
         session.close();
+
+        return true;
     }
 
     @Override

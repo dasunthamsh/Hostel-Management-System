@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public interface ReservationBO extends SuperBO {
 
-    void saveReservation(ReservationDTO dto);
+    boolean saveReservation(ReservationDTO dto);
 
      ArrayList<String> getStudentIds();
 

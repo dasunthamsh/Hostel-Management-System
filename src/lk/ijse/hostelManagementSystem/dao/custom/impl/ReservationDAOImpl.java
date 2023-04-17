@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ReservationDAOImpl implements ReservationDAO {
     @Override
-    public void save(Reservation entity) {
+    public boolean save(Reservation entity) {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
@@ -24,6 +24,7 @@ public class ReservationDAOImpl implements ReservationDAO {
         session.update(room);
         transaction.commit();
         session.close();
+        return true;
     }
 
     @Override

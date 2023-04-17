@@ -9,7 +9,7 @@ import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
 
 public interface RoomBO extends SuperBO {
 
-    void saveRoom(RoomDTO dto);
+    boolean saveRoom(RoomDTO dto);
 
     void updateRoom(RoomDTO dto);
 

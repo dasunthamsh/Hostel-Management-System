@@ -19,8 +19,10 @@ public class RoomBOImpl implements RoomBO {
         public RoomDAO roomDAO = (RoomDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
-    public void saveRoom(RoomDTO dto) {
+    public boolean saveRoom(RoomDTO dto) {
         roomDAO.save(new Room(dto.getRoomTpeId(),dto.getType(),dto.getKeyMoney(),dto.getQyt()));
+
+        return true;
     }
 
     @Override
