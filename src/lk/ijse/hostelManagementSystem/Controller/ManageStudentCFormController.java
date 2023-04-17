@@ -19,7 +19,6 @@ import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
-
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
@@ -56,7 +55,7 @@ public class ManageStudentCFormController {
             studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
 
 
-        clearText();
+      //  clearText();
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {

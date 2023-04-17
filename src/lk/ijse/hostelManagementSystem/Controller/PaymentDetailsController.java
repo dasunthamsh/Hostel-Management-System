@@ -11,11 +11,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.PaymentBo;
-import lk.ijse.hostelManagementSystem.bo.custom.ReservationBO;
 import lk.ijse.hostelManagementSystem.dto.CustomDTO;
 import lk.ijse.hostelManagementSystem.util.Notifications;
-;
+
 import java.util.List;
+
+;
 
 public class PaymentDetailsController {
     public TableColumn colStudentId;
@@ -28,11 +29,9 @@ public class PaymentDetailsController {
     public TableColumn colStatus;
     public TableColumn colResrvationID;
 
-    ReservationBO reservationBO = (ReservationBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RESEVATION);
 
    private final PaymentBo paymentBo = (PaymentBo) BOFactory.getInstance().getBO(BOFactory.BOTypes.PAYMENT);
-//
-//
+
     public void initialize()  {
         loadtable();
     }
