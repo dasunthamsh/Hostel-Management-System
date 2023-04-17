@@ -16,11 +16,8 @@ import javafx.scene.input.KeyEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
-import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
@@ -44,18 +41,14 @@ public class ManageRoomFormController {
     RoomBO roomBO = (RoomBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ROOM);
     private final LinkedHashMap<JFXTextField, Pattern> RegexMap = new LinkedHashMap<>();
 
-    public void btnAddRoomOnAction(ActionEvent actionEvent) {
-        Session session = FactoryConfigeration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-//       session.save();
-        transaction.commit();
-        session.close();
-    }
 
-    public void btnSaveRoomOnAction(ActionEvent actionEvent) {
+
+    public boolean btnSaveRoomOnAction(ActionEvent actionEvent) {
         roomBO.saveRoom(new RoomDTO(txtRoomTypeID.getText(),(String) cmbRoomType.getValue(), Integer.parseInt(txtQtq.getText()),txtKeyMoney.getText()));
 
         cleanText();
+
+        return true;
     }
 
     public void btnSearchRoomOnAction(ActionEvent actionEvent) {

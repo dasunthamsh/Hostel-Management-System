@@ -16,11 +16,11 @@ public class Reservation {
     @Id
     private String resId;
     private LocalDate date;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "studentId",referencedColumnName = "studentId")
     private Student student;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "roomTpeId",referencedColumnName = "roomTpeId")
     private Room room;
     private String status;

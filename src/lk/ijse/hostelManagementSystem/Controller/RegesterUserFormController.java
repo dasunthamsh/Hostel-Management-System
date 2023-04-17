@@ -12,6 +12,7 @@ import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RegesterBO;
 import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
+import lk.ijse.hostelManagementSystem.util.Notifications;
 import lk.ijse.hostelManagementSystem.util.Routes;
 import lk.ijse.hostelManagementSystem.util.ValidationUtil;
 
@@ -39,9 +40,19 @@ public class RegesterUserFormController  {
     }
 
     public void btnRegesterOnAction(ActionEvent actionEvent) throws IOException {
-            regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
-
-
+        boolean isAdded =    regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
+            if(isAdded){
+                String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+                String titel = "Successful";
+                String text = "Student is Added";
+                Notifications.showNotification(url,text,titel);
+            }else {
+                String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+                String titel = "error";
+                String text = "Somthing was wrong";
+                Notifications.showNotification(url,text,titel);
+            }
+                clearText();
            }
 
 
@@ -66,5 +77,12 @@ public class RegesterUserFormController  {
         RegexMap.put(txtEmail,Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"));
 
 
+    }
+
+    public void clearText(){
+        txtId.setText("");
+        txtName.setText("");
+        txtEmail.setText("");
+        txtPassword.setText("");
     }
 }
