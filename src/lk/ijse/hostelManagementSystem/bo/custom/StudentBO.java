@@ -7,6 +7,8 @@ import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
+import java.util.List;
+
 public interface StudentBO extends SuperBO {
 
     boolean saveStudent(StudentDTO dto);
@@ -18,4 +20,6 @@ public interface StudentBO extends SuperBO {
     boolean deleteStudent(String id);
 
     ObservableList<StudentDTM> getStudents();
+
+    List<StudentDTO> getAllStudents();
 }

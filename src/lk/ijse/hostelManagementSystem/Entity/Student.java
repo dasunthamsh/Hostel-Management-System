@@ -41,4 +41,7 @@ public class Student {
         this.dob = dob;
         this.gender = gender;
     }
+
+    public Student(String studentId) {
+    }
 }

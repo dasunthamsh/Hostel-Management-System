@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -24,6 +23,6 @@ public class StudentDTO {
     private String gender;
 
 
-
-
+    public StudentDTO(String text) {
+    }
 }

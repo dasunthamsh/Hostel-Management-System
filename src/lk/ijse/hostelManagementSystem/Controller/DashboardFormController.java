@@ -9,10 +9,15 @@ import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import lk.ijse.hostelManagementSystem.Entity.Student;
+import lk.ijse.hostelManagementSystem.bo.BOFactory;
+import lk.ijse.hostelManagementSystem.bo.custom.DashboardBO;
+import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
 import lk.ijse.hostelManagementSystem.util.Routes;
 
 import java.io.IOException;
+import java.util.List;
 
 public class DashboardFormController {
 
@@ -28,9 +33,12 @@ public class DashboardFormController {
     public JFXButton btnPayment;
     public Text txtStudentCount;
 
+    DashboardBO dashboardBO = (DashboardBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.DASHBOARD);
+    StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
-    public void studentCount(){
 
+    public void dashnoardStatus(){
+        List<Student> dtos = studentBO.getAllStudents();
     }
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
