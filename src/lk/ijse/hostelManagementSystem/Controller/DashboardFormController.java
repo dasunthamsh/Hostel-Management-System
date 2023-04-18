@@ -9,17 +9,17 @@ import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.DashboardBO;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
+import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.util.Navigation;
 import lk.ijse.hostelManagementSystem.util.Routes;
 
 import java.io.IOException;
 import java.util.List;
 
-public class DashboardFormController {
+public class DashboardFormController  {
 
 
 
@@ -38,7 +38,9 @@ public class DashboardFormController {
 
 
     public void dashnoardStatus(){
-        List<Student> dtos = studentBO.getAllStudents();
+        List<StudentDTO> dtos = studentBO.getAllStudents();
+
+        txtStudentCount.setText(String.format("%02d",dtos.size()));
     }
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
@@ -72,5 +74,10 @@ public class DashboardFormController {
         Parent node = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
         contex.getChildren().clear();
         contex.getChildren().add(node);
+    }
+
+
+    public void initialize() {
+        dashnoardStatus();
     }
 }

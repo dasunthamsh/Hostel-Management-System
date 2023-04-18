@@ -9,6 +9,7 @@ import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
 import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.util.DataConvertor;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.function.Function;
 public class StudentBOImpl implements StudentBO {
 
     public StudentDAO studentDAO = (StudentDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.STUDENT);
-
+    DataConvertor dataConvertor = DataConvertor.getInstance();
 
     @Override
     public boolean saveStudent(StudentDTO dto) {
@@ -59,6 +60,6 @@ public class StudentBOImpl implements StudentBO {
     public List<StudentDTO> getAllStudents() {
         Function<Student,StudentDTO> function=(r)->new StudentDTO(
                 r.getStudentId(),r.getName(),r.getAddress(),r.getContactNo(),r.getDob(),r.getGender());
-        return ;
+        return dataConvertor.convert(studentDAO.findAll(),function);
     }
 }

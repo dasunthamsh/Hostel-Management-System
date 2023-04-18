@@ -10,4 +10,6 @@ import java.util.List;
 public interface StudentDAO extends CrudDAO<Student , String> {
 
      List<Student> getAll();
+
+    List<Student> findAll();
 }

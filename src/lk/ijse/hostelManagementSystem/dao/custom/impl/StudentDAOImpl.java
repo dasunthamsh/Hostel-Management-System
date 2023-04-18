@@ -7,6 +7,7 @@ import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -61,5 +62,12 @@ public class StudentDAOImpl implements StudentDAO {
         transaction.commit();
         session.close();
         return res;
+    }
+
+    @Override
+    public List<Student> findAll() {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        Query query = session.createQuery("from Student r");
+        return query.list();
     }
 }
