@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -81,11 +85,44 @@
       </Pane>
       <Pane fx:id="contex" layoutX="330.0" layoutY="7.0" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;">
          <children>
-            <Pane layoutX="429.0" layoutY="208.0" prefHeight="200.0" prefWidth="200.0">
+            <Pane layoutX="59.0" layoutY="28.0" prefHeight="52.0" prefWidth="858.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;">
                <children>
-                  <Text fx:id="txtStudentCount" layoutX="72.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="39.0" />
+                  <Text fill="WHITE" layoutX="323.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
+            <Label layoutX="82.0" layoutY="294.0" text="Student Count">
+               <font>
+                  <Font name="Segoe UI Bold" size="23.0" />
+               </font>
+            </Label>
+            <Text fx:id="txtStudentCount" layoutX="99.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.84472839534283">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </Text>
+            <LineChart fx:id="lineChrtStusentJoin" horizontalGridLinesVisible="false" layoutX="30.0" layoutY="410.0" prefHeight="341.0" prefWidth="901.0" stylesheets="@../../../../../../../other%20project/fff/src/lk/ijse/hms/view/assets/styles/main-form-std-line-chart-styles.css" verticalGridLinesVisible="false">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </LineChart>
+            <Pane layoutX="66.0" layoutY="150.0" opacity="0.24" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" />
+            <Text fx:id="txtDate" layoutX="613.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtTime" layoutX="783.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
          </children></Pane>
    </children>
 </AnchorPane>

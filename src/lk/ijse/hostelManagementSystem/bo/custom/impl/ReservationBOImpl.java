@@ -14,6 +14,7 @@ import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
+import lk.ijse.hostelManagementSystem.util.DataConvertor;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -24,6 +25,7 @@ public class ReservationBOImpl implements ReservationBO {
     public StudentDAO studentDAO = (StudentDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.STUDENT);
     public RoomDAO roomDAO = (RoomDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ROOM);
     public QueryDAO queryDAO = (QueryDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.QUERY);
+    DataConvertor dataConvertor = DataConvertor.getInstance();
 
     @Override
     public boolean saveReservation(ReservationDTO dto) {
@@ -82,8 +84,6 @@ public class ReservationBOImpl implements ReservationBO {
                 new RoomDTO(r.getRoomTpeId(),r.getType(),r.getKeyMoney(),r.getQyt()),
                 reservation.getStatus());
     }
-
-
 
 
 

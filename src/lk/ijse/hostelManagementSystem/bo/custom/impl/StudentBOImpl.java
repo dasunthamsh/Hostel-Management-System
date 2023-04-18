@@ -12,6 +12,7 @@ import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.util.DataConvertor;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.function.Function;
 
@@ -61,5 +62,10 @@ public class StudentBOImpl implements StudentBO {
         Function<Student,StudentDTO> function=(r)->new StudentDTO(
                 r.getStudentId(),r.getName(),r.getAddress(),r.getContactNo(),r.getDob(),r.getGender());
         return dataConvertor.convert(studentDAO.findAll(),function);
+    }
+
+    @Override
+    public BigInteger getStudentJoinCount(String month) {
+        return studentDAO.getStudentJoinCount(month);
     }
 }

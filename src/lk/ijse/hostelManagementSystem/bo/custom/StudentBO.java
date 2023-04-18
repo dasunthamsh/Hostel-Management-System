@@ -7,6 +7,7 @@ import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
+import java.math.BigInteger;
 import java.util.List;
 
 public interface StudentBO extends SuperBO {
@@ -22,4 +23,6 @@ public interface StudentBO extends SuperBO {
     ObservableList<StudentDTM> getStudents();
 
     List<StudentDTO> getAllStudents();
+
+    BigInteger getStudentJoinCount(String month);
 }

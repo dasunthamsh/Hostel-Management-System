@@ -5,10 +5,12 @@ package lk.ijse.hostelManagementSystem.dao.custom.impl;/*
 import lk.ijse.hostelManagementSystem.Entity.Student;
 import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
 import lk.ijse.hostelManagementSystem.util.FactoryConfigeration;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.math.BigInteger;
 import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
@@ -69,5 +71,13 @@ public class StudentDAOImpl implements StudentDAO {
         Session session = FactoryConfigeration.getInstance().getSession();
         Query query = session.createQuery("from Student r");
         return query.list();
+    }
+
+    @Override
+    public BigInteger getStudentJoinCount(String month) {
+        Session session = FactoryConfigeration.getInstance().getSession();
+        SQLQuery sqlQuery = session.createSQLQuery("select count(s.studentId) from Student s where s.dob like :month");
+        sqlQuery.setParameter("month",month);
+        return (BigInteger) sqlQuery.list().get(0);
     }
 }

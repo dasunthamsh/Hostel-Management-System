@@ -18,10 +18,7 @@ import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.util.Notifications;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class ReserveRoomFormController {
     public JFXComboBox cmbStudentId;
@@ -141,20 +138,5 @@ public class ReserveRoomFormController {
 
     }
 
-    private void setTime() {
-        Thread clock = new Thread() {
-            public void run() {
-                while (true) {
-                    DateFormat hour = new SimpleDateFormat("hh:mm:ss");
-                    cmbDate.setValue(LocalDate.parse(hour.format(new Date())));
 
-                    try {
-                        sleep(1000);
-                    } catch (InterruptedException ex) {
-                    }
-                }
-            }
-        };
-        clock.start();
-    }
 }
