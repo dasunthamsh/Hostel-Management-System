@@ -85,4 +85,12 @@ public class RegesterUserFormController  {
         txtEmail.setText("");
         txtPassword.setText("");
     }
+
+    public void toName(ActionEvent actionEvent) {txtName.requestFocus(); }
+
+    public void toEmali(ActionEvent actionEvent) { txtEmail.requestFocus();}
+
+    public void toPassword(ActionEvent actionEvent) {txtPassword.requestFocus(); }
+
+    public void toBtnRegester(ActionEvent actionEvent) {btnRegester.requestFocus(); }
 }

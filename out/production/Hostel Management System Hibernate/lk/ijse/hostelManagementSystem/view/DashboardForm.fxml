@@ -113,12 +113,12 @@
                </yAxis>
             </LineChart>
             <Pane layoutX="66.0" layoutY="150.0" opacity="0.24" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831) linear-gradient(to right top, #250902, #38040e, #640d14, #800e13,  #ad2831); -fx-background-radius: 25;" />
-            <Text fx:id="txtDate" layoutX="613.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
+            <Text fx:id="txtDate" layoutX="613.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Text fx:id="txtTime" layoutX="783.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
+            <Text fx:id="txtTime" layoutX="783.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.99999526143074">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

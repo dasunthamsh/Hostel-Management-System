@@ -171,4 +171,13 @@ public class ManageStudentCFormController {
         txtStudentNo.setText("");
     }
 
+    public void toName(ActionEvent actionEvent) { txtStudentName.requestFocus();}
+
+    public void toAddress(ActionEvent actionEvent) { txtStudentAddress.requestFocus();}
+
+    public void toContact(ActionEvent actionEvent) { txtStudentNo.requestFocus();}
+
+    public void toBirthaday(ActionEvent actionEvent) { cmbBirthDay.requestFocus();}
+
+    public void toGender(ActionEvent actionEvent) { }
 }
