@@ -9,9 +9,9 @@ import java.util.HashMap;
 
 public interface RegesterDAO extends SuperDAO {
 
-    boolean save(Regester entity);
+    boolean save(Regester entity)throws Exception ;
 
-    boolean update(Regester regester);
+    boolean update(Regester regester)throws Exception ;
 
     HashMap<String, String> getAllUserNPasswordMap();
 }

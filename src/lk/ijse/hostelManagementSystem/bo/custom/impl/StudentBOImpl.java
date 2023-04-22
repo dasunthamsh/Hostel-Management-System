@@ -22,19 +22,19 @@ public class StudentBOImpl implements StudentBO {
     DataConvertor dataConvertor = DataConvertor.getInstance();
 
     @Override
-    public boolean saveStudent(StudentDTO dto) {
+    public boolean saveStudent(StudentDTO dto)throws Exception  {
         studentDAO.save(new Student(dto.getStudentId(),dto.getName(),dto.getAddress(),dto.getContactNo(),dto.getDob(),dto.getGender()));
         return true;
     }
 
     @Override
-    public boolean updateStudent(StudentDTO dto) {
+    public boolean updateStudent(StudentDTO dto) throws Exception {
         studentDAO.update(new Student(dto.getStudentId(),dto.getName(),dto.getAddress(),dto.getContactNo(),dto.getDob(),dto.getGender()));
     return true;
     }
 
     @Override
-    public StudentDTO searcStudent(String id) {
+    public StudentDTO searcStudent(String id) throws Exception{
         Student student = studentDAO.serch(id);
         return new StudentDTO(
                 student.getStudentId(),student.getName(),student.getAddress(),student.getContactNo(),student.getDob(),student.getGender()
@@ -42,7 +42,7 @@ public class StudentBOImpl implements StudentBO {
     }
 
     @Override
-    public boolean deleteStudent(String id) {
+    public boolean deleteStudent(String id)throws Exception {
         studentDAO.delete(id);
         return true;
     }

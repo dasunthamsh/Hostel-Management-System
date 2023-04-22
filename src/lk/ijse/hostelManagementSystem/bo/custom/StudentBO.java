@@ -12,13 +12,13 @@ import java.util.List;
 
 public interface StudentBO extends SuperBO {
 
-    boolean saveStudent(StudentDTO dto);
+    boolean saveStudent(StudentDTO dto)throws Exception ;
 
-    boolean updateStudent(StudentDTO dto);
+    boolean updateStudent(StudentDTO dto)throws Exception ;
 
-    StudentDTO searcStudent(String id);
+    StudentDTO searcStudent(String id)throws Exception;
 
-    boolean deleteStudent(String id);
+    boolean deleteStudent(String id)throws Exception;
 
     ObservableList<StudentDTM> getStudents();
 

@@ -28,7 +28,7 @@ public class ReservationBOImpl implements ReservationBO {
     DataConvertor dataConvertor = DataConvertor.getInstance();
 
     @Override
-    public boolean saveReservation(ReservationDTO dto) {
+    public boolean saveReservation(ReservationDTO dto)throws Exception  {
         StudentDTO s1 = dto.getStudent();
         RoomDTO r1 = dto.getRoom();
 
@@ -45,7 +45,7 @@ public class ReservationBOImpl implements ReservationBO {
     }
 
     @Override
-    public StudentDTO serchStudent(String id) {
+    public StudentDTO serchStudent(String id)throws Exception {
         Student serch = studentDAO.serch(id);
 
         return new StudentDTO(serch.getStudentId(),serch.getName(),serch.getAddress(),serch.getContactNo(),serch.getDob(),serch.getGender());
@@ -58,7 +58,7 @@ public class ReservationBOImpl implements ReservationBO {
     }
 
     @Override
-    public RoomDTO serchRoom(String id) {
+    public RoomDTO serchRoom(String id)throws Exception {
         Room room =roomDAO.serch(id);
         return new RoomDTO(room.getRoomTpeId(),room.getType(),room.getQyt(), room.getKeyMoney());
     }

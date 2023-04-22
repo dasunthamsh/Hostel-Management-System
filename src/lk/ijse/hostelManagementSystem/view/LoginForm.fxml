@@ -25,7 +25,7 @@
             </Text>
          </children>
       </Pane>
-      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="263.0" layoutY="358.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="263.0" layoutY="358.0" onAction="#toBtnSignin" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -63,9 +63,9 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text fill="#948383" layoutX="14.0" layoutY="810.0" opacity="0.84" strokeType="OUTSIDE" strokeWidth="0.0" text="- T  U  N  A     P  R  O  J  E  C  T S -" wrappingWidth="239.00001421570778" />
+      <Text fill="#948383" layoutX="352.0" layoutY="790.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-        T         U         N         A            P         R         O         J         E         C         T         S        -" wrappingWidth="620.0000142157078" />
       <JFXButton fx:id="btnForgetPassword" layoutX="352.0" layoutY="554.0" onAction="#btnForgetPasswordOnAction" prefHeight="31.0" prefWidth="158.0" text="Forget Password ?" textFill="WHITE" />
-      <JFXTextField fx:id="txtEmail" cache="true" layoutX="263.0" layoutY="292.0" prefHeight="50.0" prefWidth="336.0" promptText="  Email" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtEmail" cache="true" layoutX="263.0" layoutY="292.0" onAction="#toPassword" prefHeight="50.0" prefWidth="336.0" promptText="  ID" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

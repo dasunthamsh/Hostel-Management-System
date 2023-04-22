@@ -4,12 +4,12 @@ package lk.ijse.hostelManagementSystem.dao;/*
 
 public interface CrudDAO <T ,ID> extends SuperDAO {
 
-    boolean  save(T entity);
+    boolean  save(T entity)throws Exception;
 
-    boolean update(T entity);
+    boolean update(T entity)throws Exception;
 
-    T serch(ID id);
+    T serch(ID id)throws Exception;
 
-    boolean delete(ID id);
+    boolean delete(ID id )throws Exception;
 
 }

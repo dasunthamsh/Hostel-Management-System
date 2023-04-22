@@ -7,9 +7,9 @@ import lk.ijse.hostelManagementSystem.dto.RegesterDTO;
 
 public interface RegesterBO extends SuperBO {
 
-    boolean saveUser(RegesterDTO dto);
+    boolean saveUser(RegesterDTO dto)throws Exception ;
 
-    boolean updateUser(RegesterDTO regesterDTO);
+    boolean updateUser(RegesterDTO regesterDTO)throws Exception ;
 
     boolean checkPassword(String email , String password);
 }

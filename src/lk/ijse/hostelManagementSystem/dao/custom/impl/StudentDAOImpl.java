@@ -14,8 +14,11 @@ import java.math.BigInteger;
 import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
+
+
+
     @Override
-    public boolean save(Student entity) {
+    public boolean save(Student entity)throws Exception  {
 
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -27,7 +30,7 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public boolean update(Student entity) {
+    public boolean update(Student entity)throws Exception {
 
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -38,7 +41,7 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public Student serch(String id) {
+    public Student serch(String id) throws Exception {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Student student = session.get(Student.class ,id);
@@ -48,10 +51,12 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public boolean delete(String id) {
+    public boolean delete(String id) throws Exception{
+
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.delete(session.get(Student.class ,id));
+
         transaction.commit();
         session.close();
         return  true;
@@ -79,5 +84,10 @@ public class StudentDAOImpl implements StudentDAO {
         SQLQuery sqlQuery = session.createSQLQuery("select count(s.studentId) from Student s where s.dob like :month");
         sqlQuery.setParameter("month",month);
         return (BigInteger) sqlQuery.list().get(0);
+    }
+
+    @Override
+    public List<String> lodeId() {
+        return null;
     }
 }

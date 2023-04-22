@@ -15,13 +15,13 @@ public class RegesterBOImpl implements RegesterBO {
     RegesterDAO regesterDAO = (RegesterDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.REGESTER);
 
     @Override
-    public boolean saveUser(RegesterDTO dto) {
+    public boolean saveUser(RegesterDTO dto)throws Exception  {
         regesterDAO.save(new Regester(dto.getId(),dto.getName(),dto.getEmail(), dto.getPassword()));
         return true;
     }
 
     @Override
-    public boolean updateUser(RegesterDTO dto) {
+    public boolean updateUser(RegesterDTO dto)throws Exception  {
         regesterDAO.update(new Regester(dto.getId(), dto.getPassword()));
         return true;
     }

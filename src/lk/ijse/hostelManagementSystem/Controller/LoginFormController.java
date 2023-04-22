@@ -41,4 +41,8 @@ public class LoginFormController {
     public void btnForgetPasswordOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.FORGETPASSWORD,pane);
     }
+
+    public void toPassword(ActionEvent actionEvent) { txtPassword.requestFocus();}
+
+    public void toBtnSignin(ActionEvent actionEvent) { btnSignIn.requestFocus();}
 }

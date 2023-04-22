@@ -12,7 +12,7 @@ import java.util.List;
 
 public class RoomDAOImpl implements RoomDAO {
     @Override
-    public boolean save(Room entity) {
+    public boolean save(Room entity) throws Exception{
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(entity);
@@ -22,7 +22,7 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public boolean update(Room entity) {
+    public boolean update(Room entity) throws Exception{
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.update(entity);
@@ -33,7 +33,7 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public Room serch(String id) {
+    public Room serch(String id)throws Exception {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Room room = session.get(Room.class,id);
@@ -43,7 +43,7 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public boolean delete(String id) {
+    public boolean delete(String id)throws Exception {
         Session session = FactoryConfigeration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.delete(session.get(Room.class,id));

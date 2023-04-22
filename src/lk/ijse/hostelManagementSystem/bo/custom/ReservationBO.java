@@ -11,15 +11,15 @@ import java.util.ArrayList;
 
 public interface ReservationBO extends SuperBO {
 
-    boolean saveReservation(ReservationDTO dto);
+    boolean saveReservation(ReservationDTO dto)throws Exception ;
 
      ArrayList<String> getStudentIds();
 
-     StudentDTO serchStudent(String id);
+     StudentDTO serchStudent(String id)throws Exception;
 
      ArrayList<String> getRoomIds();
 
-      RoomDTO serchRoom(String id);
+      RoomDTO serchRoom(String id)throws Exception;
 
       String getResevationId();
 

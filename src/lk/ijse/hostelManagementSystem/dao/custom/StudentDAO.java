@@ -15,4 +15,6 @@ public interface StudentDAO extends CrudDAO<Student , String> {
     List<Student> findAll();
 
     BigInteger getStudentJoinCount(String month);
+
+    List<String> lodeId();
 }

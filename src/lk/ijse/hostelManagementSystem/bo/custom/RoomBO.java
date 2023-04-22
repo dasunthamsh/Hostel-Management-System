@@ -9,13 +9,13 @@ import lk.ijse.hostelManagementSystem.view.dtm.RoomDTM;
 
 public interface RoomBO extends SuperBO {
 
-    boolean saveRoom(RoomDTO dto);
+    boolean saveRoom(RoomDTO dto)throws Exception ;
 
-    boolean updateRoom(RoomDTO dto);
+    boolean updateRoom(RoomDTO dto)throws Exception ;
 
-    RoomDTO searcRoom(String id);
+    RoomDTO searcRoom(String id)throws Exception;
 
-    boolean deleteRoom(String id);
+    boolean deleteRoom(String id) throws Exception;
 
     ObservableList<RoomDTM> getRooms();
 }

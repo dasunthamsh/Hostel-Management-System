@@ -40,8 +40,13 @@ public class RegesterUserFormController  {
     }
 
     public void btnRegesterOnAction(ActionEvent actionEvent) throws IOException {
-        boolean isAdded =    regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
-            if(isAdded){
+        boolean isAdded = false;
+        try {
+            isAdded = regesterBO.saveUser(new RegesterDTO(txtId.getText(), txtName.getText(), txtEmail.getText(), txtPassword.getText()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if(isAdded){
                 String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
                 String titel = "Successful";
                 String text = "Student is Added";

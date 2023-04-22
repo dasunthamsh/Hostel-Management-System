@@ -42,15 +42,19 @@ public class ReserveRoomFormController {
     public void btnReservRoomOnAction(ActionEvent actionEvent) {
 
 
-
-       boolean isAdded = reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
+        boolean isAdded = false;
+        try {
+            isAdded = reservationBO.saveReservation(new ReservationDTO(reservationBO.getResevationId(),cmbDate.getValue(), reservationBO.serchStudent(String.valueOf(cmbStudentId.getValue())) ,reservationBO.serchRoom(String.valueOf(cmbRoomId.getValue())) ,(String) cmbPayment.getValue()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if(isAdded){
             String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
             String titel = "Successful";
             String text = "Student is Added";
             Notifications.showNotification(url,text,titel);
         }else {
-            String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;
+            String url ="lk/ijse/hostelManagementSystem/assets/sorry.png" ;
             String titel = "error";
             String text = "Somthing was wrong";
             Notifications.showNotification(url,text,titel);
@@ -74,9 +78,21 @@ public class ReserveRoomFormController {
         cmbRoomId.getItems().addAll(reservationBO.getRoomIds());
         cmbStudentId.getItems().addAll(reservationBO.getStudentIds());
 
-        cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {setStudentFields(reservationBO.serchStudent(String.valueOf(newValue)));});
+       cmbStudentId.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
+           try {
+               setStudentFields(reservationBO.serchStudent(String.valueOf(newValue)));
+           } catch (Exception e) {
+               e.printStackTrace();
+           }
+       });
 
-        cmbRoomId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {setRoomFields(reservationBO.serchRoom(String.valueOf(newValue)));});
+        cmbRoomId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                setRoomFields(reservationBO.serchRoom(String.valueOf(newValue)));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void setStudentFields(StudentDTO student){txtStudentName.setText(student.getName());}
@@ -118,25 +134,7 @@ public class ReserveRoomFormController {
         cmbPayment.setValue("");
     }
 
-    public void btnSerchOnAction(ActionEvent actionEvent) {
-        RoomDTO roomDTO = new RoomDTO();
-        StudentDTO studentDTO = new StudentDTO();
 
-
-
-   ReservationDTO res = reservationBO.getReservation(txtResId.getText());
-
-    txtResId.setText(String.valueOf(res.getResId()));
-    cmbRoomId.setValue(res.getRoom());
-    cmbStudentId.setValue(res.getStudent());
-    cmbPayment.setValue(res.getStatus());
-    txtroomType.setText(roomDTO.getType());
-    txtAvalableQyt.setText(String.valueOf(roomDTO.getQyt()));
-    txtMoney.setText(roomDTO.getKeyMoney());
-    txtStudentName.setText(studentDTO.getName());
-    cmbDate.setValue(res.getDate());
-
-    }
 
 
 }

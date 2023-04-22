@@ -26,7 +26,12 @@ RegesterBO regesterBO = (RegesterBO) BOFactory.getInstance().getBO(BOFactory.BOT
     public JFXTextField txtId;
 
     public boolean btnResetOnAction(ActionEvent actionEvent) {
-        boolean isUpdated = regesterBO.updateUser(new RegesterDTO(txtId.getText(),txtPassword.getText()));
+        boolean isUpdated = false;
+        try {
+            isUpdated = regesterBO.updateUser(new RegesterDTO(txtId.getText(),txtPassword.getText()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if(isUpdated){
             if(isUpdated){
                 String url ="lk/ijse/hostelManagementSystem/assets/notification.png" ;

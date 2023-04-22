@@ -19,27 +19,27 @@ public class RoomBOImpl implements RoomBO {
         public RoomDAO roomDAO = (RoomDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
-    public boolean saveRoom(RoomDTO dto) {
+    public boolean saveRoom(RoomDTO dto)throws Exception  {
         roomDAO.save(new Room(dto.getRoomTpeId(),dto.getType(),dto.getKeyMoney(),dto.getQyt()));
 
         return true;
     }
 
     @Override
-    public boolean updateRoom(RoomDTO dto) {
+    public boolean updateRoom(RoomDTO dto)throws Exception  {
         roomDAO.update(new Room(dto.getRoomTpeId(),dto.getType(),dto.getKeyMoney(),dto.getQyt()));
             return true;
     }
 
     @Override
-    public RoomDTO searcRoom(String id) {
+    public RoomDTO searcRoom(String id)throws Exception {
         Room room = roomDAO.serch(id);
         return new RoomDTO(
                 room.getRoomTpeId(),room.getType(),room.getQyt(),room.getKeyMoney());
     }
 
     @Override
-    public boolean deleteRoom(String id) {
+    public boolean deleteRoom(String id)throws Exception {
         roomDAO.delete(id);
         return true;
     }
